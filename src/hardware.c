@@ -18,11 +18,25 @@ void Hardware_ConfigureOscillator(){
 }
 
 /******************************************************************************/
-/* Hardware_init_IO() -                                               */
+/* Hardware_initIO() -                                               */
 /******************************************************************************/
 void Hardware_initIO(){
+    
+    /* setup I/O registers */
     TRISA = 0B00101111;  // set PORTA directions
     WPUA = TRISA;        // weak pullups on all inputs
     ANSELA = 0x00;       // Pin is assigned Digital I/O
     PORTA = 0x00;        // set all outputs false
+    
+    /* set interrupts */
+    IOCAP = 0B00100000;  // look for rising edge on RA5
+    IOCAN = 0x00;        // ignore all falling edge
+    GIE = true;          // enable global interrupts
+    PEIE = true;         // enable peripheral interrupts
+    INTEDG = true;       // look for rising edge on Interrupt pin
+    PIE0bits.IOCIE = true; // Interrupt-on-Change Interrupt Enable bit
+    PIE1 = 0x00;         // turn off all other interrupts
+    PIE2 = 0x00;
+    PIE3 = 0x00;
+    PIE4 = 0x00;
 }

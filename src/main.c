@@ -58,19 +58,18 @@
 /******************************************************************************/
 void main(void)
 {
-    
+    /* setup hardware */
     Hardware_ConfigureOscillator(); // Configure the oscillator for the device
-    Hardware_initIO(); // Initialize I/O and Peripherals for application
+    Hardware_initIO();              // Initialize I/O and Peripherals for application
 
     /* flash LED to prove function */
     for (int i = 0; i < 5; i++){
-        SHUTTER_PIN = false; // invert output
+        SHUTTER_PIN =~ SHUTTER_PIN; // invert output
         __delay_ms(500);
     }
-    
     SHUTTER_PIN = false;
 
-
+    /* enter main loop and wait for interrupt from PIR sensor */
     while(true){
         SLEEP();
     }
