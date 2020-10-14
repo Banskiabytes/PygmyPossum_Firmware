@@ -9,6 +9,7 @@
 void Pygmy_init(void);
 uint8_t Pygmy_readDipSwitches(void);
 void Pygmy_delay_ms(uint16_t);
+void Pygmy_TriggeredPIR(void);
 
 
 
