@@ -12,7 +12,10 @@
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <asminc-extensions/>
             <make-dep-projects/>
-            <sourceRootList/>
+            <sourceRootList>
+                <sourceRootElem>src</sourceRootElem>
+                <sourceRootElem>headers</sourceRootElem>
+            </sourceRootList>
             <confList>
                 <confElem>
                     <name>XC8_PIC16F18313</name>
