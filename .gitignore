@@ -8,4 +8,6 @@ dist/
 nbproject/Makefile-*
 nbproject/Package-*
 nbproject/private/
+# Igore visual studio code
+.vscode/
 
