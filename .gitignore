@@ -10,4 +10,5 @@ nbproject/Package-*
 nbproject/private/
 # Igore visual studio code
 .vscode/
+.vscode/c_cpp_properties.json
 
