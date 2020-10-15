@@ -15,9 +15,7 @@
   <h3 align="center">PYGMY</h3>
 
   <p align="center">
-    The Pygmy is a PIR sensor for remotly triggering camera traps. Its is based on a 8bit PIC microcontroller PIC16F18313 and custom PCB
-    <br />
-  Firmware is written in C (standard C99) using XC8 compiler v2.30
+
   </p>
 </p>
 
@@ -27,10 +25,10 @@
 ## Table of Contents
 
 * [About the Project](#about-the-project)
-  * [Built With](#built-with)
+* [Built With](#built-with)
 * [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
-  * [Installation](#installation)
+* [Prerequisites](#prerequisites)
+* [Installation](#installation)
 * [Usage](#usage)
 * [Roadmap](#roadmap)
 * [Contributing](#contributing)
@@ -43,13 +41,13 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+The Pygmy is a battery powered PIR (Passive Infrared) sensor for remotly triggering camera traps. Its is based on an 8 bit PIC microcontroller and custom PCB
+<br />
+Firmware is written in C (standard C99) using XC8 compiler v2.30
 
 ### Built With
-* [MPLAB]()
-* [KiCAD]()
-* [Fusion360]()
-* [Cura 4]()
+* [Microchip PIC16F18313](https://www.microchip.com/PIC16F18313)
+* [MPLAB X IDE v5.40]()
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -61,12 +59,6 @@ To get a local copy up and running follow these simple steps.
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
 _For more examples, please refer to the [Documentation](https://github.com/tomevison/PYGMY/INFO.docx)_
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-See the [open issues](https://github.com/tomevison/PYGMY/issues) for a list of proposed features (and known issues).
 
 
 <!-- CONTRIBUTING -->
