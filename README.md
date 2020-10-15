@@ -33,15 +33,20 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+<p>
+A camera trap is a remotely activated camera that is equipped with a motion sensor or an infrared sensor, or uses a light beam as a trigger. Camera trapping is a method for capturing wild animals on film when researchers are not present, and has been used in ecological research for decades. In addition to applications in hunting and wildlife viewing, research applications include studies of nest ecology, detection of rare species, estimation of population size and species richness, as well as research on habitat use and occupation of human-built structures.[1](https://en.wikipedia.org/wiki/Camera_trap)
+</p>
+
 The Pygmy is a battery powered PIR (Passive Infrared) sensor for remotly triggering camera traps. Its is based on an 8 bit PIC microcontroller and custom PCB
 <br />
 Firmware is written in C (standard C99) using XC8 compiler v2.30
 
 ### Built With
+Hardware:
 * [Microchip PIC16F18313](https://www.microchip.com/PIC16F18313)
 * [Microchip PICKit4](https://www.microchip.com/PICKIT4)
-Software:
-* [MPLAB X IDE v5.40]()
+<br />Software:
+* [MPLAB X IDE v5.40](https://www.microchip.com/mplab/mplab-x-ide)
 
 <!-- USAGE EXAMPLES -->
 ## Usage
