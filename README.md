@@ -26,17 +26,9 @@
 
 * [About the Project](#about-the-project)
 * [Built With](#built-with)
-* [Getting Started](#getting-started)
-* [Prerequisites](#prerequisites)
-* [Installation](#installation)
 * [Usage](#usage)
-* [Roadmap](#roadmap)
-* [Contributing](#contributing)
 * [License](#license)
 * [Contact](#contact)
-* [Acknowledgements](#acknowledgements)
-
-
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
@@ -47,39 +39,22 @@ Firmware is written in C (standard C99) using XC8 compiler v2.30
 
 ### Built With
 * [Microchip PIC16F18313](https://www.microchip.com/PIC16F18313)
+* [Microchip PICKit4](https://www.microchip.com/PICKIT4)
+Software:
 * [MPLAB X IDE v5.40]()
-
-<!-- GETTING STARTED -->
-## Getting Started
-To get a local copy up and running follow these simple steps.
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://github.com/tomevison/PYGMY/INFO.docx)_
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-
+Set the DIP switches on the front of the board to select your pre-programmed package. There are 8 pre-progammed packages in total. Each package contains a value for:
+* Ammount of Shots to take after a Sensor Event
+* Time Between Shots
+* Minimum time between Events
 
 <!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
-
-
 
 <!-- CONTACT -->
 ## Contact
@@ -88,13 +63,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 * James Lidsey - james.lidsey93@gmail.com
 
 Project Link: [https://github.com/tomevison/PYGMY](https://github.com/tomevison/PYGMY)
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-
-* []()
-* []()
-* []()
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
