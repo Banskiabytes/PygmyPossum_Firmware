@@ -42,10 +42,10 @@ The Pygmy is a battery powered PIR (Passive Infrared) sensor for remotly trigger
 Firmware is written in C (standard C99) using XC8 compiler v2.30
 
 ### Built With
-Hardware:
+## Hardware:
 * [Microchip PIC16F18313](https://www.microchip.com/PIC16F18313)
 * [Microchip PICKit4](https://www.microchip.com/PICKIT4)
-<br />Software:
+## Software:
 * [MPLAB X IDE v5.40](https://www.microchip.com/mplab/mplab-x-ide)
 
 <!-- USAGE EXAMPLES -->
