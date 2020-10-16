@@ -9,7 +9,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/tomevison/PYGMY">
-    <img src="06_IMAGES/repository-logo.png" alt="Logo" width="800">
+    <img src="https://i.imgur.com/gcAi0my.jpg" alt="Logo" width="800">
   </a>
 
   <h3 align="center">PYGMY</h3>
@@ -66,8 +66,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 * Tom Evison - tom@evisonengineering.com.au
 * James Lidsey - james.lidsey93@gmail.com
-
-Project Link: [https://github.com/tomevison/PYGMY](https://github.com/tomevison/PYGMY)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
