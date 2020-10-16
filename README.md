@@ -8,8 +8,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/tomevison/PYGMY">
-    <img src="https://i.imgur.com/gcAi0my.jpg" alt="Logo" width="800">
+  <a href="https://github.com/tomevison/">
+    <img src="banner.png" alt="Logo" width="800">
   </a>
 
   <h3 align="center">PYGMY</h3>
@@ -52,7 +52,7 @@ Firmware is written in C (standard C99) using XC8 compiler v2.30
 ## Usage
 
 Set the DIP switches on the front of the board to select your pre-programmed package. There are 8 pre-progammed packages in total. Each package contains a value for:
-* Ammount of Shots to take after a Sensor Event
+* Number of Shots to take after a Event
 * Time Between Shots
 * Minimum time between Events
 
