@@ -44,13 +44,13 @@ Firmware is written in C (standard C99) using XC8 compiler v2.30
 
 ### How it works..
 <p>
-The microcontroller will instantly enter a sleep state to minimise current consumtion. A rising edge on from the HS-SR501 module, will trigger an interrupt on the MCU, and wake it from sleep. In the interrupt service routine, the Pygmy Possum will read the settings from the DIP switches and send pulses to the output optocoupler. This ensures that the camera circui is completely isolated from the Pygmy Possum circuit. The optocoupler will short the Tip to the Sheath of the TRS audio Jack. This will activate the shutter release on the connected camera.
+The microcontroller will instantly enter a sleep state to minimise current consumtion. The output from the HS-SR501 module is connected to an input pin on the MCU, A rising edge on this input will trigger an interrupt on the MCU, and wake it from sleep. In the interrupt service routine, the Pygmy Possum will read the settings from the DIP switches and send pulses to the output optocoupler. This ensures that the camera circui is completely isolated from the Pygmy Possum circuit. The optocoupler will short the Tip to the Sheath of the TRS audio Jack. This will activate the shutter release on the connected camera.
 </p>
 
 ## Built With
 #### Hardware:
 * [Microchip PIC16F18313](https://www.microchip.com/PIC16F18313)
-* [HC-SR501 PIR module]()
+* [HC-SR501 PIR module](https://lastminuteengineers.com/pir-sensor-arduino-tutorial/)
 * [Microchip PICKit4](https://www.microchip.com/PICKIT4)
 #### Software:
 * [MPLAB X IDE v5.40](https://www.microchip.com/mplab/mplab-x-ide)
@@ -83,9 +83,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 [stars-shield]: https://img.shields.io/github/stars/tomevison/repo.svg?style=flat-square
 [stars-url]: https://github.com/tomevison/repo/stargazers
 [issues-shield]: https://img.shields.io/github/issues/tomevison/repo.svg?style=flat-square
-[issues-url]: https://github.com/tomevison/repo/issues
+[issues-url]: https://github.com/EmbeddedEnvironmental/PygmyPossum_Firmware/issues
 [license-shield]: https://img.shields.io/github/license/tomevison/repo.svg?style=flat-square
-[license-url]: https://github.com/tomevison/repo/blob/master/LICENSE.txt
+[license-url]: https://github.com/EmbeddedEnvironmental/PygmyPossum_Firmware/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/thomas-evison-87b27073/
-[product-screenshot]: images/screenshot.png
