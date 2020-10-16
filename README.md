@@ -12,14 +12,9 @@
     <img src="banner.png" alt="Logo" width="800">
   </a>
 
-  <h3 align="center">PYGMY</h3>
-
-  <p align="center">
-
-  </p>
+  <h3 align="center">The Pygmy Possum</h3>
+  <p align="center">PIR sensor for camera traps</p>
 </p>
-
-
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
@@ -34,16 +29,28 @@
 ## About The Project
 
 <p>
+The Pygmy Possum is a battery powered PIR (Passive Infrared) sensor for triggering remote camera traps. 
+</p>
+
+<p>
 A camera trap is a remotely activated camera that is equipped with a motion sensor or an infrared sensor, or uses a light beam as a trigger. Camera trapping is a method for capturing wild animals on film when researchers are not present, and has been used in ecological research for decades. In addition to applications in hunting and wildlife viewing, research applications include studies of nest ecology, detection of rare species, estimation of population size and species richness, as well as research on habitat use and occupation of human-built structures.[1](https://en.wikipedia.org/wiki/Camera_trap)
 </p>
 
-The Pygmy is a battery powered PIR (Passive Infrared) sensor for remotly triggering camera traps. Its is based on an 8 bit PIC microcontroller and custom PCB
+<p>
+Its is based on an 8 bit PIC microcontroller and custom PCB
 <br />
 Firmware is written in C (standard C99) using XC8 compiler v2.30
+</p>
+
+### How it works..
+<p>
+The microcontroller will instantly enter a sleep state to minimise current consumtion. A rising edge on from the HS-SR501 module, will trigger an interrupt on the MCU, and wake it from sleep. In the interrupt service routine, the Pygmy Possum will read the settings from the DIP switches and send pulses to the output optocoupler. This ensures that the camera circui is completely isolated from the Pygmy Possum circuit. The optocoupler will short the Tip to the Sheath of the TRS audio Jack. This will activate the shutter release on the connected camera.
+</p>
 
 ## Built With
 #### Hardware:
 * [Microchip PIC16F18313](https://www.microchip.com/PIC16F18313)
+* [HC-SR501 PIR module]()
 * [Microchip PICKit4](https://www.microchip.com/PICKIT4)
 #### Software:
 * [MPLAB X IDE v5.40](https://www.microchip.com/mplab/mplab-x-ide)
