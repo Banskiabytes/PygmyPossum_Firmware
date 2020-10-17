@@ -36,32 +36,31 @@ The Pygmy Possum is a battery powered PIR (Passive Infrared) sensor for triggeri
 A camera trap is a remotely activated camera that is equipped with a motion sensor or an infrared sensor, or uses a light beam as a trigger. Camera trapping is a method for capturing wild animals on film when researchers are not present, and has been used in ecological research for decades. In addition to applications in hunting and wildlife viewing, research applications include studies of nest ecology, detection of rare species, estimation of population size and species richness, as well as research on habitat use and occupation of human-built structures.[1](https://en.wikipedia.org/wiki/Camera_trap)
 </p>
 
-<p>
-Its is based on an 8 bit PIC microcontroller and custom PCB
-<br />
-Firmware is written in C (standard C99) using XC8 compiler v2.30
-</p>
-
 ### How it works..
 <p>
-The microcontroller will instantly enter a sleep state to minimise current consumtion. The output from the HS-SR501 module is connected to an input pin on the MCU, A rising edge on this input will trigger an interrupt on the MCU, and wake it from sleep. In the interrupt service routine, the Pygmy Possum will read the settings from the DIP switches and send pulses to the output optocoupler. This ensures that the camera circui is completely isolated from the Pygmy Possum circuit. The optocoupler will short the Tip to the Sheath of the TRS audio Jack. This will activate the shutter release on the connected camera.
+The Pygmy Possum is based on an 8 bit PIC microcontroller and custom PCB
+<br />
+Firmware is written in C (standard C99). The compiler being used is XC8 v2.30 by Microchip.
+</p>
+<p>
+The microcontroller will instantly enter a sleep state to minimise current consumtion. The output from the HS-SR501 module is connected to an input pin on the MCU, A rising edge on this input will trigger an interrupt on the MCU, and wake it from sleep. In the interrupt service routine, the Pygmy Possum will read the settings from the DIP switches and send pulses to the output optocoupler. This ensures that the camera circuit is completely isolated from the Pygmy Possum circuit. The optocoupler will short the Tip to the Sheath of the TRS audio Jack. This will activate the shutter release on the connected camera.
 </p>
 
 ## Built With
 #### Hardware:
-* [Microchip PIC16F18313](https://www.microchip.com/PIC16F18313)
-* [HC-SR501 PIR module](https://lastminuteengineers.com/pir-sensor-arduino-tutorial/)
-* [Microchip PICKit4](https://www.microchip.com/PICKIT4)
+* [Microchip PIC16F18313](https://www.microchip.com/PIC16F18313) 8-bit MCU
+* [HC-SR501 PIR module](https://lastminuteengineers.com/pir-sensor-arduino-tutorial/) low-cost passive infrared sensor board
+* [Microchip PICKit4](https://www.microchip.com/PICKIT4) programmer
 #### Software:
 * [MPLAB X IDE v5.40](https://www.microchip.com/mplab/mplab-x-ide)
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Set the DIP switches on the front of the board to select your pre-programmed package. There are 8 pre-progammed packages in total. Each package contains a value for:
-* Number of Shots to take after a Event
-* Time Between Shots
-* Minimum time between Events
+Set the DIP switches on the front of the board to select a pre-programmed package. Currently there are 8 hard-coded packages that can be selected. Each package write values into the `camParams` Struct for:
+* `numOfSnaps` - Number of Shots to take after a Event
+* `snapPeriod` - Time Between Shots (ms)
+* `minEventPeriod` - Minimum time between Events (s)
 
 <!-- LICENSE -->
 ## License
