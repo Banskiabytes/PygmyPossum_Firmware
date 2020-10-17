@@ -62,6 +62,20 @@ Set the DIP switches on the front of the board to select a pre-programmed packag
 * `snapPeriod` - Time Between Shots (ms)
 * `minEventPeriod` - Minimum time between Events (s)
 
+The default DIP settings are as follows:
+|DIP3|DIP2|DIP1|Package Number|`numOfSnaps`|`snapPeriod (ms)`|`minEventPeriod (s)`|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|0|0|0|0|3|50|10|
+|0|0|1|1|3|100|10|
+|0|1|0|2|3|250|10|
+|0|1|1|3|3|500|10|
+|1|0|0|4|3|750|10|
+|1|0|1|5|3|1000|10|
+|1|1|0|6|3|1500|10|
+|1|1|1|7|3|3000|10|
+
+<!-- table can be generated with https://www.tablesgenerator.com/markdown_tables -->
+
 <!-- LICENSE -->
 ## License
 
