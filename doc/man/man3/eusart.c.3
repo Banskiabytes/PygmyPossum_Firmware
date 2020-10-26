@@ -1,0 +1,214 @@
+.TH "src/eusart.c" 3 "Mon Oct 26 2020" "Version v1.1" "Pygmy Possum" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/eusart.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'eusart\&.h'\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBEUSART_TX_BUFFER_SIZE\fP   8"
+.br
+.ti -1c
+.RI "#define \fBEUSART_RX_BUFFER_SIZE\fP   8"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBEUSART_DefaultFramingErrorHandler\fP (void)"
+.br
+.ti -1c
+.RI "void \fBEUSART_DefaultOverrunErrorHandler\fP (void)"
+.br
+.ti -1c
+.RI "void \fBEUSART_DefaultErrorHandler\fP (void)"
+.br
+.ti -1c
+.RI "void \fBEUSART_Initialize\fP (void)"
+.br
+.ti -1c
+.RI "bool \fBEUSART_is_tx_ready\fP (void)"
+.br
+.ti -1c
+.RI "bool \fBEUSART_is_rx_ready\fP (void)"
+.br
+.ti -1c
+.RI "bool \fBEUSART_is_tx_done\fP (void)"
+.br
+.ti -1c
+.RI "eusart_status_t \fBEUSART_get_last_status\fP (void)"
+.br
+.ti -1c
+.RI "uint8_t \fBEUSART_Read\fP (void)"
+.br
+.ti -1c
+.RI "void \fBEUSART_Write\fP (uint8_t txData)"
+.br
+.ti -1c
+.RI "void \fBEUSART_WriteString\fP (uint8_t txData[])"
+.br
+.ti -1c
+.RI "void \fBEUSART_Transmit_ISR\fP (void)"
+.br
+.ti -1c
+.RI "void \fBEUSART_Receive_ISR\fP (void)"
+.br
+.ti -1c
+.RI "void \fBEUSART_RxDataHandler\fP (void)"
+.br
+.ti -1c
+.RI "void \fBEUSART_SetFramingErrorHandler\fP (void(*interruptHandler)(void))"
+.br
+.ti -1c
+.RI "void \fBEUSART_SetOverrunErrorHandler\fP (void(*interruptHandler)(void))"
+.br
+.ti -1c
+.RI "void \fBEUSART_SetErrorHandler\fP (void(*interruptHandler)(void))"
+.br
+.ti -1c
+.RI "void \fBEUSART_SetTxInterruptHandler\fP (void(*interruptHandler)(void))"
+.br
+.ti -1c
+.RI "void \fBEUSART_SetRxInterruptHandler\fP (void(*interruptHandler)(void))"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "volatile uint8_t \fBeusartTxHead\fP = 0"
+.br
+.ti -1c
+.RI "volatile uint8_t \fBeusartTxTail\fP = 0"
+.br
+.ti -1c
+.RI "volatile uint8_t \fBeusartTxBuffer\fP [\fBEUSART_TX_BUFFER_SIZE\fP]"
+.br
+.ti -1c
+.RI "volatile uint8_t \fBeusartTxBufferRemaining\fP"
+.br
+.ti -1c
+.RI "volatile uint8_t \fBeusartRxHead\fP = 0"
+.br
+.ti -1c
+.RI "volatile uint8_t \fBeusartRxTail\fP = 0"
+.br
+.ti -1c
+.RI "volatile uint8_t \fBeusartRxBuffer\fP [\fBEUSART_RX_BUFFER_SIZE\fP]"
+.br
+.ti -1c
+.RI "volatile eusart_status_t \fBeusartRxStatusBuffer\fP [\fBEUSART_RX_BUFFER_SIZE\fP]"
+.br
+.ti -1c
+.RI "volatile uint8_t \fBeusartRxCount\fP"
+.br
+.ti -1c
+.RI "volatile eusart_status_t \fBeusartRxLastError\fP"
+.br
+.ti -1c
+.RI "void(* \fBEUSART_TxDefaultInterruptHandler\fP )(void)"
+.br
+.ti -1c
+.RI "void(* \fBEUSART_RxDefaultInterruptHandler\fP )(void)"
+.br
+.ti -1c
+.RI "void(* \fBEUSART_FramingErrorHandler\fP )(void)"
+.br
+.ti -1c
+.RI "void(* \fBEUSART_OverrunErrorHandler\fP )(void)"
+.br
+.ti -1c
+.RI "void(* \fBEUSART_ErrorHandler\fP )(void)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define EUSART_RX_BUFFER_SIZE   8"
+
+.SS "#define EUSART_TX_BUFFER_SIZE   8"
+
+.SH "Function Documentation"
+.PP 
+.SS "void EUSART_DefaultErrorHandler (void)"
+
+.SS "void EUSART_DefaultFramingErrorHandler (void)"
+
+.SS "void EUSART_DefaultOverrunErrorHandler (void)"
+
+.SS "eusart_status_t EUSART_get_last_status (void)"
+
+.SS "void EUSART_Initialize (void)"
+
+.SS "bool EUSART_is_rx_ready (void)"
+
+.SS "bool EUSART_is_tx_done (void)"
+
+.SS "bool EUSART_is_tx_ready (void)"
+
+.SS "uint8_t EUSART_Read (void)"
+
+.SS "void EUSART_Receive_ISR (void)"
+
+.SS "void EUSART_RxDataHandler (void)"
+
+.SS "void EUSART_SetErrorHandler (void(*)(void) interruptHandler)"
+
+.SS "void EUSART_SetFramingErrorHandler (void(*)(void) interruptHandler)"
+
+.SS "void EUSART_SetOverrunErrorHandler (void(*)(void) interruptHandler)"
+
+.SS "void EUSART_SetRxInterruptHandler (void(*)(void) interruptHandler)"
+
+.SS "void EUSART_SetTxInterruptHandler (void(*)(void) interruptHandler)"
+
+.SS "void EUSART_Transmit_ISR (void)"
+
+.SS "void EUSART_Write (uint8_t txData)"
+
+.SS "void EUSART_WriteString (uint8_t txData[])"
+
+.SH "Variable Documentation"
+.PP 
+.SS "void(* EUSART_ErrorHandler) (void)"
+
+.SS "void(* EUSART_FramingErrorHandler) (void)"
+
+.SS "void(* EUSART_OverrunErrorHandler) (void)"
+
+.SS "void(* EUSART_RxDefaultInterruptHandler) (void)"
+
+.SS "void(* EUSART_TxDefaultInterruptHandler) (void)"
+Section: EUSART APIs 
+.SS "volatile uint8_t eusartRxBuffer[\fBEUSART_RX_BUFFER_SIZE\fP]"
+
+.SS "volatile uint8_t eusartRxCount"
+
+.SS "volatile uint8_t eusartRxHead = 0"
+
+.SS "volatile eusart_status_t eusartRxLastError"
+
+.SS "volatile eusart_status_t eusartRxStatusBuffer[\fBEUSART_RX_BUFFER_SIZE\fP]"
+
+.SS "volatile uint8_t eusartRxTail = 0"
+
+.SS "volatile uint8_t eusartTxBuffer[\fBEUSART_TX_BUFFER_SIZE\fP]"
+
+.SS "volatile uint8_t eusartTxBufferRemaining"
+
+.SS "volatile uint8_t eusartTxHead = 0"
+Section: Global Variables 
+.SS "volatile uint8_t eusartTxTail = 0"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Pygmy Possum from the source code\&.

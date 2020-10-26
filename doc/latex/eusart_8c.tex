@@ -1,0 +1,310 @@
+\doxysection{src/eusart.c File Reference}
+\label{eusart_8c}\index{src/eusart.c@{src/eusart.c}}
+{\ttfamily \#include \char`\"{}eusart.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ E\+U\+S\+A\+R\+T\+\_\+\+T\+X\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}~8
+\item 
+\#define \textbf{ E\+U\+S\+A\+R\+T\+\_\+\+R\+X\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}~8
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ E\+U\+S\+A\+R\+T\+\_\+\+Default\+Framing\+Error\+Handler} (void)
+\item 
+void \textbf{ E\+U\+S\+A\+R\+T\+\_\+\+Default\+Overrun\+Error\+Handler} (void)
+\item 
+void \textbf{ E\+U\+S\+A\+R\+T\+\_\+\+Default\+Error\+Handler} (void)
+\item 
+void \textbf{ E\+U\+S\+A\+R\+T\+\_\+\+Initialize} (void)
+\item 
+bool \textbf{ E\+U\+S\+A\+R\+T\+\_\+is\+\_\+tx\+\_\+ready} (void)
+\item 
+bool \textbf{ E\+U\+S\+A\+R\+T\+\_\+is\+\_\+rx\+\_\+ready} (void)
+\item 
+bool \textbf{ E\+U\+S\+A\+R\+T\+\_\+is\+\_\+tx\+\_\+done} (void)
+\item 
+eusart\+\_\+status\+\_\+t \textbf{ E\+U\+S\+A\+R\+T\+\_\+get\+\_\+last\+\_\+status} (void)
+\item 
+uint8\+\_\+t \textbf{ E\+U\+S\+A\+R\+T\+\_\+\+Read} (void)
+\item 
+void \textbf{ E\+U\+S\+A\+R\+T\+\_\+\+Write} (uint8\+\_\+t tx\+Data)
+\item 
+void \textbf{ E\+U\+S\+A\+R\+T\+\_\+\+Write\+String} (uint8\+\_\+t tx\+Data[$\,$])
+\item 
+void \textbf{ E\+U\+S\+A\+R\+T\+\_\+\+Transmit\+\_\+\+I\+SR} (void)
+\item 
+void \textbf{ E\+U\+S\+A\+R\+T\+\_\+\+Receive\+\_\+\+I\+SR} (void)
+\item 
+void \textbf{ E\+U\+S\+A\+R\+T\+\_\+\+Rx\+Data\+Handler} (void)
+\item 
+void \textbf{ E\+U\+S\+A\+R\+T\+\_\+\+Set\+Framing\+Error\+Handler} (void($\ast$interrupt\+Handler)(void))
+\item 
+void \textbf{ E\+U\+S\+A\+R\+T\+\_\+\+Set\+Overrun\+Error\+Handler} (void($\ast$interrupt\+Handler)(void))
+\item 
+void \textbf{ E\+U\+S\+A\+R\+T\+\_\+\+Set\+Error\+Handler} (void($\ast$interrupt\+Handler)(void))
+\item 
+void \textbf{ E\+U\+S\+A\+R\+T\+\_\+\+Set\+Tx\+Interrupt\+Handler} (void($\ast$interrupt\+Handler)(void))
+\item 
+void \textbf{ E\+U\+S\+A\+R\+T\+\_\+\+Set\+Rx\+Interrupt\+Handler} (void($\ast$interrupt\+Handler)(void))
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile uint8\+\_\+t \textbf{ eusart\+Tx\+Head} = 0
+\item 
+volatile uint8\+\_\+t \textbf{ eusart\+Tx\+Tail} = 0
+\item 
+volatile uint8\+\_\+t \textbf{ eusart\+Tx\+Buffer} [\textbf{ E\+U\+S\+A\+R\+T\+\_\+\+T\+X\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}]
+\item 
+volatile uint8\+\_\+t \textbf{ eusart\+Tx\+Buffer\+Remaining}
+\item 
+volatile uint8\+\_\+t \textbf{ eusart\+Rx\+Head} = 0
+\item 
+volatile uint8\+\_\+t \textbf{ eusart\+Rx\+Tail} = 0
+\item 
+volatile uint8\+\_\+t \textbf{ eusart\+Rx\+Buffer} [\textbf{ E\+U\+S\+A\+R\+T\+\_\+\+R\+X\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}]
+\item 
+volatile eusart\+\_\+status\+\_\+t \textbf{ eusart\+Rx\+Status\+Buffer} [\textbf{ E\+U\+S\+A\+R\+T\+\_\+\+R\+X\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}]
+\item 
+volatile uint8\+\_\+t \textbf{ eusart\+Rx\+Count}
+\item 
+volatile eusart\+\_\+status\+\_\+t \textbf{ eusart\+Rx\+Last\+Error}
+\item 
+void($\ast$ \textbf{ E\+U\+S\+A\+R\+T\+\_\+\+Tx\+Default\+Interrupt\+Handler} )(void)
+\item 
+void($\ast$ \textbf{ E\+U\+S\+A\+R\+T\+\_\+\+Rx\+Default\+Interrupt\+Handler} )(void)
+\item 
+void($\ast$ \textbf{ E\+U\+S\+A\+R\+T\+\_\+\+Framing\+Error\+Handler} )(void)
+\item 
+void($\ast$ \textbf{ E\+U\+S\+A\+R\+T\+\_\+\+Overrun\+Error\+Handler} )(void)
+\item 
+void($\ast$ \textbf{ E\+U\+S\+A\+R\+T\+\_\+\+Error\+Handler} )(void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{eusart_8c_a0b6e850d4781b01f5d53665293956271}} 
+\index{eusart.c@{eusart.c}!EUSART\_RX\_BUFFER\_SIZE@{EUSART\_RX\_BUFFER\_SIZE}}
+\index{EUSART\_RX\_BUFFER\_SIZE@{EUSART\_RX\_BUFFER\_SIZE}!eusart.c@{eusart.c}}
+\doxysubsubsection{EUSART\_RX\_BUFFER\_SIZE}
+{\footnotesize\ttfamily \#define E\+U\+S\+A\+R\+T\+\_\+\+R\+X\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE~8}
+
+\mbox{\label{eusart_8c_a09ddd159876c86ef8111c5940da77075}} 
+\index{eusart.c@{eusart.c}!EUSART\_TX\_BUFFER\_SIZE@{EUSART\_TX\_BUFFER\_SIZE}}
+\index{EUSART\_TX\_BUFFER\_SIZE@{EUSART\_TX\_BUFFER\_SIZE}!eusart.c@{eusart.c}}
+\doxysubsubsection{EUSART\_TX\_BUFFER\_SIZE}
+{\footnotesize\ttfamily \#define E\+U\+S\+A\+R\+T\+\_\+\+T\+X\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE~8}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{eusart_8c_a82981005ba8785fdb6218240729f581a}} 
+\index{eusart.c@{eusart.c}!EUSART\_DefaultErrorHandler@{EUSART\_DefaultErrorHandler}}
+\index{EUSART\_DefaultErrorHandler@{EUSART\_DefaultErrorHandler}!eusart.c@{eusart.c}}
+\doxysubsubsection{EUSART\_DefaultErrorHandler()}
+{\footnotesize\ttfamily void E\+U\+S\+A\+R\+T\+\_\+\+Default\+Error\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{eusart_8c_a6028a5ab71d288d9cea053a61a9f5c28}} 
+\index{eusart.c@{eusart.c}!EUSART\_DefaultFramingErrorHandler@{EUSART\_DefaultFramingErrorHandler}}
+\index{EUSART\_DefaultFramingErrorHandler@{EUSART\_DefaultFramingErrorHandler}!eusart.c@{eusart.c}}
+\doxysubsubsection{EUSART\_DefaultFramingErrorHandler()}
+{\footnotesize\ttfamily void E\+U\+S\+A\+R\+T\+\_\+\+Default\+Framing\+Error\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{eusart_8c_ac62c19603a76dee7f6ec6686a6c3484e}} 
+\index{eusart.c@{eusart.c}!EUSART\_DefaultOverrunErrorHandler@{EUSART\_DefaultOverrunErrorHandler}}
+\index{EUSART\_DefaultOverrunErrorHandler@{EUSART\_DefaultOverrunErrorHandler}!eusart.c@{eusart.c}}
+\doxysubsubsection{EUSART\_DefaultOverrunErrorHandler()}
+{\footnotesize\ttfamily void E\+U\+S\+A\+R\+T\+\_\+\+Default\+Overrun\+Error\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{eusart_8c_a8fb7d6b27e983f5aaa0555c746aafe42}} 
+\index{eusart.c@{eusart.c}!EUSART\_get\_last\_status@{EUSART\_get\_last\_status}}
+\index{EUSART\_get\_last\_status@{EUSART\_get\_last\_status}!eusart.c@{eusart.c}}
+\doxysubsubsection{EUSART\_get\_last\_status()}
+{\footnotesize\ttfamily eusart\+\_\+status\+\_\+t E\+U\+S\+A\+R\+T\+\_\+get\+\_\+last\+\_\+status (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{eusart_8c_a3b17818bce44b045bfad135a0c19035b}} 
+\index{eusart.c@{eusart.c}!EUSART\_Initialize@{EUSART\_Initialize}}
+\index{EUSART\_Initialize@{EUSART\_Initialize}!eusart.c@{eusart.c}}
+\doxysubsubsection{EUSART\_Initialize()}
+{\footnotesize\ttfamily void E\+U\+S\+A\+R\+T\+\_\+\+Initialize (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{eusart_8c_a1428fbfafd1b08c0910b037ccae9aa09}} 
+\index{eusart.c@{eusart.c}!EUSART\_is\_rx\_ready@{EUSART\_is\_rx\_ready}}
+\index{EUSART\_is\_rx\_ready@{EUSART\_is\_rx\_ready}!eusart.c@{eusart.c}}
+\doxysubsubsection{EUSART\_is\_rx\_ready()}
+{\footnotesize\ttfamily bool E\+U\+S\+A\+R\+T\+\_\+is\+\_\+rx\+\_\+ready (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{eusart_8c_a5573b761c39dd9ce6ed8fd961a37a389}} 
+\index{eusart.c@{eusart.c}!EUSART\_is\_tx\_done@{EUSART\_is\_tx\_done}}
+\index{EUSART\_is\_tx\_done@{EUSART\_is\_tx\_done}!eusart.c@{eusart.c}}
+\doxysubsubsection{EUSART\_is\_tx\_done()}
+{\footnotesize\ttfamily bool E\+U\+S\+A\+R\+T\+\_\+is\+\_\+tx\+\_\+done (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{eusart_8c_a5910980b8fabd42cf735bd4d9c698810}} 
+\index{eusart.c@{eusart.c}!EUSART\_is\_tx\_ready@{EUSART\_is\_tx\_ready}}
+\index{EUSART\_is\_tx\_ready@{EUSART\_is\_tx\_ready}!eusart.c@{eusart.c}}
+\doxysubsubsection{EUSART\_is\_tx\_ready()}
+{\footnotesize\ttfamily bool E\+U\+S\+A\+R\+T\+\_\+is\+\_\+tx\+\_\+ready (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{eusart_8c_ae1f0c4e5aabff2a4c28fc3e6a8cf8776}} 
+\index{eusart.c@{eusart.c}!EUSART\_Read@{EUSART\_Read}}
+\index{EUSART\_Read@{EUSART\_Read}!eusart.c@{eusart.c}}
+\doxysubsubsection{EUSART\_Read()}
+{\footnotesize\ttfamily uint8\+\_\+t E\+U\+S\+A\+R\+T\+\_\+\+Read (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{eusart_8c_a93b60ea3d97e878e0eb272f5d6f6d157}} 
+\index{eusart.c@{eusart.c}!EUSART\_Receive\_ISR@{EUSART\_Receive\_ISR}}
+\index{EUSART\_Receive\_ISR@{EUSART\_Receive\_ISR}!eusart.c@{eusart.c}}
+\doxysubsubsection{EUSART\_Receive\_ISR()}
+{\footnotesize\ttfamily void E\+U\+S\+A\+R\+T\+\_\+\+Receive\+\_\+\+I\+SR (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{eusart_8c_a86ea148223309645a07a8d7c0f9d6dd9}} 
+\index{eusart.c@{eusart.c}!EUSART\_RxDataHandler@{EUSART\_RxDataHandler}}
+\index{EUSART\_RxDataHandler@{EUSART\_RxDataHandler}!eusart.c@{eusart.c}}
+\doxysubsubsection{EUSART\_RxDataHandler()}
+{\footnotesize\ttfamily void E\+U\+S\+A\+R\+T\+\_\+\+Rx\+Data\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{eusart_8c_a88d68cb5f802bf2094a5448a1584c6a7}} 
+\index{eusart.c@{eusart.c}!EUSART\_SetErrorHandler@{EUSART\_SetErrorHandler}}
+\index{EUSART\_SetErrorHandler@{EUSART\_SetErrorHandler}!eusart.c@{eusart.c}}
+\doxysubsubsection{EUSART\_SetErrorHandler()}
+{\footnotesize\ttfamily void E\+U\+S\+A\+R\+T\+\_\+\+Set\+Error\+Handler (\begin{DoxyParamCaption}\item[{void($\ast$)(void)}]{interrupt\+Handler }\end{DoxyParamCaption})}
+
+\mbox{\label{eusart_8c_a53ca91908219b70dd25a97e38096a90a}} 
+\index{eusart.c@{eusart.c}!EUSART\_SetFramingErrorHandler@{EUSART\_SetFramingErrorHandler}}
+\index{EUSART\_SetFramingErrorHandler@{EUSART\_SetFramingErrorHandler}!eusart.c@{eusart.c}}
+\doxysubsubsection{EUSART\_SetFramingErrorHandler()}
+{\footnotesize\ttfamily void E\+U\+S\+A\+R\+T\+\_\+\+Set\+Framing\+Error\+Handler (\begin{DoxyParamCaption}\item[{void($\ast$)(void)}]{interrupt\+Handler }\end{DoxyParamCaption})}
+
+\mbox{\label{eusart_8c_a20e02c3fcd9453f6e7a004960e404eaf}} 
+\index{eusart.c@{eusart.c}!EUSART\_SetOverrunErrorHandler@{EUSART\_SetOverrunErrorHandler}}
+\index{EUSART\_SetOverrunErrorHandler@{EUSART\_SetOverrunErrorHandler}!eusart.c@{eusart.c}}
+\doxysubsubsection{EUSART\_SetOverrunErrorHandler()}
+{\footnotesize\ttfamily void E\+U\+S\+A\+R\+T\+\_\+\+Set\+Overrun\+Error\+Handler (\begin{DoxyParamCaption}\item[{void($\ast$)(void)}]{interrupt\+Handler }\end{DoxyParamCaption})}
+
+\mbox{\label{eusart_8c_ad88c54f3ebb7d88022d0412b69a689f0}} 
+\index{eusart.c@{eusart.c}!EUSART\_SetRxInterruptHandler@{EUSART\_SetRxInterruptHandler}}
+\index{EUSART\_SetRxInterruptHandler@{EUSART\_SetRxInterruptHandler}!eusart.c@{eusart.c}}
+\doxysubsubsection{EUSART\_SetRxInterruptHandler()}
+{\footnotesize\ttfamily void E\+U\+S\+A\+R\+T\+\_\+\+Set\+Rx\+Interrupt\+Handler (\begin{DoxyParamCaption}\item[{void($\ast$)(void)}]{interrupt\+Handler }\end{DoxyParamCaption})}
+
+\mbox{\label{eusart_8c_a5d1238da4b95ebe3347b72d9670c0b39}} 
+\index{eusart.c@{eusart.c}!EUSART\_SetTxInterruptHandler@{EUSART\_SetTxInterruptHandler}}
+\index{EUSART\_SetTxInterruptHandler@{EUSART\_SetTxInterruptHandler}!eusart.c@{eusart.c}}
+\doxysubsubsection{EUSART\_SetTxInterruptHandler()}
+{\footnotesize\ttfamily void E\+U\+S\+A\+R\+T\+\_\+\+Set\+Tx\+Interrupt\+Handler (\begin{DoxyParamCaption}\item[{void($\ast$)(void)}]{interrupt\+Handler }\end{DoxyParamCaption})}
+
+\mbox{\label{eusart_8c_a73c7eafa180dc956f243b62f5e5940ea}} 
+\index{eusart.c@{eusart.c}!EUSART\_Transmit\_ISR@{EUSART\_Transmit\_ISR}}
+\index{EUSART\_Transmit\_ISR@{EUSART\_Transmit\_ISR}!eusart.c@{eusart.c}}
+\doxysubsubsection{EUSART\_Transmit\_ISR()}
+{\footnotesize\ttfamily void E\+U\+S\+A\+R\+T\+\_\+\+Transmit\+\_\+\+I\+SR (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{eusart_8c_a69df9acb664d598e88c04f43b6fe01d2}} 
+\index{eusart.c@{eusart.c}!EUSART\_Write@{EUSART\_Write}}
+\index{EUSART\_Write@{EUSART\_Write}!eusart.c@{eusart.c}}
+\doxysubsubsection{EUSART\_Write()}
+{\footnotesize\ttfamily void E\+U\+S\+A\+R\+T\+\_\+\+Write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{tx\+Data }\end{DoxyParamCaption})}
+
+\mbox{\label{eusart_8c_ad02bb7b226016c09e0e954cfb7c029e5}} 
+\index{eusart.c@{eusart.c}!EUSART\_WriteString@{EUSART\_WriteString}}
+\index{EUSART\_WriteString@{EUSART\_WriteString}!eusart.c@{eusart.c}}
+\doxysubsubsection{EUSART\_WriteString()}
+{\footnotesize\ttfamily void E\+U\+S\+A\+R\+T\+\_\+\+Write\+String (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{tx\+Data[$\,$] }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\label{eusart_8c_a9e4dd138728f4ad66b8f3de80b433ffa}} 
+\index{eusart.c@{eusart.c}!EUSART\_ErrorHandler@{EUSART\_ErrorHandler}}
+\index{EUSART\_ErrorHandler@{EUSART\_ErrorHandler}!eusart.c@{eusart.c}}
+\doxysubsubsection{EUSART\_ErrorHandler}
+{\footnotesize\ttfamily void($\ast$ E\+U\+S\+A\+R\+T\+\_\+\+Error\+Handler) (void)}
+
+\mbox{\label{eusart_8c_a65c8c82041a47d5d9e47e9dfb10f22a7}} 
+\index{eusart.c@{eusart.c}!EUSART\_FramingErrorHandler@{EUSART\_FramingErrorHandler}}
+\index{EUSART\_FramingErrorHandler@{EUSART\_FramingErrorHandler}!eusart.c@{eusart.c}}
+\doxysubsubsection{EUSART\_FramingErrorHandler}
+{\footnotesize\ttfamily void($\ast$ E\+U\+S\+A\+R\+T\+\_\+\+Framing\+Error\+Handler) (void)}
+
+\mbox{\label{eusart_8c_a0bf20d7e9830f513d75e365a4263dc48}} 
+\index{eusart.c@{eusart.c}!EUSART\_OverrunErrorHandler@{EUSART\_OverrunErrorHandler}}
+\index{EUSART\_OverrunErrorHandler@{EUSART\_OverrunErrorHandler}!eusart.c@{eusart.c}}
+\doxysubsubsection{EUSART\_OverrunErrorHandler}
+{\footnotesize\ttfamily void($\ast$ E\+U\+S\+A\+R\+T\+\_\+\+Overrun\+Error\+Handler) (void)}
+
+\mbox{\label{eusart_8c_a3651ec15b9061efd0c712b651e78d7bc}} 
+\index{eusart.c@{eusart.c}!EUSART\_RxDefaultInterruptHandler@{EUSART\_RxDefaultInterruptHandler}}
+\index{EUSART\_RxDefaultInterruptHandler@{EUSART\_RxDefaultInterruptHandler}!eusart.c@{eusart.c}}
+\doxysubsubsection{EUSART\_RxDefaultInterruptHandler}
+{\footnotesize\ttfamily void($\ast$ E\+U\+S\+A\+R\+T\+\_\+\+Rx\+Default\+Interrupt\+Handler) (void)}
+
+\mbox{\label{eusart_8c_abe3fdf13584c6d28d21cfec80e8952ff}} 
+\index{eusart.c@{eusart.c}!EUSART\_TxDefaultInterruptHandler@{EUSART\_TxDefaultInterruptHandler}}
+\index{EUSART\_TxDefaultInterruptHandler@{EUSART\_TxDefaultInterruptHandler}!eusart.c@{eusart.c}}
+\doxysubsubsection{EUSART\_TxDefaultInterruptHandler}
+{\footnotesize\ttfamily void($\ast$ E\+U\+S\+A\+R\+T\+\_\+\+Tx\+Default\+Interrupt\+Handler) (void)}
+
+Section\+: E\+U\+S\+A\+RT A\+P\+Is \mbox{\label{eusart_8c_a55acb457979fcaae6342d0c4587ff150}} 
+\index{eusart.c@{eusart.c}!eusartRxBuffer@{eusartRxBuffer}}
+\index{eusartRxBuffer@{eusartRxBuffer}!eusart.c@{eusart.c}}
+\doxysubsubsection{eusartRxBuffer}
+{\footnotesize\ttfamily volatile uint8\+\_\+t eusart\+Rx\+Buffer[\textbf{ E\+U\+S\+A\+R\+T\+\_\+\+R\+X\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}]}
+
+\mbox{\label{eusart_8c_ad1141e46e98a21988d1631c6703fc6e2}} 
+\index{eusart.c@{eusart.c}!eusartRxCount@{eusartRxCount}}
+\index{eusartRxCount@{eusartRxCount}!eusart.c@{eusart.c}}
+\doxysubsubsection{eusartRxCount}
+{\footnotesize\ttfamily volatile uint8\+\_\+t eusart\+Rx\+Count}
+
+\mbox{\label{eusart_8c_a2a05583fcf64631114bbc194b2e700c8}} 
+\index{eusart.c@{eusart.c}!eusartRxHead@{eusartRxHead}}
+\index{eusartRxHead@{eusartRxHead}!eusart.c@{eusart.c}}
+\doxysubsubsection{eusartRxHead}
+{\footnotesize\ttfamily volatile uint8\+\_\+t eusart\+Rx\+Head = 0}
+
+\mbox{\label{eusart_8c_ace795e2ac1da3daf709734104e3e67ca}} 
+\index{eusart.c@{eusart.c}!eusartRxLastError@{eusartRxLastError}}
+\index{eusartRxLastError@{eusartRxLastError}!eusart.c@{eusart.c}}
+\doxysubsubsection{eusartRxLastError}
+{\footnotesize\ttfamily volatile eusart\+\_\+status\+\_\+t eusart\+Rx\+Last\+Error}
+
+\mbox{\label{eusart_8c_a0389a79c41bb85da57508c95f934e124}} 
+\index{eusart.c@{eusart.c}!eusartRxStatusBuffer@{eusartRxStatusBuffer}}
+\index{eusartRxStatusBuffer@{eusartRxStatusBuffer}!eusart.c@{eusart.c}}
+\doxysubsubsection{eusartRxStatusBuffer}
+{\footnotesize\ttfamily volatile eusart\+\_\+status\+\_\+t eusart\+Rx\+Status\+Buffer[\textbf{ E\+U\+S\+A\+R\+T\+\_\+\+R\+X\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}]}
+
+\mbox{\label{eusart_8c_acb2de90528d7a6d8c507e3ba3181b106}} 
+\index{eusart.c@{eusart.c}!eusartRxTail@{eusartRxTail}}
+\index{eusartRxTail@{eusartRxTail}!eusart.c@{eusart.c}}
+\doxysubsubsection{eusartRxTail}
+{\footnotesize\ttfamily volatile uint8\+\_\+t eusart\+Rx\+Tail = 0}
+
+\mbox{\label{eusart_8c_ab9da0eaec1b719a098d61cf309103bf0}} 
+\index{eusart.c@{eusart.c}!eusartTxBuffer@{eusartTxBuffer}}
+\index{eusartTxBuffer@{eusartTxBuffer}!eusart.c@{eusart.c}}
+\doxysubsubsection{eusartTxBuffer}
+{\footnotesize\ttfamily volatile uint8\+\_\+t eusart\+Tx\+Buffer[\textbf{ E\+U\+S\+A\+R\+T\+\_\+\+T\+X\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}]}
+
+\mbox{\label{eusart_8c_a314b84ad90becd9c37b405fac7e75631}} 
+\index{eusart.c@{eusart.c}!eusartTxBufferRemaining@{eusartTxBufferRemaining}}
+\index{eusartTxBufferRemaining@{eusartTxBufferRemaining}!eusart.c@{eusart.c}}
+\doxysubsubsection{eusartTxBufferRemaining}
+{\footnotesize\ttfamily volatile uint8\+\_\+t eusart\+Tx\+Buffer\+Remaining}
+
+\mbox{\label{eusart_8c_aeebfdd7efdc882e3ab80d40779d0d532}} 
+\index{eusart.c@{eusart.c}!eusartTxHead@{eusartTxHead}}
+\index{eusartTxHead@{eusartTxHead}!eusart.c@{eusart.c}}
+\doxysubsubsection{eusartTxHead}
+{\footnotesize\ttfamily volatile uint8\+\_\+t eusart\+Tx\+Head = 0}
+
+Section\+: Global Variables \mbox{\label{eusart_8c_abd12f86f07f6069551240cbc52fbd0b6}} 
+\index{eusart.c@{eusart.c}!eusartTxTail@{eusartTxTail}}
+\index{eusartTxTail@{eusartTxTail}!eusart.c@{eusart.c}}
+\doxysubsubsection{eusartTxTail}
+{\footnotesize\ttfamily volatile uint8\+\_\+t eusart\+Tx\+Tail = 0}
+

@@ -1,0 +1,52 @@
+\doxysection{src/interrupts.c File Reference}
+\label{interrupts_8c}\index{src/interrupts.c@{src/interrupts.c}}
+{\ttfamily \#include $<$xc.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}pygmy.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}eusart.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ U\+A\+R\+T\+\_\+send\+String} (char[$\,$])
+\item 
+void \textbf{ U\+A\+R\+T\+\_\+send\+Byte} (uint8\+\_\+t)
+\item 
+void \textbf{ \+\_\+\+\_\+interrupt} () isr(void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile uint8\+\_\+t \textbf{ array} [16]
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{interrupts_8c_a4e0a46b9474f02713855286ac17dac6d}} 
+\index{interrupts.c@{interrupts.c}!\_\_interrupt@{\_\_interrupt}}
+\index{\_\_interrupt@{\_\_interrupt}!interrupts.c@{interrupts.c}}
+\doxysubsubsection{\_\_interrupt()}
+{\footnotesize\ttfamily void \+\_\+\+\_\+interrupt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{interrupts_8c_a51aac80b07877caa7119456c30f255ec}} 
+\index{interrupts.c@{interrupts.c}!UART\_sendByte@{UART\_sendByte}}
+\index{UART\_sendByte@{UART\_sendByte}!interrupts.c@{interrupts.c}}
+\doxysubsubsection{UART\_sendByte()}
+{\footnotesize\ttfamily void U\+A\+R\+T\+\_\+send\+Byte (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{interrupts_8c_a0d3bb90369d8379591d6711ccea5b771}} 
+\index{interrupts.c@{interrupts.c}!UART\_sendString@{UART\_sendString}}
+\index{UART\_sendString@{UART\_sendString}!interrupts.c@{interrupts.c}}
+\doxysubsubsection{UART\_sendString()}
+{\footnotesize\ttfamily void U\+A\+R\+T\+\_\+send\+String (\begin{DoxyParamCaption}\item[{char}]{[$\,$] }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\label{interrupts_8c_a0080c9a58740f47f7d7f66aa4d624849}} 
+\index{interrupts.c@{interrupts.c}!array@{array}}
+\index{array@{array}!interrupts.c@{interrupts.c}}
+\doxysubsubsection{array}
+{\footnotesize\ttfamily volatile uint8\+\_\+t array[16]\hspace{0.3cm}{\ttfamily [extern]}}
+

@@ -1,0 +1,56 @@
+.TH "src/interrupts.c" 3 "Mon Oct 26 2020" "Version v1.1" "Pygmy Possum" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/interrupts.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <xc\&.h>\fP
+.br
+\fC#include <stdint\&.h>\fP
+.br
+\fC#include <stdbool\&.h>\fP
+.br
+\fC#include 'pygmy\&.h'\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include 'eusart\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBUART_sendString\fP (char[])"
+.br
+.ti -1c
+.RI "void \fBUART_sendByte\fP (uint8_t)"
+.br
+.ti -1c
+.RI "void \fB__interrupt\fP () isr(void)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "volatile uint8_t \fBarray\fP [16]"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void __interrupt ()"
+
+.SS "void UART_sendByte (uint8_t)"
+
+.SS "void UART_sendString (char[])"
+
+.SH "Variable Documentation"
+.PP 
+.SS "volatile uint8_t array[16]\fC [extern]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Pygmy Possum from the source code\&.
