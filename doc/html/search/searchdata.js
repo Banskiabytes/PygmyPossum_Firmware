@@ -1,27 +1,33 @@
 var indexSectionsWithContent =
 {
-  0: "_acefhimpu",
-  1: "cefhimp",
-  2: "_ehmu",
-  3: "ae",
-  4: "eu"
+  0: "_acdefhimoprsu",
+  1: "e",
+  2: "cefhimprs",
+  3: "_cehmpu",
+  4: "aefoprs",
+  5: "_defpsu",
+  6: "r"
 };
 
 var indexSectionNames =
 {
   0: "all",
-  1: "files",
-  2: "functions",
-  3: "variables",
-  4: "defines"
+  1: "classes",
+  2: "files",
+  3: "functions",
+  4: "variables",
+  5: "defines",
+  6: "pages"
 };
 
 var indexSectionLabels =
 {
   0: "All",
-  1: "Files",
-  2: "Functions",
-  3: "Variables",
-  4: "Macros"
+  1: "Data Structures",
+  2: "Files",
+  3: "Functions",
+  4: "Variables",
+  5: "Macros",
+  6: "Pages"
 };
 

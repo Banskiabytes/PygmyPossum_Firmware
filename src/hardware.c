@@ -1,4 +1,10 @@
-/*
+/** 
+ *  @file hardware.c
+ *  @brief Takes care of hardware initialisation
+ *
+ *  @author Thomas Evison
+ *  @date 28/10/2020
+ 
                           ----------
                       Vdd |1      8| GND/VSS
       PIR sensor (in) GP5 |2      7| GP0 (in) DIP3
@@ -17,9 +23,11 @@
 #include "hardware.h"
 #include <string.h>
 
-/******************************************************************************/
-/* Hardware_ConfigureOscillator() -                                     */
-/******************************************************************************/
+/**
+ *  Setup oscillator
+ *  @author Thomas Evison
+ *  @date 28/10/2020
+ */
 void Hardware_ConfigureOscillator(){
     /* TODO Add clock switching code if appropriate.  */
 
@@ -29,9 +37,11 @@ void Hardware_ConfigureOscillator(){
     //OSCFRQ = 0B00000000;
 }
 
-/******************************************************************************/
-/* Hardware_initIO() -                                               */
-/******************************************************************************/
+/**
+ *  Initialize hardware registers to setup IO, Interrupts, etc
+ *  @author Thomas Evison
+ *  @date 28/10/2020
+ */
 void Hardware_initIO(){
     
     /* setup I/O registers */
@@ -59,9 +69,11 @@ void Hardware_initIO(){
 }
 
 
-/******************************************************************************/
-/* Hardware_initUART() -                                                      */
-/******************************************************************************/
+/**
+ *  Initialize hardware UART
+ *  @author Thomas Evison
+ *  @date 28/10/2020
+ */
 void Hardware_initUART(){
     
     /* choose Tx pin with PPS */
@@ -85,17 +97,21 @@ void Hardware_initUART(){
 
 }
 
-/******************************************************************************/
-/* Hardware_UARTsendString() -                                               */
-/******************************************************************************/
+/**
+ *  Send a single byte via UART
+ *  @author Thomas Evison
+ *  @date 28/10/2020
+ */
 void Hardware_UARTsendByte(uint8_t Tx) {
     while (!TXIF);
     TXREG = Tx;
 }
 
-/******************************************************************************/
-/* Hardware_initIO() -                                               */
-/******************************************************************************/
+/**
+ *  Send string via hardware UART
+ *  @author Thomas Evison
+ *  @date 28/10/2020
+ */
 void Hardware_UARTsendString(char Tx[]) {
     for (int i = 0; i < strlen(Tx); i++) {
         while (!TXIF);

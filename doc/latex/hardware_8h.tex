@@ -1,0 +1,176 @@
+\hypertarget{hardware_8h}{}\doxysection{C\+:/\+Users/me/\+Google Drive/1. Projects/15\+\_\+\+C\+A\+M\+E\+R\+A\+\_\+\+T\+R\+A\+P/02\+\_\+\+F\+I\+R\+M\+W\+A\+R\+E/\+P\+Y\+G\+M\+Y\+\_\+\+P\+O\+S\+S\+UM.X/headers/hardware.h File Reference}
+\label{hardware_8h}\index{C:/Users/me/Google Drive/1. Projects/15\_CAMERA\_TRAP/02\_FIRMWARE/PYGMY\_POSSUM.X/headers/hardware.h@{C:/Users/me/Google Drive/1. Projects/15\_CAMERA\_TRAP/02\_FIRMWARE/PYGMY\_POSSUM.X/headers/hardware.h}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{hardware_8h_ab13699db5108b7d8d9efc2e1a2c9a4ab}{D\+I\+P3\+\_\+\+P\+IN}}~P\+O\+R\+T\+Abits.\+R\+A0
+\item 
+\#define \mbox{\hyperlink{hardware_8h_a8d7f277dfe81c8aa6e47a71ab708e5a1}{D\+I\+P1\+\_\+\+P\+IN}}~P\+O\+R\+T\+Abits.\+R\+A1
+\item 
+\#define \mbox{\hyperlink{hardware_8h_a386bd5a6168d14ed64af7d5a53d4ce47}{P\+I\+R\+\_\+\+P\+IN}}~P\+O\+R\+T\+Abits.\+R\+A5
+\item 
+\#define \mbox{\hyperlink{hardware_8h_af0fe5c74fca09397427d2832db2dc24b}{S\+H\+U\+T\+T\+E\+R\+\_\+\+P\+IN}}~L\+A\+T\+Abits.\+L\+A\+T\+A2
+\item 
+\#define \mbox{\hyperlink{hardware_8h_a024148e99a7143db044a48216664d03d}{\+\_\+\+X\+T\+A\+L\+\_\+\+F\+R\+EQ}}~32000000\+UL
+\item 
+\#define \mbox{\hyperlink{hardware_8h_a99d7c812ba23bfdba5d29ec2fddf1e83}{F\+CY}}~S\+Y\+S\+\_\+\+F\+R\+EQ/4
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{hardware_8h_acda039a06bd6334b01daab8aa1e54f81}{Hardware\+\_\+\+Configure\+Oscillator}} (void)
+\item 
+void \mbox{\hyperlink{hardware_8h_a5b9841ffaa76a502da89777cd9e7f704}{Hardware\+\_\+init\+IO}} (void)
+\item 
+void \mbox{\hyperlink{hardware_8h_a2080e7d07656982478888167ac035f31}{Hardware\+\_\+init\+U\+A\+RT}} (void)
+\item 
+void \mbox{\hyperlink{hardware_8h_ae8797dfb22ff4e90d071ea89de825ea8}{Hardware\+\_\+\+U\+A\+R\+Tsend\+Byte}} (uint8\+\_\+t)
+\item 
+void \mbox{\hyperlink{hardware_8h_ad1b40bfb3891d2543dc49cf4388b136a}{Hardware\+\_\+\+U\+A\+R\+Tsend\+String}} (char\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{hardware_8h_a024148e99a7143db044a48216664d03d}\label{hardware_8h_a024148e99a7143db044a48216664d03d}} 
+\index{hardware.h@{hardware.h}!\_XTAL\_FREQ@{\_XTAL\_FREQ}}
+\index{\_XTAL\_FREQ@{\_XTAL\_FREQ}!hardware.h@{hardware.h}}
+\doxysubsubsection{\texorpdfstring{\_XTAL\_FREQ}{\_XTAL\_FREQ}}
+{\footnotesize\ttfamily \#define \+\_\+\+X\+T\+A\+L\+\_\+\+F\+R\+EQ~32000000\+UL}
+
+
+
+Definition at line 13 of file hardware.\+h.
+
+\mbox{\Hypertarget{hardware_8h_a8d7f277dfe81c8aa6e47a71ab708e5a1}\label{hardware_8h_a8d7f277dfe81c8aa6e47a71ab708e5a1}} 
+\index{hardware.h@{hardware.h}!DIP1\_PIN@{DIP1\_PIN}}
+\index{DIP1\_PIN@{DIP1\_PIN}!hardware.h@{hardware.h}}
+\doxysubsubsection{\texorpdfstring{DIP1\_PIN}{DIP1\_PIN}}
+{\footnotesize\ttfamily \#define D\+I\+P1\+\_\+\+P\+IN~P\+O\+R\+T\+Abits.\+R\+A1}
+
+
+
+Definition at line 4 of file hardware.\+h.
+
+\mbox{\Hypertarget{hardware_8h_ab13699db5108b7d8d9efc2e1a2c9a4ab}\label{hardware_8h_ab13699db5108b7d8d9efc2e1a2c9a4ab}} 
+\index{hardware.h@{hardware.h}!DIP3\_PIN@{DIP3\_PIN}}
+\index{DIP3\_PIN@{DIP3\_PIN}!hardware.h@{hardware.h}}
+\doxysubsubsection{\texorpdfstring{DIP3\_PIN}{DIP3\_PIN}}
+{\footnotesize\ttfamily \#define D\+I\+P3\+\_\+\+P\+IN~P\+O\+R\+T\+Abits.\+R\+A0}
+
+
+
+Definition at line 3 of file hardware.\+h.
+
+\mbox{\Hypertarget{hardware_8h_a99d7c812ba23bfdba5d29ec2fddf1e83}\label{hardware_8h_a99d7c812ba23bfdba5d29ec2fddf1e83}} 
+\index{hardware.h@{hardware.h}!FCY@{FCY}}
+\index{FCY@{FCY}!hardware.h@{hardware.h}}
+\doxysubsubsection{\texorpdfstring{FCY}{FCY}}
+{\footnotesize\ttfamily \#define F\+CY~S\+Y\+S\+\_\+\+F\+R\+EQ/4}
+
+
+
+Definition at line 14 of file hardware.\+h.
+
+\mbox{\Hypertarget{hardware_8h_a386bd5a6168d14ed64af7d5a53d4ce47}\label{hardware_8h_a386bd5a6168d14ed64af7d5a53d4ce47}} 
+\index{hardware.h@{hardware.h}!PIR\_PIN@{PIR\_PIN}}
+\index{PIR\_PIN@{PIR\_PIN}!hardware.h@{hardware.h}}
+\doxysubsubsection{\texorpdfstring{PIR\_PIN}{PIR\_PIN}}
+{\footnotesize\ttfamily \#define P\+I\+R\+\_\+\+P\+IN~P\+O\+R\+T\+Abits.\+R\+A5}
+
+
+
+Definition at line 6 of file hardware.\+h.
+
+\mbox{\Hypertarget{hardware_8h_af0fe5c74fca09397427d2832db2dc24b}\label{hardware_8h_af0fe5c74fca09397427d2832db2dc24b}} 
+\index{hardware.h@{hardware.h}!SHUTTER\_PIN@{SHUTTER\_PIN}}
+\index{SHUTTER\_PIN@{SHUTTER\_PIN}!hardware.h@{hardware.h}}
+\doxysubsubsection{\texorpdfstring{SHUTTER\_PIN}{SHUTTER\_PIN}}
+{\footnotesize\ttfamily \#define S\+H\+U\+T\+T\+E\+R\+\_\+\+P\+IN~L\+A\+T\+Abits.\+L\+A\+T\+A2}
+
+
+
+Definition at line 9 of file hardware.\+h.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{hardware_8h_acda039a06bd6334b01daab8aa1e54f81}\label{hardware_8h_acda039a06bd6334b01daab8aa1e54f81}} 
+\index{hardware.h@{hardware.h}!Hardware\_ConfigureOscillator@{Hardware\_ConfigureOscillator}}
+\index{Hardware\_ConfigureOscillator@{Hardware\_ConfigureOscillator}!hardware.h@{hardware.h}}
+\doxysubsubsection{\texorpdfstring{Hardware\_ConfigureOscillator()}{Hardware\_ConfigureOscillator()}}
+{\footnotesize\ttfamily void Hardware\+\_\+\+Configure\+Oscillator (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Setup oscillator \begin{DoxyAuthor}{Author}
+Thomas Evison 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+28/10/2020 
+\end{DoxyDate}
+
+
+Definition at line 31 of file hardware.\+c.
+
+\mbox{\Hypertarget{hardware_8h_a5b9841ffaa76a502da89777cd9e7f704}\label{hardware_8h_a5b9841ffaa76a502da89777cd9e7f704}} 
+\index{hardware.h@{hardware.h}!Hardware\_initIO@{Hardware\_initIO}}
+\index{Hardware\_initIO@{Hardware\_initIO}!hardware.h@{hardware.h}}
+\doxysubsubsection{\texorpdfstring{Hardware\_initIO()}{Hardware\_initIO()}}
+{\footnotesize\ttfamily void Hardware\+\_\+init\+IO (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Initialize hardware registers to setup IO, Interrupts, etc \begin{DoxyAuthor}{Author}
+Thomas Evison 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+28/10/2020 
+\end{DoxyDate}
+
+
+Definition at line 45 of file hardware.\+c.
+
+\mbox{\Hypertarget{hardware_8h_a2080e7d07656982478888167ac035f31}\label{hardware_8h_a2080e7d07656982478888167ac035f31}} 
+\index{hardware.h@{hardware.h}!Hardware\_initUART@{Hardware\_initUART}}
+\index{Hardware\_initUART@{Hardware\_initUART}!hardware.h@{hardware.h}}
+\doxysubsubsection{\texorpdfstring{Hardware\_initUART()}{Hardware\_initUART()}}
+{\footnotesize\ttfamily void Hardware\+\_\+init\+U\+A\+RT (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Initialize hardware U\+A\+RT \begin{DoxyAuthor}{Author}
+Thomas Evison 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+28/10/2020 
+\end{DoxyDate}
+
+
+Definition at line 77 of file hardware.\+c.
+
+\mbox{\Hypertarget{hardware_8h_ae8797dfb22ff4e90d071ea89de825ea8}\label{hardware_8h_ae8797dfb22ff4e90d071ea89de825ea8}} 
+\index{hardware.h@{hardware.h}!Hardware\_UARTsendByte@{Hardware\_UARTsendByte}}
+\index{Hardware\_UARTsendByte@{Hardware\_UARTsendByte}!hardware.h@{hardware.h}}
+\doxysubsubsection{\texorpdfstring{Hardware\_UARTsendByte()}{Hardware\_UARTsendByte()}}
+{\footnotesize\ttfamily void Hardware\+\_\+\+U\+A\+R\+Tsend\+Byte (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Tx }\end{DoxyParamCaption})}
+
+Send a single byte via U\+A\+RT \begin{DoxyAuthor}{Author}
+Thomas Evison 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+28/10/2020 
+\end{DoxyDate}
+
+
+Definition at line 105 of file hardware.\+c.
+
+\mbox{\Hypertarget{hardware_8h_ad1b40bfb3891d2543dc49cf4388b136a}\label{hardware_8h_ad1b40bfb3891d2543dc49cf4388b136a}} 
+\index{hardware.h@{hardware.h}!Hardware\_UARTsendString@{Hardware\_UARTsendString}}
+\index{Hardware\_UARTsendString@{Hardware\_UARTsendString}!hardware.h@{hardware.h}}
+\doxysubsubsection{\texorpdfstring{Hardware\_UARTsendString()}{Hardware\_UARTsendString()}}
+{\footnotesize\ttfamily void Hardware\+\_\+\+U\+A\+R\+Tsend\+String (\begin{DoxyParamCaption}\item[{char}]{Tx\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Send string via hardware U\+A\+RT \begin{DoxyAuthor}{Author}
+Thomas Evison 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+28/10/2020 
+\end{DoxyDate}
+
+
+Definition at line 115 of file hardware.\+c.
+

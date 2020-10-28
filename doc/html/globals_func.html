@@ -5,10 +5,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Pygmy Possum: Globals</title>
+<title>PygmyPossum_Firmware: Globals</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -21,10 +25,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Pygmy Possum
-   &#160;<span id="projectnumber">v1.1</span>
+   <div id="projectname">PygmyPossum_Firmware
+   &#160;<span id="projectnumber">1.1</span>
    </div>
-   <div id="projectbrief">PIR sensor for camera traps</div>
+   <div id="projectbrief">A configurable PIR sensor for remote wildlife photography</div>
   </td>
  </tr>
  </tbody>
@@ -48,6 +52,22 @@ $(function() {
 /* @license-end */</script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('globals_func.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -63,10 +83,23 @@ $(function() {
 </div>
 
 <div class="contents">
-&#160;<ul>
+&#160;
+
+<h3><a id="index__5F"></a>- _ -</h3><ul>
 <li>__interrupt()
 : <a class="el" href="interrupts_8c.html#a4e0a46b9474f02713855286ac17dac6d">interrupts.c</a>
 </li>
+</ul>
+
+
+<h3><a id="index_c"></a>- c -</h3><ul>
+<li>ConfigureOscillator()
+: <a class="el" href="system_8h.html#a9cf05fad20cabd4ca4a12ab9b1c6e7ea">system.h</a>
+</li>
+</ul>
+
+
+<h3><a id="index_e"></a>- e -</h3><ul>
 <li>EUSART_DefaultErrorHandler()
 : <a class="el" href="eusart_8c.html#a82981005ba8785fdb6218240729f581a">eusart.c</a>
 </li>
@@ -77,74 +110,132 @@ $(function() {
 : <a class="el" href="eusart_8c.html#ac62c19603a76dee7f6ec6686a6c3484e">eusart.c</a>
 </li>
 <li>EUSART_get_last_status()
-: <a class="el" href="eusart_8c.html#a8fb7d6b27e983f5aaa0555c746aafe42">eusart.c</a>
+: <a class="el" href="eusart_8h.html#a8fb7d6b27e983f5aaa0555c746aafe42">eusart.h</a>
+, <a class="el" href="eusart_8c.html#a8fb7d6b27e983f5aaa0555c746aafe42">eusart.c</a>
 </li>
 <li>EUSART_Initialize()
-: <a class="el" href="eusart_8c.html#a3b17818bce44b045bfad135a0c19035b">eusart.c</a>
+: <a class="el" href="eusart_8h.html#a3b17818bce44b045bfad135a0c19035b">eusart.h</a>
+, <a class="el" href="eusart_8c.html#a3b17818bce44b045bfad135a0c19035b">eusart.c</a>
 </li>
 <li>EUSART_is_rx_ready()
-: <a class="el" href="eusart_8c.html#a1428fbfafd1b08c0910b037ccae9aa09">eusart.c</a>
+: <a class="el" href="eusart_8h.html#a1428fbfafd1b08c0910b037ccae9aa09">eusart.h</a>
+, <a class="el" href="eusart_8c.html#a1428fbfafd1b08c0910b037ccae9aa09">eusart.c</a>
 </li>
 <li>EUSART_is_tx_done()
-: <a class="el" href="eusart_8c.html#a5573b761c39dd9ce6ed8fd961a37a389">eusart.c</a>
+: <a class="el" href="eusart_8h.html#a5573b761c39dd9ce6ed8fd961a37a389">eusart.h</a>
+, <a class="el" href="eusart_8c.html#a5573b761c39dd9ce6ed8fd961a37a389">eusart.c</a>
 </li>
 <li>EUSART_is_tx_ready()
-: <a class="el" href="eusart_8c.html#a5910980b8fabd42cf735bd4d9c698810">eusart.c</a>
+: <a class="el" href="eusart_8h.html#a5910980b8fabd42cf735bd4d9c698810">eusart.h</a>
+, <a class="el" href="eusart_8c.html#a5910980b8fabd42cf735bd4d9c698810">eusart.c</a>
 </li>
 <li>EUSART_Read()
-: <a class="el" href="eusart_8c.html#ae1f0c4e5aabff2a4c28fc3e6a8cf8776">eusart.c</a>
+: <a class="el" href="eusart_8h.html#ae1f0c4e5aabff2a4c28fc3e6a8cf8776">eusart.h</a>
+, <a class="el" href="eusart_8c.html#ae1f0c4e5aabff2a4c28fc3e6a8cf8776">eusart.c</a>
 </li>
 <li>EUSART_Receive_ISR()
-: <a class="el" href="eusart_8c.html#a93b60ea3d97e878e0eb272f5d6f6d157">eusart.c</a>
+: <a class="el" href="eusart_8h.html#a93b60ea3d97e878e0eb272f5d6f6d157">eusart.h</a>
+, <a class="el" href="eusart_8c.html#a93b60ea3d97e878e0eb272f5d6f6d157">eusart.c</a>
 </li>
 <li>EUSART_RxDataHandler()
-: <a class="el" href="eusart_8c.html#a86ea148223309645a07a8d7c0f9d6dd9">eusart.c</a>
+: <a class="el" href="eusart_8h.html#a86ea148223309645a07a8d7c0f9d6dd9">eusart.h</a>
+, <a class="el" href="eusart_8c.html#a86ea148223309645a07a8d7c0f9d6dd9">eusart.c</a>
 </li>
 <li>EUSART_SetErrorHandler()
-: <a class="el" href="eusart_8c.html#a88d68cb5f802bf2094a5448a1584c6a7">eusart.c</a>
+: <a class="el" href="eusart_8h.html#a88d68cb5f802bf2094a5448a1584c6a7">eusart.h</a>
+, <a class="el" href="eusart_8c.html#a88d68cb5f802bf2094a5448a1584c6a7">eusart.c</a>
 </li>
 <li>EUSART_SetFramingErrorHandler()
-: <a class="el" href="eusart_8c.html#a53ca91908219b70dd25a97e38096a90a">eusart.c</a>
+: <a class="el" href="eusart_8h.html#a53ca91908219b70dd25a97e38096a90a">eusart.h</a>
+, <a class="el" href="eusart_8c.html#a53ca91908219b70dd25a97e38096a90a">eusart.c</a>
 </li>
 <li>EUSART_SetOverrunErrorHandler()
 : <a class="el" href="eusart_8c.html#a20e02c3fcd9453f6e7a004960e404eaf">eusart.c</a>
+, <a class="el" href="eusart_8h.html#a20e02c3fcd9453f6e7a004960e404eaf">eusart.h</a>
 </li>
 <li>EUSART_SetRxInterruptHandler()
 : <a class="el" href="eusart_8c.html#ad88c54f3ebb7d88022d0412b69a689f0">eusart.c</a>
+, <a class="el" href="eusart_8h.html#ad88c54f3ebb7d88022d0412b69a689f0">eusart.h</a>
 </li>
 <li>EUSART_SetTxInterruptHandler()
 : <a class="el" href="eusart_8c.html#a5d1238da4b95ebe3347b72d9670c0b39">eusart.c</a>
+, <a class="el" href="eusart_8h.html#a5d1238da4b95ebe3347b72d9670c0b39">eusart.h</a>
 </li>
 <li>EUSART_Transmit_ISR()
-: <a class="el" href="eusart_8c.html#a73c7eafa180dc956f243b62f5e5940ea">eusart.c</a>
+: <a class="el" href="eusart_8h.html#a73c7eafa180dc956f243b62f5e5940ea">eusart.h</a>
+, <a class="el" href="eusart_8c.html#a73c7eafa180dc956f243b62f5e5940ea">eusart.c</a>
 </li>
 <li>EUSART_Write()
 : <a class="el" href="eusart_8c.html#a69df9acb664d598e88c04f43b6fe01d2">eusart.c</a>
+, <a class="el" href="eusart_8h.html#a69df9acb664d598e88c04f43b6fe01d2">eusart.h</a>
 </li>
 <li>EUSART_WriteString()
-: <a class="el" href="eusart_8c.html#ad02bb7b226016c09e0e954cfb7c029e5">eusart.c</a>
+: <a class="el" href="eusart_8h.html#a568ca472442675bf2af4a22a8cb310ee">eusart.h</a>
+, <a class="el" href="eusart_8c.html#ad02bb7b226016c09e0e954cfb7c029e5">eusart.c</a>
 </li>
+</ul>
+
+
+<h3><a id="index_h"></a>- h -</h3><ul>
 <li>Hardware_ConfigureOscillator()
-: <a class="el" href="hardware_8c.html#a3ac20820f923265beeffdbccf121c51c">hardware.c</a>
+: <a class="el" href="hardware_8h.html#acda039a06bd6334b01daab8aa1e54f81">hardware.h</a>
+, <a class="el" href="hardware_8c.html#a3ac20820f923265beeffdbccf121c51c">hardware.c</a>
 </li>
 <li>Hardware_initIO()
 : <a class="el" href="hardware_8c.html#a036b63c1d5a012fdfe888ee33c8c21b8">hardware.c</a>
+, <a class="el" href="hardware_8h.html#a5b9841ffaa76a502da89777cd9e7f704">hardware.h</a>
 </li>
 <li>Hardware_initUART()
-: <a class="el" href="hardware_8c.html#ad8bbba9aad39cf9e6b882dfa2e5be4e9">hardware.c</a>
+: <a class="el" href="hardware_8h.html#a2080e7d07656982478888167ac035f31">hardware.h</a>
+, <a class="el" href="hardware_8c.html#ad8bbba9aad39cf9e6b882dfa2e5be4e9">hardware.c</a>
 </li>
 <li>Hardware_UARTsendByte()
-: <a class="el" href="hardware_8c.html#a74a219e58ec5ae80f7a651b52e761f9c">hardware.c</a>
+: <a class="el" href="hardware_8h.html#ae8797dfb22ff4e90d071ea89de825ea8">hardware.h</a>
+, <a class="el" href="hardware_8c.html#a74a219e58ec5ae80f7a651b52e761f9c">hardware.c</a>
 </li>
 <li>Hardware_UARTsendString()
 : <a class="el" href="hardware_8c.html#a51994b7ca858143dd0f3fb6f0f1e7950">hardware.c</a>
+, <a class="el" href="hardware_8h.html#ad1b40bfb3891d2543dc49cf4388b136a">hardware.h</a>
 </li>
+</ul>
+
+
+<h3><a id="index_m"></a>- m -</h3><ul>
 <li>main()
 : <a class="el" href="main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667">main.c</a>
 </li>
 <li>menuRun()
 : <a class="el" href="main_8c.html#ad88de487cdaebb4499b3e1e5cbf5d3bc">main.c</a>
 </li>
+</ul>
+
+
+<h3><a id="index_p"></a>- p -</h3><ul>
+<li>Pygmy_camParamsToString()
+: <a class="el" href="pygmy_8h.html#a555e0cd78a15e03d0ccfca43d479f851">pygmy.h</a>
+</li>
+<li>Pygmy_delay_ms()
+: <a class="el" href="pygmy_8h.html#a84df2b888527aa87567836a8698003c8">pygmy.h</a>
+</li>
+<li>Pygmy_handleMsg()
+: <a class="el" href="pygmy_8h.html#a31a8859a958471a6b534f08c2900ea07">pygmy.h</a>
+</li>
+<li>Pygmy_init()
+: <a class="el" href="pygmy_8h.html#a3c339c03e24c31d8bb528f757a1fc243">pygmy.h</a>
+</li>
+<li>Pygmy_readDipSwitches()
+: <a class="el" href="pygmy_8h.html#a9f520d46511ca82bdb1a22b856436ff1">pygmy.h</a>
+</li>
+<li>Pygmy_TriggeredPIR()
+: <a class="el" href="pygmy_8h.html#a15d9047af7fc5d583fd318fa5ba3f2d6">pygmy.h</a>
+</li>
+<li>Pygmy_validCmd()
+: <a class="el" href="pygmy_8h.html#a1535fdb47f7a46b8030cc94312c89141">pygmy.h</a>
+</li>
+</ul>
+
+
+<h3><a id="index_u"></a>- u -</h3><ul>
 <li>UART_sendByte()
 : <a class="el" href="interrupts_8c.html#a51aac80b07877caa7119456c30f255ec">interrupts.c</a>
 </li>
@@ -153,9 +244,12 @@ $(function() {
 </li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+  </ul>
+</div>
 </body>
 </html>

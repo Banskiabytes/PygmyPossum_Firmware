@@ -1,0 +1,465 @@
+\hypertarget{eusart_8h}{}\doxysection{C\+:/\+Users/me/\+Google Drive/1. Projects/15\+\_\+\+C\+A\+M\+E\+R\+A\+\_\+\+T\+R\+A\+P/02\+\_\+\+F\+I\+R\+M\+W\+A\+R\+E/\+P\+Y\+G\+M\+Y\+\_\+\+P\+O\+S\+S\+UM.X/headers/eusart.h File Reference}
+\label{eusart_8h}\index{C:/Users/me/Google Drive/1. Projects/15\_CAMERA\_TRAP/02\_FIRMWARE/PYGMY\_POSSUM.X/headers/eusart.h@{C:/Users/me/Google Drive/1. Projects/15\_CAMERA\_TRAP/02\_FIRMWARE/PYGMY\_POSSUM.X/headers/eusart.h}}
+{\ttfamily \#include $<$xc.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+union \mbox{\hyperlink{unioneusart__status__t}{eusart\+\_\+status\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{eusart_8h_accdd7cd6215305b8b1bc2b3698621bc0}{E\+U\+S\+A\+R\+T\+\_\+\+Data\+Ready}}~(\mbox{\hyperlink{eusart_8c_a1428fbfafd1b08c0910b037ccae9aa09}{E\+U\+S\+A\+R\+T\+\_\+is\+\_\+rx\+\_\+ready}}())
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{eusart_8h_a3b17818bce44b045bfad135a0c19035b}{E\+U\+S\+A\+R\+T\+\_\+\+Initialize}} (void)
+\begin{DoxyCompactList}\small\item\em Initialization routine that takes inputs from the E\+U\+S\+A\+RT G\+UI. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{eusart_8h_a5910980b8fabd42cf735bd4d9c698810}{E\+U\+S\+A\+R\+T\+\_\+is\+\_\+tx\+\_\+ready}} (void)
+\begin{DoxyCompactList}\small\item\em Checks if the E\+U\+S\+A\+RT receiver ready for reading. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{eusart_8h_a1428fbfafd1b08c0910b037ccae9aa09}{E\+U\+S\+A\+R\+T\+\_\+is\+\_\+rx\+\_\+ready}} (void)
+\begin{DoxyCompactList}\small\item\em Checks if the E\+U\+S\+A\+RT receiver ready for reading. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{eusart_8h_a5573b761c39dd9ce6ed8fd961a37a389}{E\+U\+S\+A\+R\+T\+\_\+is\+\_\+tx\+\_\+done}} (void)
+\begin{DoxyCompactList}\small\item\em Checks if E\+U\+S\+A\+RT data is transmitted. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{unioneusart__status__t}{eusart\+\_\+status\+\_\+t}} \mbox{\hyperlink{eusart_8h_a8fb7d6b27e983f5aaa0555c746aafe42}{E\+U\+S\+A\+R\+T\+\_\+get\+\_\+last\+\_\+status}} (void)
+\begin{DoxyCompactList}\small\item\em Gets the error status of the last read byte. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{eusart_8h_ae1f0c4e5aabff2a4c28fc3e6a8cf8776}{E\+U\+S\+A\+R\+T\+\_\+\+Read}} (void)
+\begin{DoxyCompactList}\small\item\em Read a byte of data from the E\+U\+S\+A\+RT. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{eusart_8h_a69df9acb664d598e88c04f43b6fe01d2}{E\+U\+S\+A\+R\+T\+\_\+\+Write}} (uint8\+\_\+t tx\+Data)
+\begin{DoxyCompactList}\small\item\em Writes a byte of data to the E\+U\+S\+A\+RT. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{eusart_8h_a568ca472442675bf2af4a22a8cb310ee}{E\+U\+S\+A\+R\+T\+\_\+\+Write\+String}} (uint8\+\_\+t\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{eusart_8h_a73c7eafa180dc956f243b62f5e5940ea}{E\+U\+S\+A\+R\+T\+\_\+\+Transmit\+\_\+\+I\+SR}} (void)
+\begin{DoxyCompactList}\small\item\em Maintains the driver\textquotesingle{}s transmitter state machine and implements its I\+SR. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{eusart_8h_a93b60ea3d97e878e0eb272f5d6f6d157}{E\+U\+S\+A\+R\+T\+\_\+\+Receive\+\_\+\+I\+SR}} (void)
+\begin{DoxyCompactList}\small\item\em Maintains the driver\textquotesingle{}s receiver state machine and implements its I\+SR. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{eusart_8h_a86ea148223309645a07a8d7c0f9d6dd9}{E\+U\+S\+A\+R\+T\+\_\+\+Rx\+Data\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em Maintains the driver\textquotesingle{}s receiver state machine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{eusart_8h_a53ca91908219b70dd25a97e38096a90a}{E\+U\+S\+A\+R\+T\+\_\+\+Set\+Framing\+Error\+Handler}} (void($\ast$interrupt\+Handler)(void))
+\begin{DoxyCompactList}\small\item\em Set E\+U\+S\+A\+RT Framing Error Handler. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{eusart_8h_a20e02c3fcd9453f6e7a004960e404eaf}{E\+U\+S\+A\+R\+T\+\_\+\+Set\+Overrun\+Error\+Handler}} (void($\ast$interrupt\+Handler)(void))
+\begin{DoxyCompactList}\small\item\em Set E\+U\+S\+A\+RT Overrun Error Handler. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{eusart_8h_a88d68cb5f802bf2094a5448a1584c6a7}{E\+U\+S\+A\+R\+T\+\_\+\+Set\+Error\+Handler}} (void($\ast$interrupt\+Handler)(void))
+\begin{DoxyCompactList}\small\item\em Set E\+U\+S\+A\+RT Error Handler. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{eusart_8h_a5d1238da4b95ebe3347b72d9670c0b39}{E\+U\+S\+A\+R\+T\+\_\+\+Set\+Tx\+Interrupt\+Handler}} (void($\ast$interrupt\+Handler)(void))
+\begin{DoxyCompactList}\small\item\em Sets the transmit handler function to be called by the interrupt service. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{eusart_8h_ad88c54f3ebb7d88022d0412b69a689f0}{E\+U\+S\+A\+R\+T\+\_\+\+Set\+Rx\+Interrupt\+Handler}} (void($\ast$interrupt\+Handler)(void))
+\begin{DoxyCompactList}\small\item\em Sets the receive handler function to be called by the interrupt service. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile uint8\+\_\+t \mbox{\hyperlink{eusart_8h_a314b84ad90becd9c37b405fac7e75631}{eusart\+Tx\+Buffer\+Remaining}}
+\item 
+volatile uint8\+\_\+t \mbox{\hyperlink{eusart_8h_ad1141e46e98a21988d1631c6703fc6e2}{eusart\+Rx\+Count}}
+\item 
+void($\ast$ \mbox{\hyperlink{eusart_8h_abe3fdf13584c6d28d21cfec80e8952ff}{E\+U\+S\+A\+R\+T\+\_\+\+Tx\+Default\+Interrupt\+Handler}} )(void)
+\item 
+void($\ast$ \mbox{\hyperlink{eusart_8h_a3651ec15b9061efd0c712b651e78d7bc}{E\+U\+S\+A\+R\+T\+\_\+\+Rx\+Default\+Interrupt\+Handler}} )(void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{eusart_8h_accdd7cd6215305b8b1bc2b3698621bc0}\label{eusart_8h_accdd7cd6215305b8b1bc2b3698621bc0}} 
+\index{eusart.h@{eusart.h}!EUSART\_DataReady@{EUSART\_DataReady}}
+\index{EUSART\_DataReady@{EUSART\_DataReady}!eusart.h@{eusart.h}}
+\doxysubsubsection{\texorpdfstring{EUSART\_DataReady}{EUSART\_DataReady}}
+{\footnotesize\ttfamily \#define E\+U\+S\+A\+R\+T\+\_\+\+Data\+Ready~(\mbox{\hyperlink{eusart_8c_a1428fbfafd1b08c0910b037ccae9aa09}{E\+U\+S\+A\+R\+T\+\_\+is\+\_\+rx\+\_\+ready}}())}
+
+Section\+: Included Files Section\+: Macro Declarations 
+
+Definition at line 14 of file eusart.\+h.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{eusart_8h_a8fb7d6b27e983f5aaa0555c746aafe42}\label{eusart_8h_a8fb7d6b27e983f5aaa0555c746aafe42}} 
+\index{eusart.h@{eusart.h}!EUSART\_get\_last\_status@{EUSART\_get\_last\_status}}
+\index{EUSART\_get\_last\_status@{EUSART\_get\_last\_status}!eusart.h@{eusart.h}}
+\doxysubsubsection{\texorpdfstring{EUSART\_get\_last\_status()}{EUSART\_get\_last\_status()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{unioneusart__status__t}{eusart\+\_\+status\+\_\+t}} E\+U\+S\+A\+R\+T\+\_\+get\+\_\+last\+\_\+status (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Gets the error status of the last read byte. 
+
+\begin{DoxyVerb}This routine gets the error status of the last read byte.
+\end{DoxyVerb}
+
+
+@\+Preconditions \mbox{\hyperlink{eusart_8c_a3b17818bce44b045bfad135a0c19035b}{E\+U\+S\+A\+R\+T\+\_\+\+Initialize()}} function should have been called before calling this function. The returned value is only updated after a read is called.
+
+@\+Param None
+
+@\+Returns the status of the last read byte
+
+@\+Example {\ttfamily  void \mbox{\hyperlink{main_8c_a6288eba0f8e8ad3ab1544ad731eb7667}{main(void)}} \{ volatile uint8\+\_\+t rx\+Data; volatile \mbox{\hyperlink{unioneusart__status__t}{eusart\+\_\+status\+\_\+t}} rx\+Status;}
+
+{\ttfamily Initialize the device S\+Y\+S\+T\+E\+M\+\_\+\+Initialize();}
+
+{\ttfamily Enable the Global Interrupts I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+Global\+Interrupt\+Enable();}
+
+{\ttfamily  while(1) \{ Logic to echo received data if(\+E\+U\+S\+A\+R\+T\+\_\+is\+\_\+rx\+\_\+ready()) \{ rx\+Data = \mbox{\hyperlink{eusart_8c_ae1f0c4e5aabff2a4c28fc3e6a8cf8776}{E\+U\+S\+A\+R\+T\+\_\+\+Read()}}; rx\+Status = \mbox{\hyperlink{eusart_8c_a8fb7d6b27e983f5aaa0555c746aafe42}{E\+U\+S\+A\+R\+T\+\_\+get\+\_\+last\+\_\+status()}}; if(rx\+Status.\+ferr)\{ L\+E\+D\+\_\+0\+\_\+\+Set\+High(); \} \} \} \} } 
+
+Definition at line 296 of file eusart.\+c.
+
+\mbox{\Hypertarget{eusart_8h_a3b17818bce44b045bfad135a0c19035b}\label{eusart_8h_a3b17818bce44b045bfad135a0c19035b}} 
+\index{eusart.h@{eusart.h}!EUSART\_Initialize@{EUSART\_Initialize}}
+\index{EUSART\_Initialize@{EUSART\_Initialize}!eusart.h@{eusart.h}}
+\doxysubsubsection{\texorpdfstring{EUSART\_Initialize()}{EUSART\_Initialize()}}
+{\footnotesize\ttfamily void E\+U\+S\+A\+R\+T\+\_\+\+Initialize (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialization routine that takes inputs from the E\+U\+S\+A\+RT G\+UI. 
+
+This routine initializes the E\+U\+S\+A\+RT driver. This routine must be called before any other E\+U\+S\+A\+RT routine is called.
+
+@\+Preconditions None
+
+@\+Param None
+
+@\+Returns None
+
+@\+Comment 
+
+Definition at line 77 of file eusart.\+c.
+
+\mbox{\Hypertarget{eusart_8h_a1428fbfafd1b08c0910b037ccae9aa09}\label{eusart_8h_a1428fbfafd1b08c0910b037ccae9aa09}} 
+\index{eusart.h@{eusart.h}!EUSART\_is\_rx\_ready@{EUSART\_is\_rx\_ready}}
+\index{EUSART\_is\_rx\_ready@{EUSART\_is\_rx\_ready}!eusart.h@{eusart.h}}
+\doxysubsubsection{\texorpdfstring{EUSART\_is\_rx\_ready()}{EUSART\_is\_rx\_ready()}}
+{\footnotesize\ttfamily bool E\+U\+S\+A\+R\+T\+\_\+is\+\_\+rx\+\_\+ready (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Checks if the E\+U\+S\+A\+RT receiver ready for reading. 
+
+\begin{DoxyVerb}This routine checks if EUSART receiver has received data 
+and ready to be read
+\end{DoxyVerb}
+
+
+@\+Preconditions \mbox{\hyperlink{eusart_8c_a3b17818bce44b045bfad135a0c19035b}{E\+U\+S\+A\+R\+T\+\_\+\+Initialize()}} function should be called before calling this function E\+U\+S\+A\+RT receiver should be enabled before calling this function
+
+@\+Param None
+
+@\+Returns Status of E\+U\+S\+A\+RT receiver T\+R\+UE\+: E\+U\+S\+A\+RT receiver is ready for reading F\+A\+L\+SE\+: E\+U\+S\+A\+RT receiver is not ready for reading
+
+@\+Example {\ttfamily  void \mbox{\hyperlink{main_8c_a6288eba0f8e8ad3ab1544ad731eb7667}{main(void)}} \{ volatile uint8\+\_\+t rx\+Data;}
+
+{\ttfamily Initialize the device S\+Y\+S\+T\+E\+M\+\_\+\+Initialize();}
+
+{\ttfamily  while(1) \{ Logic to echo received data if(\+E\+U\+S\+A\+R\+T\+\_\+is\+\_\+rx\+\_\+ready()) \{ rx\+Data = U\+A\+R\+T1\+\_\+\+Read(); if(\+E\+U\+S\+A\+R\+T\+\_\+is\+\_\+tx\+\_\+ready()) \{ E\+U\+S\+A\+R\+T\+\_\+\+Write(rx\+Data); \} \} \} \} } 
+
+Definition at line 197 of file eusart.\+c.
+
+\mbox{\Hypertarget{eusart_8h_a5573b761c39dd9ce6ed8fd961a37a389}\label{eusart_8h_a5573b761c39dd9ce6ed8fd961a37a389}} 
+\index{eusart.h@{eusart.h}!EUSART\_is\_tx\_done@{EUSART\_is\_tx\_done}}
+\index{EUSART\_is\_tx\_done@{EUSART\_is\_tx\_done}!eusart.h@{eusart.h}}
+\doxysubsubsection{\texorpdfstring{EUSART\_is\_tx\_done()}{EUSART\_is\_tx\_done()}}
+{\footnotesize\ttfamily bool E\+U\+S\+A\+R\+T\+\_\+is\+\_\+tx\+\_\+done (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Checks if E\+U\+S\+A\+RT data is transmitted. 
+
+\begin{DoxyVerb}This function return the status of transmit shift register
+\end{DoxyVerb}
+
+
+@\+Preconditions \mbox{\hyperlink{eusart_8c_a3b17818bce44b045bfad135a0c19035b}{E\+U\+S\+A\+R\+T\+\_\+\+Initialize()}} function should be called before calling this function E\+U\+S\+A\+RT transmitter should be enabled and E\+U\+S\+A\+R\+T\+\_\+\+Write should be called before calling this function
+
+@\+Param None
+
+@\+Returns Status of E\+U\+S\+A\+RT receiver T\+R\+UE\+: Data completely shifted out if the U\+S\+A\+RT shift register F\+A\+L\+SE\+: Data is not completely shifted out of the shift register
+
+@\+Example {\ttfamily  void \mbox{\hyperlink{main_8c_a6288eba0f8e8ad3ab1544ad731eb7667}{main(void)}} \{ volatile uint8\+\_\+t rx\+Data;}
+
+{\ttfamily Initialize the device S\+Y\+S\+T\+E\+M\+\_\+\+Initialize();}
+
+{\ttfamily  while(1) \{ if(\+E\+U\+S\+A\+R\+T\+\_\+is\+\_\+tx\+\_\+ready()) \{ L\+E\+D\+\_\+0\+\_\+\+Set\+High(); E\+U\+S\+A\+R\+T\+Write(rx\+Data); \} if(\mbox{\hyperlink{eusart_8c_a5573b761c39dd9ce6ed8fd961a37a389}{E\+U\+S\+A\+R\+T\+\_\+is\+\_\+tx\+\_\+done()}} \{ L\+E\+D\+\_\+0\+\_\+\+Set\+Low(); \} \} \} } 
+
+Definition at line 246 of file eusart.\+c.
+
+\mbox{\Hypertarget{eusart_8h_a5910980b8fabd42cf735bd4d9c698810}\label{eusart_8h_a5910980b8fabd42cf735bd4d9c698810}} 
+\index{eusart.h@{eusart.h}!EUSART\_is\_tx\_ready@{EUSART\_is\_tx\_ready}}
+\index{EUSART\_is\_tx\_ready@{EUSART\_is\_tx\_ready}!eusart.h@{eusart.h}}
+\doxysubsubsection{\texorpdfstring{EUSART\_is\_tx\_ready()}{EUSART\_is\_tx\_ready()}}
+{\footnotesize\ttfamily bool E\+U\+S\+A\+R\+T\+\_\+is\+\_\+tx\+\_\+ready (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Checks if the E\+U\+S\+A\+RT receiver ready for reading. 
+
+This routine checks if E\+U\+S\+A\+RT receiver has received data and ready to be read
+
+@\+Preconditions \mbox{\hyperlink{eusart_8c_a3b17818bce44b045bfad135a0c19035b}{E\+U\+S\+A\+R\+T\+\_\+\+Initialize()}} function should be called before calling this function E\+U\+S\+A\+RT receiver should be enabled before calling this function
+
+@\+Param None
+
+@\+Returns Status of E\+U\+S\+A\+RT receiver T\+R\+UE\+: E\+U\+S\+A\+RT receiver is ready for reading F\+A\+L\+SE\+: E\+U\+S\+A\+RT receiver is not ready for reading
+
+@\+Example {\ttfamily  void \mbox{\hyperlink{main_8c_a6288eba0f8e8ad3ab1544ad731eb7667}{main(void)}} \{ volatile uint8\+\_\+t rx\+Data;}
+
+{\ttfamily Initialize the device S\+Y\+S\+T\+E\+M\+\_\+\+Initialize();}
+
+{\ttfamily  while(1) \{ Logic to echo received data if(\+E\+U\+S\+A\+R\+T\+\_\+is\+\_\+rx\+\_\+ready()) \{ rx\+Data = U\+A\+R\+T1\+\_\+\+Read(); if(\+E\+U\+S\+A\+R\+T\+\_\+is\+\_\+tx\+\_\+ready()) \{ E\+U\+S\+A\+R\+T\+\_\+\+Write(rx\+Data); \} \} \} \} } 
+
+Definition at line 147 of file eusart.\+c.
+
+\mbox{\Hypertarget{eusart_8h_ae1f0c4e5aabff2a4c28fc3e6a8cf8776}\label{eusart_8h_ae1f0c4e5aabff2a4c28fc3e6a8cf8776}} 
+\index{eusart.h@{eusart.h}!EUSART\_Read@{EUSART\_Read}}
+\index{EUSART\_Read@{EUSART\_Read}!eusart.h@{eusart.h}}
+\doxysubsubsection{\texorpdfstring{EUSART\_Read()}{EUSART\_Read()}}
+{\footnotesize\ttfamily uint8\+\_\+t E\+U\+S\+A\+R\+T\+\_\+\+Read (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Read a byte of data from the E\+U\+S\+A\+RT. 
+
+This routine reads a byte of data from the E\+U\+S\+A\+RT.
+
+@\+Preconditions \mbox{\hyperlink{eusart_8c_a3b17818bce44b045bfad135a0c19035b}{E\+U\+S\+A\+R\+T\+\_\+\+Initialize()}} function should have been called before calling this function. The transfer status should be checked to see if the receiver is not empty before calling this function.
+
+@\+Param None
+
+@\+Returns A data byte received by the driver. 
+
+Definition at line 318 of file eusart.\+c.
+
+\mbox{\Hypertarget{eusart_8h_a93b60ea3d97e878e0eb272f5d6f6d157}\label{eusart_8h_a93b60ea3d97e878e0eb272f5d6f6d157}} 
+\index{eusart.h@{eusart.h}!EUSART\_Receive\_ISR@{EUSART\_Receive\_ISR}}
+\index{EUSART\_Receive\_ISR@{EUSART\_Receive\_ISR}!eusart.h@{eusart.h}}
+\doxysubsubsection{\texorpdfstring{EUSART\_Receive\_ISR()}{EUSART\_Receive\_ISR()}}
+{\footnotesize\ttfamily void E\+U\+S\+A\+R\+T\+\_\+\+Receive\+\_\+\+I\+SR (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Maintains the driver\textquotesingle{}s receiver state machine and implements its I\+SR. 
+
+This routine is used to maintain the driver\textquotesingle{}s internal receiver state machine.\+This interrupt service routine is called when the state of the receiver needs to be maintained in a non polled manner.
+
+@\+Preconditions \mbox{\hyperlink{eusart_8c_a3b17818bce44b045bfad135a0c19035b}{E\+U\+S\+A\+R\+T\+\_\+\+Initialize()}} function should have been called for the I\+SR to execute correctly.
+
+@\+Param None
+
+@\+Returns None 
+
+Definition at line 432 of file eusart.\+c.
+
+\mbox{\Hypertarget{eusart_8h_a86ea148223309645a07a8d7c0f9d6dd9}\label{eusart_8h_a86ea148223309645a07a8d7c0f9d6dd9}} 
+\index{eusart.h@{eusart.h}!EUSART\_RxDataHandler@{EUSART\_RxDataHandler}}
+\index{EUSART\_RxDataHandler@{EUSART\_RxDataHandler}!eusart.h@{eusart.h}}
+\doxysubsubsection{\texorpdfstring{EUSART\_RxDataHandler()}{EUSART\_RxDataHandler()}}
+{\footnotesize\ttfamily void E\+U\+S\+A\+R\+T\+\_\+\+Rx\+Data\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Maintains the driver\textquotesingle{}s receiver state machine. 
+
+This routine is called by the receive state routine and is used to maintain the driver\textquotesingle{}s internal receiver state machine. It should be called by a custom I\+SR to maintain normal behavior
+
+@\+Preconditions \mbox{\hyperlink{eusart_8c_a3b17818bce44b045bfad135a0c19035b}{E\+U\+S\+A\+R\+T\+\_\+\+Initialize()}} function should have been called for the I\+SR to execute correctly.
+
+@\+Param None
+
+@\+Returns None 
+
+Definition at line 474 of file eusart.\+c.
+
+\mbox{\Hypertarget{eusart_8h_a88d68cb5f802bf2094a5448a1584c6a7}\label{eusart_8h_a88d68cb5f802bf2094a5448a1584c6a7}} 
+\index{eusart.h@{eusart.h}!EUSART\_SetErrorHandler@{EUSART\_SetErrorHandler}}
+\index{EUSART\_SetErrorHandler@{EUSART\_SetErrorHandler}!eusart.h@{eusart.h}}
+\doxysubsubsection{\texorpdfstring{EUSART\_SetErrorHandler()}{EUSART\_SetErrorHandler()}}
+{\footnotesize\ttfamily void E\+U\+S\+A\+R\+T\+\_\+\+Set\+Error\+Handler (\begin{DoxyParamCaption}\item[{void($\ast$)(void)}]{interrupt\+Handler }\end{DoxyParamCaption})}
+
+
+
+Set E\+U\+S\+A\+RT Error Handler. 
+
+This A\+PI sets the function to be called upon E\+U\+S\+A\+RT error
+
+@\+Preconditions Initialize the E\+U\+S\+A\+RT module before calling this A\+PI
+
+@\+Param Address of function to be set as error handler
+
+@\+Returns None 
+
+Definition at line 554 of file eusart.\+c.
+
+\mbox{\Hypertarget{eusart_8h_a53ca91908219b70dd25a97e38096a90a}\label{eusart_8h_a53ca91908219b70dd25a97e38096a90a}} 
+\index{eusart.h@{eusart.h}!EUSART\_SetFramingErrorHandler@{EUSART\_SetFramingErrorHandler}}
+\index{EUSART\_SetFramingErrorHandler@{EUSART\_SetFramingErrorHandler}!eusart.h@{eusart.h}}
+\doxysubsubsection{\texorpdfstring{EUSART\_SetFramingErrorHandler()}{EUSART\_SetFramingErrorHandler()}}
+{\footnotesize\ttfamily void E\+U\+S\+A\+R\+T\+\_\+\+Set\+Framing\+Error\+Handler (\begin{DoxyParamCaption}\item[{void($\ast$)(void)}]{interrupt\+Handler }\end{DoxyParamCaption})}
+
+
+
+Set E\+U\+S\+A\+RT Framing Error Handler. 
+
+This A\+PI sets the function to be called upon E\+U\+S\+A\+RT framing error
+
+@\+Preconditions Initialize the E\+U\+S\+A\+RT before calling this A\+PI
+
+@\+Param Address of function to be set as framing error handler
+
+@\+Returns None 
+
+Definition at line 514 of file eusart.\+c.
+
+\mbox{\Hypertarget{eusart_8h_a20e02c3fcd9453f6e7a004960e404eaf}\label{eusart_8h_a20e02c3fcd9453f6e7a004960e404eaf}} 
+\index{eusart.h@{eusart.h}!EUSART\_SetOverrunErrorHandler@{EUSART\_SetOverrunErrorHandler}}
+\index{EUSART\_SetOverrunErrorHandler@{EUSART\_SetOverrunErrorHandler}!eusart.h@{eusart.h}}
+\doxysubsubsection{\texorpdfstring{EUSART\_SetOverrunErrorHandler()}{EUSART\_SetOverrunErrorHandler()}}
+{\footnotesize\ttfamily void E\+U\+S\+A\+R\+T\+\_\+\+Set\+Overrun\+Error\+Handler (\begin{DoxyParamCaption}\item[{void($\ast$)(void)}]{interrupt\+Handler }\end{DoxyParamCaption})}
+
+
+
+Set E\+U\+S\+A\+RT Overrun Error Handler. 
+
+This A\+PI sets the function to be called upon E\+U\+S\+A\+RT overrun error
+
+@\+Preconditions Initialize the E\+U\+S\+A\+RT module before calling this A\+PI
+
+@\+Param Address of function to be set as overrun error handler
+
+@\+Returns None 
+
+Definition at line 534 of file eusart.\+c.
+
+\mbox{\Hypertarget{eusart_8h_ad88c54f3ebb7d88022d0412b69a689f0}\label{eusart_8h_ad88c54f3ebb7d88022d0412b69a689f0}} 
+\index{eusart.h@{eusart.h}!EUSART\_SetRxInterruptHandler@{EUSART\_SetRxInterruptHandler}}
+\index{EUSART\_SetRxInterruptHandler@{EUSART\_SetRxInterruptHandler}!eusart.h@{eusart.h}}
+\doxysubsubsection{\texorpdfstring{EUSART\_SetRxInterruptHandler()}{EUSART\_SetRxInterruptHandler()}}
+{\footnotesize\ttfamily void E\+U\+S\+A\+R\+T\+\_\+\+Set\+Rx\+Interrupt\+Handler (\begin{DoxyParamCaption}\item[{void($\ast$)(void)}]{interrupt\+Handler }\end{DoxyParamCaption})}
+
+
+
+Sets the receive handler function to be called by the interrupt service. 
+
+Calling this function will set a new custom function that will be called when the receive interrupt needs servicing.
+
+@\+Preconditions \mbox{\hyperlink{eusart_8c_a3b17818bce44b045bfad135a0c19035b}{E\+U\+S\+A\+R\+T\+\_\+\+Initialize()}} function should have been called for the I\+SR to execute correctly.
+
+@\+Param A pointer to the new function
+
+@\+Returns None 
+
+Definition at line 598 of file eusart.\+c.
+
+\mbox{\Hypertarget{eusart_8h_a5d1238da4b95ebe3347b72d9670c0b39}\label{eusart_8h_a5d1238da4b95ebe3347b72d9670c0b39}} 
+\index{eusart.h@{eusart.h}!EUSART\_SetTxInterruptHandler@{EUSART\_SetTxInterruptHandler}}
+\index{EUSART\_SetTxInterruptHandler@{EUSART\_SetTxInterruptHandler}!eusart.h@{eusart.h}}
+\doxysubsubsection{\texorpdfstring{EUSART\_SetTxInterruptHandler()}{EUSART\_SetTxInterruptHandler()}}
+{\footnotesize\ttfamily void E\+U\+S\+A\+R\+T\+\_\+\+Set\+Tx\+Interrupt\+Handler (\begin{DoxyParamCaption}\item[{void($\ast$)(void)}]{interrupt\+Handler }\end{DoxyParamCaption})}
+
+
+
+Sets the transmit handler function to be called by the interrupt service. 
+
+Calling this function will set a new custom function that will be called when the transmit interrupt needs servicing.
+
+@\+Preconditions \mbox{\hyperlink{eusart_8c_a3b17818bce44b045bfad135a0c19035b}{E\+U\+S\+A\+R\+T\+\_\+\+Initialize()}} function should have been called for the I\+SR to execute correctly.
+
+@\+Param A pointer to the new function
+
+@\+Returns None 
+
+Definition at line 576 of file eusart.\+c.
+
+\mbox{\Hypertarget{eusart_8h_a73c7eafa180dc956f243b62f5e5940ea}\label{eusart_8h_a73c7eafa180dc956f243b62f5e5940ea}} 
+\index{eusart.h@{eusart.h}!EUSART\_Transmit\_ISR@{EUSART\_Transmit\_ISR}}
+\index{EUSART\_Transmit\_ISR@{EUSART\_Transmit\_ISR}!eusart.h@{eusart.h}}
+\doxysubsubsection{\texorpdfstring{EUSART\_Transmit\_ISR()}{EUSART\_Transmit\_ISR()}}
+{\footnotesize\ttfamily void E\+U\+S\+A\+R\+T\+\_\+\+Transmit\+\_\+\+I\+SR (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Maintains the driver\textquotesingle{}s transmitter state machine and implements its I\+SR. 
+
+This routine is used to maintain the driver\textquotesingle{}s internal transmitter state machine.\+This interrupt service routine is called when the state of the transmitter needs to be maintained in a non polled manner.
+
+@\+Preconditions \mbox{\hyperlink{eusart_8c_a3b17818bce44b045bfad135a0c19035b}{E\+U\+S\+A\+R\+T\+\_\+\+Initialize()}} function should have been called for the I\+SR to execute correctly.
+
+@\+Param None
+
+@\+Returns None 
+
+Definition at line 399 of file eusart.\+c.
+
+\mbox{\Hypertarget{eusart_8h_a69df9acb664d598e88c04f43b6fe01d2}\label{eusart_8h_a69df9acb664d598e88c04f43b6fe01d2}} 
+\index{eusart.h@{eusart.h}!EUSART\_Write@{EUSART\_Write}}
+\index{EUSART\_Write@{EUSART\_Write}!eusart.h@{eusart.h}}
+\doxysubsubsection{\texorpdfstring{EUSART\_Write()}{EUSART\_Write()}}
+{\footnotesize\ttfamily void E\+U\+S\+A\+R\+T\+\_\+\+Write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{tx\+Data }\end{DoxyParamCaption})}
+
+
+
+Writes a byte of data to the E\+U\+S\+A\+RT. 
+
+This routine writes a byte of data to the E\+U\+S\+A\+RT.
+
+@\+Preconditions \mbox{\hyperlink{eusart_8c_a3b17818bce44b045bfad135a0c19035b}{E\+U\+S\+A\+R\+T\+\_\+\+Initialize()}} function should have been called before calling this function. The transfer status should be checked to see if transmitter is not busy before calling this function.
+
+@\+Param tx\+Data -\/ Data byte to write to the E\+U\+S\+A\+RT
+
+@\+Returns None 
+
+Definition at line 355 of file eusart.\+c.
+
+\mbox{\Hypertarget{eusart_8h_a568ca472442675bf2af4a22a8cb310ee}\label{eusart_8h_a568ca472442675bf2af4a22a8cb310ee}} 
+\index{eusart.h@{eusart.h}!EUSART\_WriteString@{EUSART\_WriteString}}
+\index{EUSART\_WriteString@{EUSART\_WriteString}!eusart.h@{eusart.h}}
+\doxysubsubsection{\texorpdfstring{EUSART\_WriteString()}{EUSART\_WriteString()}}
+{\footnotesize\ttfamily void E\+U\+S\+A\+R\+T\+\_\+\+Write\+String (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 372 of file eusart.\+c.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{eusart_8h_a3651ec15b9061efd0c712b651e78d7bc}\label{eusart_8h_a3651ec15b9061efd0c712b651e78d7bc}} 
+\index{eusart.h@{eusart.h}!EUSART\_RxDefaultInterruptHandler@{EUSART\_RxDefaultInterruptHandler}}
+\index{EUSART\_RxDefaultInterruptHandler@{EUSART\_RxDefaultInterruptHandler}!eusart.h@{eusart.h}}
+\doxysubsubsection{\texorpdfstring{EUSART\_RxDefaultInterruptHandler}{EUSART\_RxDefaultInterruptHandler}}
+{\footnotesize\ttfamily void($\ast$ E\+U\+S\+A\+R\+T\+\_\+\+Rx\+Default\+Interrupt\+Handler) (void)\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 47 of file eusart.\+c.
+
+\mbox{\Hypertarget{eusart_8h_abe3fdf13584c6d28d21cfec80e8952ff}\label{eusart_8h_abe3fdf13584c6d28d21cfec80e8952ff}} 
+\index{eusart.h@{eusart.h}!EUSART\_TxDefaultInterruptHandler@{EUSART\_TxDefaultInterruptHandler}}
+\index{EUSART\_TxDefaultInterruptHandler@{EUSART\_TxDefaultInterruptHandler}!eusart.h@{eusart.h}}
+\doxysubsubsection{\texorpdfstring{EUSART\_TxDefaultInterruptHandler}{EUSART\_TxDefaultInterruptHandler}}
+{\footnotesize\ttfamily void($\ast$ E\+U\+S\+A\+R\+T\+\_\+\+Tx\+Default\+Interrupt\+Handler) (void)\hspace{0.3cm}{\ttfamily [extern]}}
+
+Section\+: E\+U\+S\+A\+RT A\+P\+Is 
+
+Definition at line 46 of file eusart.\+c.
+
+\mbox{\Hypertarget{eusart_8h_ad1141e46e98a21988d1631c6703fc6e2}\label{eusart_8h_ad1141e46e98a21988d1631c6703fc6e2}} 
+\index{eusart.h@{eusart.h}!eusartRxCount@{eusartRxCount}}
+\index{eusartRxCount@{eusartRxCount}!eusart.h@{eusart.h}}
+\doxysubsubsection{\texorpdfstring{eusartRxCount}{eusartRxCount}}
+{\footnotesize\ttfamily volatile uint8\+\_\+t eusart\+Rx\+Count\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 40 of file eusart.\+c.
+
+\mbox{\Hypertarget{eusart_8h_a314b84ad90becd9c37b405fac7e75631}\label{eusart_8h_a314b84ad90becd9c37b405fac7e75631}} 
+\index{eusart.h@{eusart.h}!eusartTxBufferRemaining@{eusartTxBufferRemaining}}
+\index{eusartTxBufferRemaining@{eusartTxBufferRemaining}!eusart.h@{eusart.h}}
+\doxysubsubsection{\texorpdfstring{eusartTxBufferRemaining}{eusartTxBufferRemaining}}
+{\footnotesize\ttfamily volatile uint8\+\_\+t eusart\+Tx\+Buffer\+Remaining\hspace{0.3cm}{\ttfamily [extern]}}
+
+Section\+: Global variables 
+
+Definition at line 34 of file eusart.\+c.
+

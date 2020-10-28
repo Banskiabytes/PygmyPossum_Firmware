@@ -1,3 +1,11 @@
+/** 
+ *  @file main.c
+ *  @brief main file to initialize components and initiate main loop
+ *
+ *  @author Thomas Evison
+ *
+ *  @date 28/10/2020
+ */
 
 /******************************************************************************/
 /* Files to Include                                                           */
@@ -19,10 +27,11 @@ void menuRun(void);
 /******************************************************************************/
 #define USB_POWERED true   // placeholder until PCB1.1 is complete
 
-/******************************************************************************/
-/* Main Program                                                               */
-
-/******************************************************************************/
+/**
+*  Main entry point of program
+*  @author Thomas Evison
+*  @date 28/10/2020
+*/
 void main(void) {
     /* setup hardware */
     Hardware_ConfigureOscillator(); // Configure the oscillator for the device
@@ -130,6 +139,11 @@ void main(void) {
 
 }
 
+/**
+ *  Outputs a brief message to serial
+ *  @author Thomas Evison
+ *  @date 28/10/2020
+ */
 void menuRun() {
     /* introduce yourself */
     EUSART_WriteString("PygmyPossum v1.1\n");

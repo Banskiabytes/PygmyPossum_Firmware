@@ -1,3 +1,12 @@
+/** 
+ *  @file pygmy.c
+ *  @brief Contains all functions and utilities to load settings and 
+ *  control the camera
+ *
+ *  @author Thomas Evison
+ *  @date 28/10/2020
+ */
+
 #include <xc.h>            /* XC8 General Include File */
 #include <stdint.h>        /* For uint8_t definition */
 #include <stdlib.h>        /* For uint8_t definition */
@@ -8,16 +17,21 @@
 #define USRPROG_START_MEM (uint8_t)128 /* address byte of EEPROM for user programs
 
 /* user defined types */
+
+/**
+ * Structure containing parameters for camera during event
+ */
 struct {
-    bool wakeCamera;        // wake camera after PIR event
-    uint8_t numOfSnaps;     // amount of pics to take after PIR event
-    uint16_t snapPeriod;    // ms - frequency of burst after event
-    uint8_t minEventPeriod; // s - minimum time before another shutter is trig
+    bool wakeCamera;        ///< wake camera after PIR event
+    uint8_t numOfSnaps;     ///< amount of pics to take after PIR event
+    uint16_t snapPeriod;    ///< ms - frequency of burst after event
+    uint8_t minEventPeriod; ///< s - minimum time before another shutter is trig
 } camParams;
 
-/*******************************************************************************
- * Pygmy_readDipSwitches() - reads values from dip switches and returns value as byte
- *******************************************************************************/
+/**
+ *  Reads hardware dip switches and resolves to an unsigned int.
+ *  @return The the dip switches setting as an unsigned integer
+ */
 uint8_t Pygmy_readDipSwitches() {
 
     // values inverted for active low switch w/ pull-up resistor
@@ -28,59 +42,62 @@ uint8_t Pygmy_readDipSwitches() {
     return dipSetting;
 }
 
-/*******************************************************************************
- * delay_ms() - ms delay funciton
- ******************************************************************************/
+/**
+ *  Crappy delay function to overcome __delay_ms() constraint 
+ *  of "inline delay argument must be constant"
+ *  @param milliseconds The time to delay in milliseconds
+ */
 void Pygmy_delay_ms(uint16_t milliseconds) {
 
-    /* crappy delay function to overcome __delay_ms() constraint
-     * of "inline delay argument must be constant"  */
+
     while (milliseconds > 0) {
         __delay_ms(1);
         milliseconds--;
     }
 }
 
-/*******************************************************************************
- * Pygmy_setCamParams() - setup camera timing parameters
- ******************************************************************************/
+/**
+ *  Setup camera timing parameters
+ *  @param dipSetting The current value of the hardware dip switches
+ */
 void Pygmy_setCamParams(uint8_t dipSetting) {
-    
-    uint8_t usrProgStartAddress = USRPROG_START_MEM + dipSetting*8;
-    
+
+    uint8_t usrProgStartAddress = USRPROG_START_MEM + dipSetting * 8;
+
     /* get the camera parameters from EEPROM */
     camParams.numOfSnaps = eeprom_read(usrProgStartAddress + 1);
-    
+
     /* snap period is stored across 2 bytes */
     uint8_t snapPeriodLSB = eeprom_read(usrProgStartAddress + 2);
     uint8_t snapPeriodMSB = eeprom_read(usrProgStartAddress + 3);
     camParams.snapPeriod = (snapPeriodMSB << 8) | snapPeriodLSB;
-    
+
     camParams.minEventPeriod = eeprom_read(usrProgStartAddress + 4);
 }
 
-/*******************************************************************************
- * Pygmy_handleMsg() - handle UART messages
- *******************************************************************************/
+/**
+ *  handle incomming UART messages
+ *  @param cmd 16 byte wide array, incoming packet from PC
+ */
 uint8_t * Pygmy_handleMsg(uint8_t cmd[]) {
 
     /* start crafting the response message */
     uint8_t response[16] = {0};
-    response[0] = 'R';    // standard response flag
-    response[1] = cmd[1]; // return the cmd code
+    response[0] = 'R'; ///< standard response flag
+    response[1] = cmd[1]; ///< return the cmd code
 
     /* get frame command */
     switch (cmd[1]) {
         case 'A': // get usr prog
-            response[2] = cmd[2]; 
+            response[2] = cmd[2];
             for (int i = 0; i < 8; i++) {
-                response[3+i] = (eeprom_read(USRPROG_START_MEM + cmd[2]*8 + i));
+                response[3 + i] = (eeprom_read(USRPROG_START_MEM + cmd[2]*8 + i));
             }
             break;
         case 'B': // set usr prog
-            response[2] = cmd[2]; 
+            response[2] = cmd[2];
             for (int i = 0; i < 8; i++) {
-                eeprom_write(USRPROG_START_MEM + cmd[2]*8 + i , cmd[3+i]);
+                eeprom_write(USRPROG_START_MEM + cmd[2]*8 + i, cmd[3 + i]);
             }
             break;
         case 'D': // get dip switches
@@ -92,7 +109,7 @@ uint8_t * Pygmy_handleMsg(uint8_t cmd[]) {
                 eeprom_write(USRPROG_START_MEM + (i * 8) + 1, 0x03); // numOfSnaps
                 eeprom_write(USRPROG_START_MEM + (i * 8) + 2, 0xE8); // snapPeriod LSB
                 eeprom_write(USRPROG_START_MEM + (i * 8) + 3, 0x03); // snapPeriod MSB
-                eeprom_write(USRPROG_START_MEM + (i * 8) + 4, 10);   // minEventPeriod
+                eeprom_write(USRPROG_START_MEM + (i * 8) + 4, 10); // minEventPeriod
                 eeprom_write(USRPROG_START_MEM + (i * 8) + 5, 0xFF); // undefined
                 eeprom_write(USRPROG_START_MEM + (i * 8) + 6, 0xFF); // undefined
                 eeprom_write(USRPROG_START_MEM + (i * 8) + 7, 0xFF); // undefined
@@ -105,9 +122,10 @@ uint8_t * Pygmy_handleMsg(uint8_t cmd[]) {
 
 }
 
-/*******************************************************************************
- * Pygmy_TriggeredPIR() - handle camera after motion event
- *******************************************************************************/
+/**
+ *  handle camera after motion event. Called in ISR() 
+ *  after change on PIR input pin
+ */
 void Pygmy_TriggeredPIR() {
 
     if (!PIR_PIN) {

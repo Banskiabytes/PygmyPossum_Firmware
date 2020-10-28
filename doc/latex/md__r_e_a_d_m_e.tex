@@ -1,0 +1,71 @@
+\href{https://github.com/tomevison/PYGMY/graphs/contributors}{\texttt{ }} \href{https://github.com/tomevison/repo/network/members}{\texttt{ }} \href{https://github.com/tomevison/repo/stargazers}{\texttt{ }} \href{https://github.com/EmbeddedEnvironmental/PygmyPossum_Firmware/issues}{\texttt{ }} \href{https://github.com/EmbeddedEnvironmental/PygmyPossum_Firmware/blob/master/LICENSE}{\texttt{ }} \href{https://www.linkedin.com/in/thomas-evison-87b27073/}{\texttt{ }}
+
+~\newline
+ 
+
+\href{https://github.com/tomevison/}{\texttt{  }}
+
+\doxysubsubsection*{The Pygmy Possum}
+
+
+
+P\+IR sensor for camera traps\hypertarget{md__r_e_a_d_m_e_autotoc_md0}{}\doxysubsection{Table of Contents}\label{md__r_e_a_d_m_e_autotoc_md0}
+
+\begin{DoxyItemize}
+\item \href{\#about-the-project}{\texttt{ About the Project}}
+\item \href{\#built-with}{\texttt{ Built With}}
+\item \href{\#usage}{\texttt{ Usage}}
+\item \href{\#license}{\texttt{ License}}
+\item \href{\#contact}{\texttt{ Contact}}
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysubsection{About The Project}\label{md__r_e_a_d_m_e_autotoc_md1}
+The Pygmy Possum is a battery powered P\+IR (Passive Infrared) sensor for triggering remote camera traps. 
+
+A camera trap is a remotely activated camera that is equipped with a motion sensor or an infrared sensor, or uses a light beam as a trigger. Camera trapping is a method for capturing wild animals on film when researchers are not present, and has been used in ecological research for decades. In addition to applications in hunting and wildlife viewing, research applications include studies of nest ecology, detection of rare species, estimation of population size and species richness, as well as research on habitat use and occupation of human-\/built structures.\href{https://en.wikipedia.org/wiki/Camera_trap}{\texttt{ 1}} \hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysubsubsection{How it works..}\label{md__r_e_a_d_m_e_autotoc_md2}
+The Pygmy Possum is based on an 8 bit P\+IC microcontroller and custom P\+CB ~\newline
+ Firmware is written in C (standard C99). The compiler being used is X\+C8 v2.\+30 by Microchip. 
+
+The microcontroller will instantly enter a sleep state to minimise current consumtion. The output from the H\+S-\/\+S\+R501 module is connected to an input pin on the M\+CU, A rising edge on this input will trigger an interrupt on the M\+CU, and wake it from sleep. In the interrupt service routine, the Pygmy Possum will read the settings from the D\+IP switches and send pulses to the output optocoupler. This ensures that the camera circuit is completely isolated from the Pygmy Possum circuit. The optocoupler will short the Tip to the Sheath of the T\+RS audio Jack. This will activate the shutter release on the connected camera. \hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysubsection{Built With}\label{md__r_e_a_d_m_e_autotoc_md3}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxyparagraph{Hardware\+:}\label{md__r_e_a_d_m_e_autotoc_md4}
+
+\begin{DoxyItemize}
+\item \href{https://www.microchip.com/PIC16F18313}{\texttt{ Microchip P\+I\+C16\+F18313}} 8-\/bit M\+CU
+\item \href{https://lastminuteengineers.com/pir-sensor-arduino-tutorial/}{\texttt{ H\+C-\/\+S\+R501 P\+IR module}} low-\/cost passive infrared sensor board
+\item \href{https://www.microchip.com/PICKIT4}{\texttt{ Microchip P\+I\+C\+Kit4}} programmer 
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxyparagraph{Software\+:}\label{md__r_e_a_d_m_e_autotoc_md5}
+
+\begin{DoxyItemize}
+\item \href{https://www.microchip.com/mplab/mplab-x-ide}{\texttt{ M\+P\+L\+AB X I\+DE v5.\+40}}
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md6}{}\doxysubsection{Usage}\label{md__r_e_a_d_m_e_autotoc_md6}
+Set the D\+IP switches on the front of the board to select a pre-\/programmed package. Currently there are 8 hard-\/coded packages that can be selected. Each package write values into the {\ttfamily cam\+Params} Struct for\+:
+\begin{DoxyItemize}
+\item {\ttfamily num\+Of\+Snaps} -\/ Number of Shots to take after a Event
+\item {\ttfamily snap\+Period} -\/ Time Between Shots (ms)
+\item {\ttfamily min\+Event\+Period} -\/ Minimum time between Events (s)
+\end{DoxyItemize}
+
+The default D\+IP settings are as follows\+: \tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{7}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ D\+I\+P3  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ D\+I\+P2  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ D\+I\+P1  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Package Number  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\ttfamily num\+Of\+Snaps}  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\ttfamily snap\+Period (ms)}  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\ttfamily min\+Event\+Period (s)}   }\\\cline{1-7}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ D\+I\+P3  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ D\+I\+P2  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ D\+I\+P1  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Package Number  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\ttfamily num\+Of\+Snaps}  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\ttfamily snap\+Period (ms)}  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\ttfamily min\+Event\+Period (s)}   }\\\cline{1-7}
+\endhead
+\PBS\centering 0  &\PBS\centering 0  &\PBS\centering 0  &\PBS\centering 0  &\PBS\centering 3  &\PBS\centering 50  &\PBS\centering 10   \\\cline{1-7}
+\PBS\centering 0  &\PBS\centering 0  &\PBS\centering 1  &\PBS\centering 1  &\PBS\centering 3  &\PBS\centering 100  &\PBS\centering 10   \\\cline{1-7}
+\PBS\centering 0  &\PBS\centering 1  &\PBS\centering 0  &\PBS\centering 2  &\PBS\centering 3  &\PBS\centering 250  &\PBS\centering 10   \\\cline{1-7}
+\PBS\centering 0  &\PBS\centering 1  &\PBS\centering 1  &\PBS\centering 3  &\PBS\centering 3  &\PBS\centering 500  &\PBS\centering 10   \\\cline{1-7}
+\PBS\centering 1  &\PBS\centering 0  &\PBS\centering 0  &\PBS\centering 4  &\PBS\centering 3  &\PBS\centering 750  &\PBS\centering 10   \\\cline{1-7}
+\PBS\centering 1  &\PBS\centering 0  &\PBS\centering 1  &\PBS\centering 5  &\PBS\centering 3  &\PBS\centering 1000  &\PBS\centering 10   \\\cline{1-7}
+\PBS\centering 1  &\PBS\centering 1  &\PBS\centering 0  &\PBS\centering 6  &\PBS\centering 3  &\PBS\centering 1500  &\PBS\centering 10   \\\cline{1-7}
+\PBS\centering 1  &\PBS\centering 1  &\PBS\centering 1  &\PBS\centering 7  &\PBS\centering 3  &\PBS\centering 3000  &\PBS\centering 10   \\\cline{1-7}
+\end{longtabu}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysubsection{License}\label{md__r_e_a_d_m_e_autotoc_md7}
+Distributed under the M\+IT License. See {\ttfamily L\+I\+C\+E\+N\+SE} for more information.\hypertarget{md__r_e_a_d_m_e_autotoc_md8}{}\doxysubsection{Contact}\label{md__r_e_a_d_m_e_autotoc_md8}
+
+\begin{DoxyItemize}
+\item Tom Evison -\/ \href{mailto:tom@evisonengineering.com.au}{\texttt{ tom@evisonengineering.\+com.\+au}}
+\item James Lidsey -\/ \href{mailto:james.lidsey93@gmail.com}{\texttt{ james.\+lidsey93@gmail.\+com}} 
+\end{DoxyItemize}

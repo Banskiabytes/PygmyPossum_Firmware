@@ -1,5 +1,10 @@
-\doxysection{src/interrupts.c File Reference}
-\label{interrupts_8c}\index{src/interrupts.c@{src/interrupts.c}}
+\hypertarget{interrupts_8c}{}\doxysection{C\+:/\+Users/me/\+Google Drive/1. Projects/15\+\_\+\+C\+A\+M\+E\+R\+A\+\_\+\+T\+R\+A\+P/02\+\_\+\+F\+I\+R\+M\+W\+A\+R\+E/\+P\+Y\+G\+M\+Y\+\_\+\+P\+O\+S\+S\+UM.X/src/interrupts.c File Reference}
+\label{interrupts_8c}\index{C:/Users/me/Google Drive/1. Projects/15\_CAMERA\_TRAP/02\_FIRMWARE/PYGMY\_POSSUM.X/src/interrupts.c@{C:/Users/me/Google Drive/1. Projects/15\_CAMERA\_TRAP/02\_FIRMWARE/PYGMY\_POSSUM.X/src/interrupts.c}}
+
+
+interrupt handler for all interrupt triggers  
+
+
 {\ttfamily \#include $<$xc.\+h$>$}\newline
 {\ttfamily \#include $<$stdint.\+h$>$}\newline
 {\ttfamily \#include $<$stdbool.\+h$>$}\newline
@@ -9,44 +14,65 @@
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \textbf{ U\+A\+R\+T\+\_\+send\+String} (char[$\,$])
+void \mbox{\hyperlink{interrupts_8c_a0d3bb90369d8379591d6711ccea5b771}{U\+A\+R\+T\+\_\+send\+String}} (char\mbox{[}$\,$\mbox{]})
 \item 
-void \textbf{ U\+A\+R\+T\+\_\+send\+Byte} (uint8\+\_\+t)
+void \mbox{\hyperlink{interrupts_8c_a51aac80b07877caa7119456c30f255ec}{U\+A\+R\+T\+\_\+send\+Byte}} (uint8\+\_\+t)
 \item 
-void \textbf{ \+\_\+\+\_\+interrupt} () isr(void)
+void \mbox{\hyperlink{interrupts_8c_a4e0a46b9474f02713855286ac17dac6d}{\+\_\+\+\_\+interrupt}} () isr(void)
 \end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-volatile uint8\+\_\+t \textbf{ array} [16]
+volatile uint8\+\_\+t \mbox{\hyperlink{interrupts_8c_a0080c9a58740f47f7d7f66aa4d624849}{array}} \mbox{[}16\mbox{]}
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+interrupt handler for all interrupt triggers 
+
+\begin{DoxyAuthor}{Author}
+Thomas Evison 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+28/10/2020 
+\end{DoxyDate}
+
+
 \doxysubsection{Function Documentation}
-\mbox{\label{interrupts_8c_a4e0a46b9474f02713855286ac17dac6d}} 
+\mbox{\Hypertarget{interrupts_8c_a4e0a46b9474f02713855286ac17dac6d}\label{interrupts_8c_a4e0a46b9474f02713855286ac17dac6d}} 
 \index{interrupts.c@{interrupts.c}!\_\_interrupt@{\_\_interrupt}}
 \index{\_\_interrupt@{\_\_interrupt}!interrupts.c@{interrupts.c}}
-\doxysubsubsection{\_\_interrupt()}
+\doxysubsubsection{\texorpdfstring{\_\_interrupt()}{\_\_interrupt()}}
 {\footnotesize\ttfamily void \+\_\+\+\_\+interrupt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\label{interrupts_8c_a51aac80b07877caa7119456c30f255ec}} 
+Interrupt handler -\/ first checks which flags have been set, then will call corresponding interrupt subroutine \begin{DoxyAuthor}{Author}
+Thomas Evison 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+28/10/2020 
+\end{DoxyDate}
+
+
+Definition at line 30 of file interrupts.\+c.
+
+\mbox{\Hypertarget{interrupts_8c_a51aac80b07877caa7119456c30f255ec}\label{interrupts_8c_a51aac80b07877caa7119456c30f255ec}} 
 \index{interrupts.c@{interrupts.c}!UART\_sendByte@{UART\_sendByte}}
 \index{UART\_sendByte@{UART\_sendByte}!interrupts.c@{interrupts.c}}
-\doxysubsubsection{UART\_sendByte()}
+\doxysubsubsection{\texorpdfstring{UART\_sendByte()}{UART\_sendByte()}}
 {\footnotesize\ttfamily void U\+A\+R\+T\+\_\+send\+Byte (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{ }\end{DoxyParamCaption})}
 
-\mbox{\label{interrupts_8c_a0d3bb90369d8379591d6711ccea5b771}} 
+\mbox{\Hypertarget{interrupts_8c_a0d3bb90369d8379591d6711ccea5b771}\label{interrupts_8c_a0d3bb90369d8379591d6711ccea5b771}} 
 \index{interrupts.c@{interrupts.c}!UART\_sendString@{UART\_sendString}}
 \index{UART\_sendString@{UART\_sendString}!interrupts.c@{interrupts.c}}
-\doxysubsubsection{UART\_sendString()}
-{\footnotesize\ttfamily void U\+A\+R\+T\+\_\+send\+String (\begin{DoxyParamCaption}\item[{char}]{[$\,$] }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{UART\_sendString()}{UART\_sendString()}}
+{\footnotesize\ttfamily void U\+A\+R\+T\+\_\+send\+String (\begin{DoxyParamCaption}\item[{char}]{\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
 
 
 
 \doxysubsection{Variable Documentation}
-\mbox{\label{interrupts_8c_a0080c9a58740f47f7d7f66aa4d624849}} 
+\mbox{\Hypertarget{interrupts_8c_a0080c9a58740f47f7d7f66aa4d624849}\label{interrupts_8c_a0080c9a58740f47f7d7f66aa4d624849}} 
 \index{interrupts.c@{interrupts.c}!array@{array}}
 \index{array@{array}!interrupts.c@{interrupts.c}}
-\doxysubsubsection{array}
-{\footnotesize\ttfamily volatile uint8\+\_\+t array[16]\hspace{0.3cm}{\ttfamily [extern]}}
+\doxysubsubsection{\texorpdfstring{array}{array}}
+{\footnotesize\ttfamily volatile uint8\+\_\+t array\mbox{[}16\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
 

@@ -5,10 +5,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Pygmy Possum: src/eusart.c File Reference</title>
+<title>PygmyPossum_Firmware: C:/Users/me/Google Drive/1. Projects/15_CAMERA_TRAP/02_FIRMWARE/PYGMY_POSSUM.X/src/eusart.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -21,10 +25,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Pygmy Possum
-   &#160;<span id="projectnumber">v1.1</span>
+   <div id="projectname">PygmyPossum_Firmware
+   &#160;<span id="projectnumber">1.1</span>
    </div>
-   <div id="projectbrief">PIR sensor for camera traps</div>
+   <div id="projectbrief">A configurable PIR sensor for remote wildlife photography</div>
   </td>
  </tr>
  </tbody>
@@ -47,6 +51,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('eusart_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -61,11 +82,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
@@ -75,9 +91,14 @@ $(function() {
 <div class="title">eusart.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;eusart.h&quot;</code><br />
+
+<p>EUSART Generated Driver API Header File.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="eusart_8h_source.html">eusart.h</a>&quot;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
-</div><table class="memberdecls">
+</div>
+<p><a href="eusart_8c_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a09ddd159876c86ef8111c5940da77075"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eusart_8c.html#a09ddd159876c86ef8111c5940da77075">EUSART_TX_BUFFER_SIZE</a>&#160;&#160;&#160;8</td></tr>
@@ -94,36 +115,51 @@ Functions</h2></td></tr>
 <tr class="memitem:a82981005ba8785fdb6218240729f581a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eusart_8c.html#a82981005ba8785fdb6218240729f581a">EUSART_DefaultErrorHandler</a> (void)</td></tr>
 <tr class="separator:a82981005ba8785fdb6218240729f581a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b17818bce44b045bfad135a0c19035b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eusart_8c.html#a3b17818bce44b045bfad135a0c19035b">EUSART_Initialize</a> (void)</td></tr>
+<tr class="memdesc:a3b17818bce44b045bfad135a0c19035b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization routine that takes inputs from the EUSART GUI.  <a href="eusart_8c.html#a3b17818bce44b045bfad135a0c19035b">More...</a><br /></td></tr>
 <tr class="separator:a3b17818bce44b045bfad135a0c19035b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5910980b8fabd42cf735bd4d9c698810"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eusart_8c.html#a5910980b8fabd42cf735bd4d9c698810">EUSART_is_tx_ready</a> (void)</td></tr>
+<tr class="memdesc:a5910980b8fabd42cf735bd4d9c698810"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the EUSART receiver ready for reading.  <a href="eusart_8c.html#a5910980b8fabd42cf735bd4d9c698810">More...</a><br /></td></tr>
 <tr class="separator:a5910980b8fabd42cf735bd4d9c698810"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1428fbfafd1b08c0910b037ccae9aa09"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eusart_8c.html#a1428fbfafd1b08c0910b037ccae9aa09">EUSART_is_rx_ready</a> (void)</td></tr>
+<tr class="memdesc:a1428fbfafd1b08c0910b037ccae9aa09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the EUSART receiver ready for reading.  <a href="eusart_8c.html#a1428fbfafd1b08c0910b037ccae9aa09">More...</a><br /></td></tr>
 <tr class="separator:a1428fbfafd1b08c0910b037ccae9aa09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5573b761c39dd9ce6ed8fd961a37a389"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eusart_8c.html#a5573b761c39dd9ce6ed8fd961a37a389">EUSART_is_tx_done</a> (void)</td></tr>
+<tr class="memdesc:a5573b761c39dd9ce6ed8fd961a37a389"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if EUSART data is transmitted.  <a href="eusart_8c.html#a5573b761c39dd9ce6ed8fd961a37a389">More...</a><br /></td></tr>
 <tr class="separator:a5573b761c39dd9ce6ed8fd961a37a389"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8fb7d6b27e983f5aaa0555c746aafe42"><td class="memItemLeft" align="right" valign="top">eusart_status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eusart_8c.html#a8fb7d6b27e983f5aaa0555c746aafe42">EUSART_get_last_status</a> (void)</td></tr>
+<tr class="memitem:a8fb7d6b27e983f5aaa0555c746aafe42"><td class="memItemLeft" align="right" valign="top"><a class="el" href="unioneusart__status__t.html">eusart_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eusart_8c.html#a8fb7d6b27e983f5aaa0555c746aafe42">EUSART_get_last_status</a> (void)</td></tr>
+<tr class="memdesc:a8fb7d6b27e983f5aaa0555c746aafe42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the error status of the last read byte.  <a href="eusart_8c.html#a8fb7d6b27e983f5aaa0555c746aafe42">More...</a><br /></td></tr>
 <tr class="separator:a8fb7d6b27e983f5aaa0555c746aafe42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1f0c4e5aabff2a4c28fc3e6a8cf8776"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eusart_8c.html#ae1f0c4e5aabff2a4c28fc3e6a8cf8776">EUSART_Read</a> (void)</td></tr>
+<tr class="memdesc:ae1f0c4e5aabff2a4c28fc3e6a8cf8776"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a byte of data from the EUSART.  <a href="eusart_8c.html#ae1f0c4e5aabff2a4c28fc3e6a8cf8776">More...</a><br /></td></tr>
 <tr class="separator:ae1f0c4e5aabff2a4c28fc3e6a8cf8776"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69df9acb664d598e88c04f43b6fe01d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eusart_8c.html#a69df9acb664d598e88c04f43b6fe01d2">EUSART_Write</a> (uint8_t txData)</td></tr>
+<tr class="memdesc:a69df9acb664d598e88c04f43b6fe01d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a byte of data to the EUSART.  <a href="eusart_8c.html#a69df9acb664d598e88c04f43b6fe01d2">More...</a><br /></td></tr>
 <tr class="separator:a69df9acb664d598e88c04f43b6fe01d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad02bb7b226016c09e0e954cfb7c029e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eusart_8c.html#ad02bb7b226016c09e0e954cfb7c029e5">EUSART_WriteString</a> (uint8_t txData[])</td></tr>
 <tr class="separator:ad02bb7b226016c09e0e954cfb7c029e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73c7eafa180dc956f243b62f5e5940ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eusart_8c.html#a73c7eafa180dc956f243b62f5e5940ea">EUSART_Transmit_ISR</a> (void)</td></tr>
+<tr class="memdesc:a73c7eafa180dc956f243b62f5e5940ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maintains the driver's transmitter state machine and implements its ISR.  <a href="eusart_8c.html#a73c7eafa180dc956f243b62f5e5940ea">More...</a><br /></td></tr>
 <tr class="separator:a73c7eafa180dc956f243b62f5e5940ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93b60ea3d97e878e0eb272f5d6f6d157"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eusart_8c.html#a93b60ea3d97e878e0eb272f5d6f6d157">EUSART_Receive_ISR</a> (void)</td></tr>
+<tr class="memdesc:a93b60ea3d97e878e0eb272f5d6f6d157"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maintains the driver's receiver state machine and implements its ISR.  <a href="eusart_8c.html#a93b60ea3d97e878e0eb272f5d6f6d157">More...</a><br /></td></tr>
 <tr class="separator:a93b60ea3d97e878e0eb272f5d6f6d157"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86ea148223309645a07a8d7c0f9d6dd9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eusart_8c.html#a86ea148223309645a07a8d7c0f9d6dd9">EUSART_RxDataHandler</a> (void)</td></tr>
+<tr class="memdesc:a86ea148223309645a07a8d7c0f9d6dd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maintains the driver's receiver state machine.  <a href="eusart_8c.html#a86ea148223309645a07a8d7c0f9d6dd9">More...</a><br /></td></tr>
 <tr class="separator:a86ea148223309645a07a8d7c0f9d6dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53ca91908219b70dd25a97e38096a90a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eusart_8c.html#a53ca91908219b70dd25a97e38096a90a">EUSART_SetFramingErrorHandler</a> (void(*interruptHandler)(void))</td></tr>
+<tr class="memdesc:a53ca91908219b70dd25a97e38096a90a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set EUSART Framing Error Handler.  <a href="eusart_8c.html#a53ca91908219b70dd25a97e38096a90a">More...</a><br /></td></tr>
 <tr class="separator:a53ca91908219b70dd25a97e38096a90a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20e02c3fcd9453f6e7a004960e404eaf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eusart_8c.html#a20e02c3fcd9453f6e7a004960e404eaf">EUSART_SetOverrunErrorHandler</a> (void(*interruptHandler)(void))</td></tr>
+<tr class="memdesc:a20e02c3fcd9453f6e7a004960e404eaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set EUSART Overrun Error Handler.  <a href="eusart_8c.html#a20e02c3fcd9453f6e7a004960e404eaf">More...</a><br /></td></tr>
 <tr class="separator:a20e02c3fcd9453f6e7a004960e404eaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88d68cb5f802bf2094a5448a1584c6a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eusart_8c.html#a88d68cb5f802bf2094a5448a1584c6a7">EUSART_SetErrorHandler</a> (void(*interruptHandler)(void))</td></tr>
+<tr class="memdesc:a88d68cb5f802bf2094a5448a1584c6a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set EUSART Error Handler.  <a href="eusart_8c.html#a88d68cb5f802bf2094a5448a1584c6a7">More...</a><br /></td></tr>
 <tr class="separator:a88d68cb5f802bf2094a5448a1584c6a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d1238da4b95ebe3347b72d9670c0b39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eusart_8c.html#a5d1238da4b95ebe3347b72d9670c0b39">EUSART_SetTxInterruptHandler</a> (void(*interruptHandler)(void))</td></tr>
+<tr class="memdesc:a5d1238da4b95ebe3347b72d9670c0b39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the transmit handler function to be called by the interrupt service.  <a href="eusart_8c.html#a5d1238da4b95ebe3347b72d9670c0b39">More...</a><br /></td></tr>
 <tr class="separator:a5d1238da4b95ebe3347b72d9670c0b39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad88c54f3ebb7d88022d0412b69a689f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eusart_8c.html#ad88c54f3ebb7d88022d0412b69a689f0">EUSART_SetRxInterruptHandler</a> (void(*interruptHandler)(void))</td></tr>
+<tr class="memdesc:ad88c54f3ebb7d88022d0412b69a689f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the receive handler function to be called by the interrupt service.  <a href="eusart_8c.html#ad88c54f3ebb7d88022d0412b69a689f0">More...</a><br /></td></tr>
 <tr class="separator:ad88c54f3ebb7d88022d0412b69a689f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
@@ -142,11 +178,11 @@ Variables</h2></td></tr>
 <tr class="separator:acb2de90528d7a6d8c507e3ba3181b106"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55acb457979fcaae6342d0c4587ff150"><td class="memItemLeft" align="right" valign="top">volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eusart_8c.html#a55acb457979fcaae6342d0c4587ff150">eusartRxBuffer</a> [<a class="el" href="eusart_8c.html#a0b6e850d4781b01f5d53665293956271">EUSART_RX_BUFFER_SIZE</a>]</td></tr>
 <tr class="separator:a55acb457979fcaae6342d0c4587ff150"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0389a79c41bb85da57508c95f934e124"><td class="memItemLeft" align="right" valign="top">volatile eusart_status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eusart_8c.html#a0389a79c41bb85da57508c95f934e124">eusartRxStatusBuffer</a> [<a class="el" href="eusart_8c.html#a0b6e850d4781b01f5d53665293956271">EUSART_RX_BUFFER_SIZE</a>]</td></tr>
+<tr class="memitem:a0389a79c41bb85da57508c95f934e124"><td class="memItemLeft" align="right" valign="top">volatile <a class="el" href="unioneusart__status__t.html">eusart_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eusart_8c.html#a0389a79c41bb85da57508c95f934e124">eusartRxStatusBuffer</a> [<a class="el" href="eusart_8c.html#a0b6e850d4781b01f5d53665293956271">EUSART_RX_BUFFER_SIZE</a>]</td></tr>
 <tr class="separator:a0389a79c41bb85da57508c95f934e124"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1141e46e98a21988d1631c6703fc6e2"><td class="memItemLeft" align="right" valign="top">volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eusart_8c.html#ad1141e46e98a21988d1631c6703fc6e2">eusartRxCount</a></td></tr>
 <tr class="separator:ad1141e46e98a21988d1631c6703fc6e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace795e2ac1da3daf709734104e3e67ca"><td class="memItemLeft" align="right" valign="top">volatile eusart_status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eusart_8c.html#ace795e2ac1da3daf709734104e3e67ca">eusartRxLastError</a></td></tr>
+<tr class="memitem:ace795e2ac1da3daf709734104e3e67ca"><td class="memItemLeft" align="right" valign="top">volatile <a class="el" href="unioneusart__status__t.html">eusart_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eusart_8c.html#ace795e2ac1da3daf709734104e3e67ca">eusartRxLastError</a></td></tr>
 <tr class="separator:ace795e2ac1da3daf709734104e3e67ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe3fdf13584c6d28d21cfec80e8952ff"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eusart_8c.html#abe3fdf13584c6d28d21cfec80e8952ff">EUSART_TxDefaultInterruptHandler</a> )(void)</td></tr>
 <tr class="separator:abe3fdf13584c6d28d21cfec80e8952ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -159,7 +195,15 @@ Variables</h2></td></tr>
 <tr class="memitem:a9e4dd138728f4ad66b8f3de80b433ffa"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eusart_8c.html#a9e4dd138728f4ad66b8f3de80b433ffa">EUSART_ErrorHandler</a> )(void)</td></tr>
 <tr class="separator:a9e4dd138728f4ad66b8f3de80b433ffa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>EUSART Generated Driver API Header File. </p>
+<dl class="section author"><dt>Author</dt><dd>Microchip Technology Inc. </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>28/10/2020</dd></dl>
+<p>This is the generated header file for the EUSART driver using PIC10 / PIC12 / PIC16 / PIC18 MCUs</p>
+<p>This header file provides APIs for driver for EUSART. Generation Information : Product Revision : PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.6 Device : PIC16F18313 Driver Version : 2.1.0 The generated drivers are tested against the following: Compiler : XC8 2.30 and above MPLAB : MPLAB X 5.40 </p>
+
+<p class="definition">Definition in file <a class="el" href="eusart_8c_source.html">eusart.c</a>.</p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a0b6e850d4781b01f5d53665293956271"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0b6e850d4781b01f5d53665293956271">&#9670;&nbsp;</a></span>EUSART_RX_BUFFER_SIZE</h2>
 
@@ -171,6 +215,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="eusart_8c_source.html#l00026">26</a> of file <a class="el" href="eusart_8c_source.html">eusart.c</a>.</p>
 
 </div>
 </div>
@@ -185,6 +231,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="eusart_8c_source.html#l00025">25</a> of file <a class="el" href="eusart_8c_source.html">eusart.c</a>.</p>
 
 </div>
 </div>
@@ -205,6 +253,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="eusart_8c_source.html#l00494">494</a> of file <a class="el" href="eusart_8c_source.html">eusart.c</a>.</p>
+
 </div>
 </div>
 <a id="a6028a5ab71d288d9cea053a61a9f5c28"></a>
@@ -222,6 +272,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="eusart_8c_source.html#l00483">483</a> of file <a class="el" href="eusart_8c_source.html">eusart.c</a>.</p>
 
 </div>
 </div>
@@ -241,6 +293,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="eusart_8c_source.html#l00486">486</a> of file <a class="el" href="eusart_8c_source.html">eusart.c</a>.</p>
+
 </div>
 </div>
 <a id="a8fb7d6b27e983f5aaa0555c746aafe42"></a>
@@ -250,7 +304,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">eusart_status_t EUSART_get_last_status </td>
+          <td class="memname"><a class="el" href="unioneusart__status__t.html">eusart_status_t</a> EUSART_get_last_status </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -258,6 +312,18 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Gets the error status of the last read byte. </p>
+<pre class="fragment">This routine gets the error status of the last read byte.
+</pre><p>@Preconditions <a class="el" href="eusart_8c.html#a3b17818bce44b045bfad135a0c19035b" title="Initialization routine that takes inputs from the EUSART GUI.">EUSART_Initialize()</a> function should have been called before calling this function. The returned value is only updated after a read is called.</p>
+<p>@Param None</p>
+<p>@Returns the status of the last read byte</p>
+<p>@Example <code> void <a class="el" href="main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667">main(void)</a> { volatile uint8_t rxData; volatile <a class="el" href="unioneusart__status__t.html">eusart_status_t</a> rxStatus;</code></p>
+<p><code>Initialize the device SYSTEM_Initialize();</code></p>
+<p><code>Enable the Global Interrupts INTERRUPT_GlobalInterruptEnable();</code></p>
+<p><code> while(1) { Logic to echo received data if(EUSART_is_rx_ready()) { rxData = <a class="el" href="eusart_8c.html#ae1f0c4e5aabff2a4c28fc3e6a8cf8776" title="Read a byte of data from the EUSART.">EUSART_Read()</a>; rxStatus = <a class="el" href="eusart_8c.html#a8fb7d6b27e983f5aaa0555c746aafe42" title="Gets the error status of the last read byte.">EUSART_get_last_status()</a>; if(rxStatus.ferr){ LED_0_SetHigh(); } } } } </code> </p>
+
+<p class="definition">Definition at line <a class="el" href="eusart_8c_source.html#l00296">296</a> of file <a class="el" href="eusart_8c_source.html">eusart.c</a>.</p>
 
 </div>
 </div>
@@ -277,6 +343,15 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Initialization routine that takes inputs from the EUSART GUI. </p>
+<p>This routine initializes the EUSART driver. This routine must be called before any other EUSART routine is called.</p>
+<p>@Preconditions None</p>
+<p>@Param None</p>
+<p>@Returns None</p>
+<p>@Comment </p>
+
+<p class="definition">Definition at line <a class="el" href="eusart_8c_source.html#l00077">77</a> of file <a class="el" href="eusart_8c_source.html">eusart.c</a>.</p>
+
 </div>
 </div>
 <a id="a1428fbfafd1b08c0910b037ccae9aa09"></a>
@@ -294,6 +369,18 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Checks if the EUSART receiver ready for reading. </p>
+<pre class="fragment">This routine checks if EUSART receiver has received data 
+and ready to be read
+</pre><p>@Preconditions <a class="el" href="eusart_8c.html#a3b17818bce44b045bfad135a0c19035b" title="Initialization routine that takes inputs from the EUSART GUI.">EUSART_Initialize()</a> function should be called before calling this function EUSART receiver should be enabled before calling this function</p>
+<p>@Param None</p>
+<p>@Returns Status of EUSART receiver TRUE: EUSART receiver is ready for reading FALSE: EUSART receiver is not ready for reading</p>
+<p>@Example <code> void <a class="el" href="main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667">main(void)</a> { volatile uint8_t rxData;</code></p>
+<p><code>Initialize the device SYSTEM_Initialize();</code></p>
+<p><code> while(1) { Logic to echo received data if(EUSART_is_rx_ready()) { rxData = UART1_Read(); if(EUSART_is_tx_ready()) { EUSART_Write(rxData); } } } } </code> </p>
+
+<p class="definition">Definition at line <a class="el" href="eusart_8c_source.html#l00197">197</a> of file <a class="el" href="eusart_8c_source.html">eusart.c</a>.</p>
 
 </div>
 </div>
@@ -313,6 +400,17 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Checks if EUSART data is transmitted. </p>
+<pre class="fragment">This function return the status of transmit shift register
+</pre><p>@Preconditions <a class="el" href="eusart_8c.html#a3b17818bce44b045bfad135a0c19035b" title="Initialization routine that takes inputs from the EUSART GUI.">EUSART_Initialize()</a> function should be called before calling this function EUSART transmitter should be enabled and EUSART_Write should be called before calling this function</p>
+<p>@Param None</p>
+<p>@Returns Status of EUSART receiver TRUE: Data completely shifted out if the USART shift register FALSE: Data is not completely shifted out of the shift register</p>
+<p>@Example <code> void <a class="el" href="main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667">main(void)</a> { volatile uint8_t rxData;</code></p>
+<p><code>Initialize the device SYSTEM_Initialize();</code></p>
+<p><code> while(1) { if(EUSART_is_tx_ready()) { LED_0_SetHigh(); EUSARTWrite(rxData); } if(<a class="el" href="eusart_8c.html#a5573b761c39dd9ce6ed8fd961a37a389" title="Checks if EUSART data is transmitted.">EUSART_is_tx_done()</a> { LED_0_SetLow(); } } } </code> </p>
+
+<p class="definition">Definition at line <a class="el" href="eusart_8c_source.html#l00246">246</a> of file <a class="el" href="eusart_8c_source.html">eusart.c</a>.</p>
+
 </div>
 </div>
 <a id="a5910980b8fabd42cf735bd4d9c698810"></a>
@@ -330,6 +428,17 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Checks if the EUSART receiver ready for reading. </p>
+<p>This routine checks if EUSART receiver has received data and ready to be read</p>
+<p>@Preconditions <a class="el" href="eusart_8c.html#a3b17818bce44b045bfad135a0c19035b" title="Initialization routine that takes inputs from the EUSART GUI.">EUSART_Initialize()</a> function should be called before calling this function EUSART receiver should be enabled before calling this function</p>
+<p>@Param None</p>
+<p>@Returns Status of EUSART receiver TRUE: EUSART receiver is ready for reading FALSE: EUSART receiver is not ready for reading</p>
+<p>@Example <code> void <a class="el" href="main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667">main(void)</a> { volatile uint8_t rxData;</code></p>
+<p><code>Initialize the device SYSTEM_Initialize();</code></p>
+<p><code> while(1) { Logic to echo received data if(EUSART_is_rx_ready()) { rxData = UART1_Read(); if(EUSART_is_tx_ready()) { EUSART_Write(rxData); } } } } </code> </p>
+
+<p class="definition">Definition at line <a class="el" href="eusart_8c_source.html#l00147">147</a> of file <a class="el" href="eusart_8c_source.html">eusart.c</a>.</p>
 
 </div>
 </div>
@@ -349,6 +458,14 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Read a byte of data from the EUSART. </p>
+<p>This routine reads a byte of data from the EUSART.</p>
+<p>@Preconditions <a class="el" href="eusart_8c.html#a3b17818bce44b045bfad135a0c19035b" title="Initialization routine that takes inputs from the EUSART GUI.">EUSART_Initialize()</a> function should have been called before calling this function. The transfer status should be checked to see if the receiver is not empty before calling this function.</p>
+<p>@Param None</p>
+<p>@Returns A data byte received by the driver. </p>
+
+<p class="definition">Definition at line <a class="el" href="eusart_8c_source.html#l00318">318</a> of file <a class="el" href="eusart_8c_source.html">eusart.c</a>.</p>
+
 </div>
 </div>
 <a id="a93b60ea3d97e878e0eb272f5d6f6d157"></a>
@@ -366,6 +483,14 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Maintains the driver's receiver state machine and implements its ISR. </p>
+<p>This routine is used to maintain the driver's internal receiver state machine.This interrupt service routine is called when the state of the receiver needs to be maintained in a non polled manner.</p>
+<p>@Preconditions <a class="el" href="eusart_8c.html#a3b17818bce44b045bfad135a0c19035b" title="Initialization routine that takes inputs from the EUSART GUI.">EUSART_Initialize()</a> function should have been called for the ISR to execute correctly.</p>
+<p>@Param None</p>
+<p>@Returns None </p>
+
+<p class="definition">Definition at line <a class="el" href="eusart_8c_source.html#l00432">432</a> of file <a class="el" href="eusart_8c_source.html">eusart.c</a>.</p>
 
 </div>
 </div>
@@ -385,6 +510,14 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Maintains the driver's receiver state machine. </p>
+<p>This routine is called by the receive state routine and is used to maintain the driver's internal receiver state machine. It should be called by a custom ISR to maintain normal behavior</p>
+<p>@Preconditions <a class="el" href="eusart_8c.html#a3b17818bce44b045bfad135a0c19035b" title="Initialization routine that takes inputs from the EUSART GUI.">EUSART_Initialize()</a> function should have been called for the ISR to execute correctly.</p>
+<p>@Param None</p>
+<p>@Returns None </p>
+
+<p class="definition">Definition at line <a class="el" href="eusart_8c_source.html#l00474">474</a> of file <a class="el" href="eusart_8c_source.html">eusart.c</a>.</p>
+
 </div>
 </div>
 <a id="a88d68cb5f802bf2094a5448a1584c6a7"></a>
@@ -402,6 +535,14 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Set EUSART Error Handler. </p>
+<p>This API sets the function to be called upon EUSART error</p>
+<p>@Preconditions Initialize the EUSART module before calling this API</p>
+<p>@Param Address of function to be set as error handler</p>
+<p>@Returns None </p>
+
+<p class="definition">Definition at line <a class="el" href="eusart_8c_source.html#l00554">554</a> of file <a class="el" href="eusart_8c_source.html">eusart.c</a>.</p>
 
 </div>
 </div>
@@ -421,6 +562,14 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Set EUSART Framing Error Handler. </p>
+<p>This API sets the function to be called upon EUSART framing error</p>
+<p>@Preconditions Initialize the EUSART before calling this API</p>
+<p>@Param Address of function to be set as framing error handler</p>
+<p>@Returns None </p>
+
+<p class="definition">Definition at line <a class="el" href="eusart_8c_source.html#l00514">514</a> of file <a class="el" href="eusart_8c_source.html">eusart.c</a>.</p>
+
 </div>
 </div>
 <a id="a20e02c3fcd9453f6e7a004960e404eaf"></a>
@@ -438,6 +587,14 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Set EUSART Overrun Error Handler. </p>
+<p>This API sets the function to be called upon EUSART overrun error</p>
+<p>@Preconditions Initialize the EUSART module before calling this API</p>
+<p>@Param Address of function to be set as overrun error handler</p>
+<p>@Returns None </p>
+
+<p class="definition">Definition at line <a class="el" href="eusart_8c_source.html#l00534">534</a> of file <a class="el" href="eusart_8c_source.html">eusart.c</a>.</p>
 
 </div>
 </div>
@@ -457,6 +614,14 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Sets the receive handler function to be called by the interrupt service. </p>
+<p>Calling this function will set a new custom function that will be called when the receive interrupt needs servicing.</p>
+<p>@Preconditions <a class="el" href="eusart_8c.html#a3b17818bce44b045bfad135a0c19035b" title="Initialization routine that takes inputs from the EUSART GUI.">EUSART_Initialize()</a> function should have been called for the ISR to execute correctly.</p>
+<p>@Param A pointer to the new function</p>
+<p>@Returns None </p>
+
+<p class="definition">Definition at line <a class="el" href="eusart_8c_source.html#l00598">598</a> of file <a class="el" href="eusart_8c_source.html">eusart.c</a>.</p>
+
 </div>
 </div>
 <a id="a5d1238da4b95ebe3347b72d9670c0b39"></a>
@@ -474,6 +639,14 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Sets the transmit handler function to be called by the interrupt service. </p>
+<p>Calling this function will set a new custom function that will be called when the transmit interrupt needs servicing.</p>
+<p>@Preconditions <a class="el" href="eusart_8c.html#a3b17818bce44b045bfad135a0c19035b" title="Initialization routine that takes inputs from the EUSART GUI.">EUSART_Initialize()</a> function should have been called for the ISR to execute correctly.</p>
+<p>@Param A pointer to the new function</p>
+<p>@Returns None </p>
+
+<p class="definition">Definition at line <a class="el" href="eusart_8c_source.html#l00576">576</a> of file <a class="el" href="eusart_8c_source.html">eusart.c</a>.</p>
 
 </div>
 </div>
@@ -493,6 +666,14 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Maintains the driver's transmitter state machine and implements its ISR. </p>
+<p>This routine is used to maintain the driver's internal transmitter state machine.This interrupt service routine is called when the state of the transmitter needs to be maintained in a non polled manner.</p>
+<p>@Preconditions <a class="el" href="eusart_8c.html#a3b17818bce44b045bfad135a0c19035b" title="Initialization routine that takes inputs from the EUSART GUI.">EUSART_Initialize()</a> function should have been called for the ISR to execute correctly.</p>
+<p>@Param None</p>
+<p>@Returns None </p>
+
+<p class="definition">Definition at line <a class="el" href="eusart_8c_source.html#l00399">399</a> of file <a class="el" href="eusart_8c_source.html">eusart.c</a>.</p>
+
 </div>
 </div>
 <a id="a69df9acb664d598e88c04f43b6fe01d2"></a>
@@ -510,6 +691,14 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Writes a byte of data to the EUSART. </p>
+<p>This routine writes a byte of data to the EUSART.</p>
+<p>@Preconditions <a class="el" href="eusart_8c.html#a3b17818bce44b045bfad135a0c19035b" title="Initialization routine that takes inputs from the EUSART GUI.">EUSART_Initialize()</a> function should have been called before calling this function. The transfer status should be checked to see if transmitter is not busy before calling this function.</p>
+<p>@Param txData - Data byte to write to the EUSART</p>
+<p>@Returns None </p>
+
+<p class="definition">Definition at line <a class="el" href="eusart_8c_source.html#l00355">355</a> of file <a class="el" href="eusart_8c_source.html">eusart.c</a>.</p>
 
 </div>
 </div>
@@ -529,6 +718,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="eusart_8c_source.html#l00372">372</a> of file <a class="el" href="eusart_8c_source.html">eusart.c</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
@@ -544,6 +735,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="eusart_8c_source.html#l00051">51</a> of file <a class="el" href="eusart_8c_source.html">eusart.c</a>.</p>
+
 </div>
 </div>
 <a id="a65c8c82041a47d5d9e47e9dfb10f22a7"></a>
@@ -557,6 +750,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="eusart_8c_source.html#l00049">49</a> of file <a class="el" href="eusart_8c_source.html">eusart.c</a>.</p>
 
 </div>
 </div>
@@ -572,6 +767,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="eusart_8c_source.html#l00050">50</a> of file <a class="el" href="eusart_8c_source.html">eusart.c</a>.</p>
+
 </div>
 </div>
 <a id="a3651ec15b9061efd0c712b651e78d7bc"></a>
@@ -585,6 +782,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="eusart_8c_source.html#l00047">47</a> of file <a class="el" href="eusart_8c_source.html">eusart.c</a>.</p>
 
 </div>
 </div>
@@ -601,6 +800,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>Section: EUSART APIs </p>
 
+<p class="definition">Definition at line <a class="el" href="eusart_8c_source.html#l00046">46</a> of file <a class="el" href="eusart_8c_source.html">eusart.c</a>.</p>
+
 </div>
 </div>
 <a id="a55acb457979fcaae6342d0c4587ff150"></a>
@@ -614,6 +815,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="eusart_8c_source.html#l00038">38</a> of file <a class="el" href="eusart_8c_source.html">eusart.c</a>.</p>
 
 </div>
 </div>
@@ -629,6 +832,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="eusart_8c_source.html#l00040">40</a> of file <a class="el" href="eusart_8c_source.html">eusart.c</a>.</p>
+
 </div>
 </div>
 <a id="a2a05583fcf64631114bbc194b2e700c8"></a>
@@ -643,6 +848,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="eusart_8c_source.html#l00036">36</a> of file <a class="el" href="eusart_8c_source.html">eusart.c</a>.</p>
+
 </div>
 </div>
 <a id="ace795e2ac1da3daf709734104e3e67ca"></a>
@@ -652,10 +859,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">volatile eusart_status_t eusartRxLastError</td>
+          <td class="memname">volatile <a class="el" href="unioneusart__status__t.html">eusart_status_t</a> eusartRxLastError</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="eusart_8c_source.html#l00041">41</a> of file <a class="el" href="eusart_8c_source.html">eusart.c</a>.</p>
 
 </div>
 </div>
@@ -666,10 +875,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">volatile eusart_status_t eusartRxStatusBuffer[<a class="el" href="eusart_8c.html#a0b6e850d4781b01f5d53665293956271">EUSART_RX_BUFFER_SIZE</a>]</td>
+          <td class="memname">volatile <a class="el" href="unioneusart__status__t.html">eusart_status_t</a> eusartRxStatusBuffer[<a class="el" href="eusart_8c.html#a0b6e850d4781b01f5d53665293956271">EUSART_RX_BUFFER_SIZE</a>]</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="eusart_8c_source.html#l00039">39</a> of file <a class="el" href="eusart_8c_source.html">eusart.c</a>.</p>
 
 </div>
 </div>
@@ -685,6 +896,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="eusart_8c_source.html#l00037">37</a> of file <a class="el" href="eusart_8c_source.html">eusart.c</a>.</p>
+
 </div>
 </div>
 <a id="ab9da0eaec1b719a098d61cf309103bf0"></a>
@@ -699,6 +912,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="eusart_8c_source.html#l00033">33</a> of file <a class="el" href="eusart_8c_source.html">eusart.c</a>.</p>
+
 </div>
 </div>
 <a id="a314b84ad90becd9c37b405fac7e75631"></a>
@@ -712,6 +927,9 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Section: Global variables </p>
+
+<p class="definition">Definition at line <a class="el" href="eusart_8c_source.html#l00034">34</a> of file <a class="el" href="eusart_8c_source.html">eusart.c</a>.</p>
 
 </div>
 </div>
@@ -728,6 +946,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>Section: Global Variables </p>
 
+<p class="definition">Definition at line <a class="el" href="eusart_8c_source.html#l00031">31</a> of file <a class="el" href="eusart_8c_source.html">eusart.c</a>.</p>
+
 </div>
 </div>
 <a id="abd12f86f07f6069551240cbc52fbd0b6"></a>
@@ -742,12 +962,18 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="eusart_8c_source.html#l00032">32</a> of file <a class="el" href="eusart_8c_source.html">eusart.c</a>.</p>
+
 </div>
 </div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="eusart_8c.html">eusart.c</a></li>
+    <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+  </ul>
+</div>
 </body>
 </html>

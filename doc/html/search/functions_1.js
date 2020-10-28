@@ -1,22 +1,4 @@
 var searchData=
 [
-  ['eusart_5fdefaulterrorhandler_65',['EUSART_DefaultErrorHandler',['../eusart_8c.html#a82981005ba8785fdb6218240729f581a',1,'eusart.c']]],
-  ['eusart_5fdefaultframingerrorhandler_66',['EUSART_DefaultFramingErrorHandler',['../eusart_8c.html#a6028a5ab71d288d9cea053a61a9f5c28',1,'eusart.c']]],
-  ['eusart_5fdefaultoverrunerrorhandler_67',['EUSART_DefaultOverrunErrorHandler',['../eusart_8c.html#ac62c19603a76dee7f6ec6686a6c3484e',1,'eusart.c']]],
-  ['eusart_5fget_5flast_5fstatus_68',['EUSART_get_last_status',['../eusart_8c.html#a8fb7d6b27e983f5aaa0555c746aafe42',1,'eusart.c']]],
-  ['eusart_5finitialize_69',['EUSART_Initialize',['../eusart_8c.html#a3b17818bce44b045bfad135a0c19035b',1,'eusart.c']]],
-  ['eusart_5fis_5frx_5fready_70',['EUSART_is_rx_ready',['../eusart_8c.html#a1428fbfafd1b08c0910b037ccae9aa09',1,'eusart.c']]],
-  ['eusart_5fis_5ftx_5fdone_71',['EUSART_is_tx_done',['../eusart_8c.html#a5573b761c39dd9ce6ed8fd961a37a389',1,'eusart.c']]],
-  ['eusart_5fis_5ftx_5fready_72',['EUSART_is_tx_ready',['../eusart_8c.html#a5910980b8fabd42cf735bd4d9c698810',1,'eusart.c']]],
-  ['eusart_5fread_73',['EUSART_Read',['../eusart_8c.html#ae1f0c4e5aabff2a4c28fc3e6a8cf8776',1,'eusart.c']]],
-  ['eusart_5freceive_5fisr_74',['EUSART_Receive_ISR',['../eusart_8c.html#a93b60ea3d97e878e0eb272f5d6f6d157',1,'eusart.c']]],
-  ['eusart_5frxdatahandler_75',['EUSART_RxDataHandler',['../eusart_8c.html#a86ea148223309645a07a8d7c0f9d6dd9',1,'eusart.c']]],
-  ['eusart_5fseterrorhandler_76',['EUSART_SetErrorHandler',['../eusart_8c.html#a88d68cb5f802bf2094a5448a1584c6a7',1,'eusart.c']]],
-  ['eusart_5fsetframingerrorhandler_77',['EUSART_SetFramingErrorHandler',['../eusart_8c.html#a53ca91908219b70dd25a97e38096a90a',1,'eusart.c']]],
-  ['eusart_5fsetoverrunerrorhandler_78',['EUSART_SetOverrunErrorHandler',['../eusart_8c.html#a20e02c3fcd9453f6e7a004960e404eaf',1,'eusart.c']]],
-  ['eusart_5fsetrxinterrupthandler_79',['EUSART_SetRxInterruptHandler',['../eusart_8c.html#ad88c54f3ebb7d88022d0412b69a689f0',1,'eusart.c']]],
-  ['eusart_5fsettxinterrupthandler_80',['EUSART_SetTxInterruptHandler',['../eusart_8c.html#a5d1238da4b95ebe3347b72d9670c0b39',1,'eusart.c']]],
-  ['eusart_5ftransmit_5fisr_81',['EUSART_Transmit_ISR',['../eusart_8c.html#a73c7eafa180dc956f243b62f5e5940ea',1,'eusart.c']]],
-  ['eusart_5fwrite_82',['EUSART_Write',['../eusart_8c.html#a69df9acb664d598e88c04f43b6fe01d2',1,'eusart.c']]],
-  ['eusart_5fwritestring_83',['EUSART_WriteString',['../eusart_8c.html#ad02bb7b226016c09e0e954cfb7c029e5',1,'eusart.c']]]
+  ['configureoscillator_98',['ConfigureOscillator',['../system_8h.html#a9cf05fad20cabd4ca4a12ab9b1c6e7ea',1,'system.h']]]
 ];

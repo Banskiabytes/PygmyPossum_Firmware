@@ -1,5 +1,10 @@
-\doxysection{src/hardware.c File Reference}
-\label{hardware_8c}\index{src/hardware.c@{src/hardware.c}}
+\hypertarget{hardware_8c}{}\doxysection{C\+:/\+Users/me/\+Google Drive/1. Projects/15\+\_\+\+C\+A\+M\+E\+R\+A\+\_\+\+T\+R\+A\+P/02\+\_\+\+F\+I\+R\+M\+W\+A\+R\+E/\+P\+Y\+G\+M\+Y\+\_\+\+P\+O\+S\+S\+UM.X/src/hardware.c File Reference}
+\label{hardware_8c}\index{C:/Users/me/Google Drive/1. Projects/15\_CAMERA\_TRAP/02\_FIRMWARE/PYGMY\_POSSUM.X/src/hardware.c@{C:/Users/me/Google Drive/1. Projects/15\_CAMERA\_TRAP/02\_FIRMWARE/PYGMY\_POSSUM.X/src/hardware.c}}
+
+
+Takes care of hardware initialisation.  
+
+
 {\ttfamily \#include $<$xc.\+h$>$}\newline
 {\ttfamily \#include $<$stdint.\+h$>$}\newline
 {\ttfamily \#include $<$stdbool.\+h$>$}\newline
@@ -9,46 +14,109 @@
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \textbf{ Hardware\+\_\+\+Configure\+Oscillator} ()
+void \mbox{\hyperlink{hardware_8c_a3ac20820f923265beeffdbccf121c51c}{Hardware\+\_\+\+Configure\+Oscillator}} ()
 \item 
-void \textbf{ Hardware\+\_\+init\+IO} ()
+void \mbox{\hyperlink{hardware_8c_a036b63c1d5a012fdfe888ee33c8c21b8}{Hardware\+\_\+init\+IO}} ()
 \item 
-void \textbf{ Hardware\+\_\+init\+U\+A\+RT} ()
+void \mbox{\hyperlink{hardware_8c_ad8bbba9aad39cf9e6b882dfa2e5be4e9}{Hardware\+\_\+init\+U\+A\+RT}} ()
 \item 
-void \textbf{ Hardware\+\_\+\+U\+A\+R\+Tsend\+Byte} (uint8\+\_\+t Tx)
+void \mbox{\hyperlink{hardware_8c_a74a219e58ec5ae80f7a651b52e761f9c}{Hardware\+\_\+\+U\+A\+R\+Tsend\+Byte}} (uint8\+\_\+t Tx)
 \item 
-void \textbf{ Hardware\+\_\+\+U\+A\+R\+Tsend\+String} (char Tx[$\,$])
+void \mbox{\hyperlink{hardware_8c_a51994b7ca858143dd0f3fb6f0f1e7950}{Hardware\+\_\+\+U\+A\+R\+Tsend\+String}} (char Tx\mbox{[}$\,$\mbox{]})
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+Takes care of hardware initialisation. 
+
+\begin{DoxyAuthor}{Author}
+Thomas Evison 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+28/10/2020
+\end{DoxyDate}
+\DoxyHorRuler{0}
+ Vdd $\vert$1 8$\vert$ G\+N\+D/\+V\+SS P\+IR sensor (in) G\+P5 $\vert$2 7$\vert$ G\+P0 (in) D\+I\+P3 S\+H\+U\+T\+T\+ER (out)G\+P4 $\vert$3 6$\vert$ G\+P1 (in) D\+I\+P1 \hypertarget{hardware_8c_autotoc_md10}{}\doxysubsubsection{(in) G\+P3 $\vert$4      5$\vert$ G\+P2 (in) D\+I\+P2}\label{hardware_8c_autotoc_md10}
+
+
 \doxysubsection{Function Documentation}
-\mbox{\label{hardware_8c_a3ac20820f923265beeffdbccf121c51c}} 
+\mbox{\Hypertarget{hardware_8c_a3ac20820f923265beeffdbccf121c51c}\label{hardware_8c_a3ac20820f923265beeffdbccf121c51c}} 
 \index{hardware.c@{hardware.c}!Hardware\_ConfigureOscillator@{Hardware\_ConfigureOscillator}}
 \index{Hardware\_ConfigureOscillator@{Hardware\_ConfigureOscillator}!hardware.c@{hardware.c}}
-\doxysubsubsection{Hardware\_ConfigureOscillator()}
-{\footnotesize\ttfamily void Hardware\+\_\+\+Configure\+Oscillator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{Hardware\_ConfigureOscillator()}{Hardware\_ConfigureOscillator()}}
+{\footnotesize\ttfamily void Hardware\+\_\+\+Configure\+Oscillator (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
-\mbox{\label{hardware_8c_a036b63c1d5a012fdfe888ee33c8c21b8}} 
+Setup oscillator \begin{DoxyAuthor}{Author}
+Thomas Evison 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+28/10/2020 
+\end{DoxyDate}
+
+
+Definition at line 31 of file hardware.\+c.
+
+\mbox{\Hypertarget{hardware_8c_a036b63c1d5a012fdfe888ee33c8c21b8}\label{hardware_8c_a036b63c1d5a012fdfe888ee33c8c21b8}} 
 \index{hardware.c@{hardware.c}!Hardware\_initIO@{Hardware\_initIO}}
 \index{Hardware\_initIO@{Hardware\_initIO}!hardware.c@{hardware.c}}
-\doxysubsubsection{Hardware\_initIO()}
-{\footnotesize\ttfamily void Hardware\+\_\+init\+IO (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{Hardware\_initIO()}{Hardware\_initIO()}}
+{\footnotesize\ttfamily void Hardware\+\_\+init\+IO (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
-\mbox{\label{hardware_8c_ad8bbba9aad39cf9e6b882dfa2e5be4e9}} 
+Initialize hardware registers to setup IO, Interrupts, etc \begin{DoxyAuthor}{Author}
+Thomas Evison 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+28/10/2020 
+\end{DoxyDate}
+
+
+Definition at line 45 of file hardware.\+c.
+
+\mbox{\Hypertarget{hardware_8c_ad8bbba9aad39cf9e6b882dfa2e5be4e9}\label{hardware_8c_ad8bbba9aad39cf9e6b882dfa2e5be4e9}} 
 \index{hardware.c@{hardware.c}!Hardware\_initUART@{Hardware\_initUART}}
 \index{Hardware\_initUART@{Hardware\_initUART}!hardware.c@{hardware.c}}
-\doxysubsubsection{Hardware\_initUART()}
-{\footnotesize\ttfamily void Hardware\+\_\+init\+U\+A\+RT (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{Hardware\_initUART()}{Hardware\_initUART()}}
+{\footnotesize\ttfamily void Hardware\+\_\+init\+U\+A\+RT (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
-\mbox{\label{hardware_8c_a74a219e58ec5ae80f7a651b52e761f9c}} 
+Initialize hardware U\+A\+RT \begin{DoxyAuthor}{Author}
+Thomas Evison 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+28/10/2020 
+\end{DoxyDate}
+
+
+Definition at line 77 of file hardware.\+c.
+
+\mbox{\Hypertarget{hardware_8c_a74a219e58ec5ae80f7a651b52e761f9c}\label{hardware_8c_a74a219e58ec5ae80f7a651b52e761f9c}} 
 \index{hardware.c@{hardware.c}!Hardware\_UARTsendByte@{Hardware\_UARTsendByte}}
 \index{Hardware\_UARTsendByte@{Hardware\_UARTsendByte}!hardware.c@{hardware.c}}
-\doxysubsubsection{Hardware\_UARTsendByte()}
+\doxysubsubsection{\texorpdfstring{Hardware\_UARTsendByte()}{Hardware\_UARTsendByte()}}
 {\footnotesize\ttfamily void Hardware\+\_\+\+U\+A\+R\+Tsend\+Byte (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Tx }\end{DoxyParamCaption})}
 
-\mbox{\label{hardware_8c_a51994b7ca858143dd0f3fb6f0f1e7950}} 
+Send a single byte via U\+A\+RT \begin{DoxyAuthor}{Author}
+Thomas Evison 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+28/10/2020 
+\end{DoxyDate}
+
+
+Definition at line 105 of file hardware.\+c.
+
+\mbox{\Hypertarget{hardware_8c_a51994b7ca858143dd0f3fb6f0f1e7950}\label{hardware_8c_a51994b7ca858143dd0f3fb6f0f1e7950}} 
 \index{hardware.c@{hardware.c}!Hardware\_UARTsendString@{Hardware\_UARTsendString}}
 \index{Hardware\_UARTsendString@{Hardware\_UARTsendString}!hardware.c@{hardware.c}}
-\doxysubsubsection{Hardware\_UARTsendString()}
-{\footnotesize\ttfamily void Hardware\+\_\+\+U\+A\+R\+Tsend\+String (\begin{DoxyParamCaption}\item[{char}]{Tx[$\,$] }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{Hardware\_UARTsendString()}{Hardware\_UARTsendString()}}
+{\footnotesize\ttfamily void Hardware\+\_\+\+U\+A\+R\+Tsend\+String (\begin{DoxyParamCaption}\item[{char}]{Tx\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Send string via hardware U\+A\+RT \begin{DoxyAuthor}{Author}
+Thomas Evison 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+28/10/2020 
+\end{DoxyDate}
+
+
+Definition at line 115 of file hardware.\+c.
 

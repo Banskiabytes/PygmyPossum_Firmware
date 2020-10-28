@@ -1,0 +1,319 @@
+\begin{theindex}
+
+  \item {\_XTAL\_FREQ}
+    \subitem {hardware.h}, \hyperpage{19}
+  \item {\_\_interrupt}
+    \subitem {interrupts.c}, \hyperpage{38}
+
+  \indexspace
+
+  \item {array}
+    \subitem {interrupts.c}, \hyperpage{39}
+
+  \indexspace
+
+  \item {ConfigureOscillator}
+    \subitem {system.h}, \hyperpage{24}
+
+  \indexspace
+
+  \item {DIP1\_PIN}
+    \subitem {hardware.h}, \hyperpage{20}
+  \item {DIP3\_PIN}
+    \subitem {hardware.h}, \hyperpage{20}
+
+  \indexspace
+
+  \item {eusart.c}
+    \subitem {EUSART\_DefaultErrorHandler}, \hyperpage{26}
+    \subitem {EUSART\_DefaultFramingErrorHandler}, \hyperpage{26}
+    \subitem {EUSART\_DefaultOverrunErrorHandler}, \hyperpage{26}
+    \subitem {EUSART\_ErrorHandler}, \hyperpage{33}
+    \subitem {EUSART\_FramingErrorHandler}, \hyperpage{33}
+    \subitem {EUSART\_get\_last\_status}, \hyperpage{26}
+    \subitem {EUSART\_Initialize}, \hyperpage{27}
+    \subitem {EUSART\_is\_rx\_ready}, \hyperpage{27}
+    \subitem {EUSART\_is\_tx\_done}, \hyperpage{28}
+    \subitem {EUSART\_is\_tx\_ready}, \hyperpage{28}
+    \subitem {EUSART\_OverrunErrorHandler}, \hyperpage{33}
+    \subitem {EUSART\_Read}, \hyperpage{29}
+    \subitem {EUSART\_Receive\_ISR}, \hyperpage{29}
+    \subitem {EUSART\_RX\_BUFFER\_SIZE}, \hyperpage{26}
+    \subitem {EUSART\_RxDataHandler}, \hyperpage{30}
+    \subitem {EUSART\_RxDefaultInterruptHandler}, \hyperpage{33}
+    \subitem {EUSART\_SetErrorHandler}, \hyperpage{30}
+    \subitem {EUSART\_SetFramingErrorHandler}, \hyperpage{30}
+    \subitem {EUSART\_SetOverrunErrorHandler}, \hyperpage{31}
+    \subitem {EUSART\_SetRxInterruptHandler}, \hyperpage{31}
+    \subitem {EUSART\_SetTxInterruptHandler}, \hyperpage{31}
+    \subitem {EUSART\_Transmit\_ISR}, \hyperpage{32}
+    \subitem {EUSART\_TX\_BUFFER\_SIZE}, \hyperpage{26}
+    \subitem {EUSART\_TxDefaultInterruptHandler}, \hyperpage{34}
+    \subitem {EUSART\_Write}, \hyperpage{32}
+    \subitem {EUSART\_WriteString}, \hyperpage{32}
+    \subitem {eusartRxBuffer}, \hyperpage{34}
+    \subitem {eusartRxCount}, \hyperpage{34}
+    \subitem {eusartRxHead}, \hyperpage{34}
+    \subitem {eusartRxLastError}, \hyperpage{34}
+    \subitem {eusartRxStatusBuffer}, \hyperpage{34}
+    \subitem {eusartRxTail}, \hyperpage{35}
+    \subitem {eusartTxBuffer}, \hyperpage{35}
+    \subitem {eusartTxBufferRemaining}, \hyperpage{35}
+    \subitem {eusartTxHead}, \hyperpage{35}
+    \subitem {eusartTxTail}, \hyperpage{35}
+  \item {eusart.h}
+    \subitem {EUSART\_DataReady}, \hyperpage{12}
+    \subitem {EUSART\_get\_last\_status}, \hyperpage{12}
+    \subitem {EUSART\_Initialize}, \hyperpage{12}
+    \subitem {EUSART\_is\_rx\_ready}, \hyperpage{13}
+    \subitem {EUSART\_is\_tx\_done}, \hyperpage{13}
+    \subitem {EUSART\_is\_tx\_ready}, \hyperpage{14}
+    \subitem {EUSART\_Read}, \hyperpage{14}
+    \subitem {EUSART\_Receive\_ISR}, \hyperpage{15}
+    \subitem {EUSART\_RxDataHandler}, \hyperpage{15}
+    \subitem {EUSART\_RxDefaultInterruptHandler}, \hyperpage{18}
+    \subitem {EUSART\_SetErrorHandler}, \hyperpage{15}
+    \subitem {EUSART\_SetFramingErrorHandler}, \hyperpage{16}
+    \subitem {EUSART\_SetOverrunErrorHandler}, \hyperpage{16}
+    \subitem {EUSART\_SetRxInterruptHandler}, \hyperpage{16}
+    \subitem {EUSART\_SetTxInterruptHandler}, \hyperpage{17}
+    \subitem {EUSART\_Transmit\_ISR}, \hyperpage{17}
+    \subitem {EUSART\_TxDefaultInterruptHandler}, \hyperpage{18}
+    \subitem {EUSART\_Write}, \hyperpage{17}
+    \subitem {EUSART\_WriteString}, \hyperpage{18}
+    \subitem {eusartRxCount}, \hyperpage{19}
+    \subitem {eusartTxBufferRemaining}, \hyperpage{19}
+  \item {EUSART\_DataReady}
+    \subitem {eusart.h}, \hyperpage{12}
+  \item {EUSART\_DefaultErrorHandler}
+    \subitem {eusart.c}, \hyperpage{26}
+  \item {EUSART\_DefaultFramingErrorHandler}
+    \subitem {eusart.c}, \hyperpage{26}
+  \item {EUSART\_DefaultOverrunErrorHandler}
+    \subitem {eusart.c}, \hyperpage{26}
+  \item {EUSART\_ErrorHandler}
+    \subitem {eusart.c}, \hyperpage{33}
+  \item {EUSART\_FramingErrorHandler}
+    \subitem {eusart.c}, \hyperpage{33}
+  \item {EUSART\_get\_last\_status}
+    \subitem {eusart.c}, \hyperpage{26}
+    \subitem {eusart.h}, \hyperpage{12}
+  \item {EUSART\_Initialize}
+    \subitem {eusart.c}, \hyperpage{27}
+    \subitem {eusart.h}, \hyperpage{12}
+  \item {EUSART\_is\_rx\_ready}
+    \subitem {eusart.c}, \hyperpage{27}
+    \subitem {eusart.h}, \hyperpage{13}
+  \item {EUSART\_is\_tx\_done}
+    \subitem {eusart.c}, \hyperpage{28}
+    \subitem {eusart.h}, \hyperpage{13}
+  \item {EUSART\_is\_tx\_ready}
+    \subitem {eusart.c}, \hyperpage{28}
+    \subitem {eusart.h}, \hyperpage{14}
+  \item {EUSART\_OverrunErrorHandler}
+    \subitem {eusart.c}, \hyperpage{33}
+  \item {EUSART\_Read}
+    \subitem {eusart.c}, \hyperpage{29}
+    \subitem {eusart.h}, \hyperpage{14}
+  \item {EUSART\_Receive\_ISR}
+    \subitem {eusart.c}, \hyperpage{29}
+    \subitem {eusart.h}, \hyperpage{15}
+  \item {EUSART\_RX\_BUFFER\_SIZE}
+    \subitem {eusart.c}, \hyperpage{26}
+  \item {EUSART\_RxDataHandler}
+    \subitem {eusart.c}, \hyperpage{30}
+    \subitem {eusart.h}, \hyperpage{15}
+  \item {EUSART\_RxDefaultInterruptHandler}
+    \subitem {eusart.c}, \hyperpage{33}
+    \subitem {eusart.h}, \hyperpage{18}
+  \item {EUSART\_SetErrorHandler}
+    \subitem {eusart.c}, \hyperpage{30}
+    \subitem {eusart.h}, \hyperpage{15}
+  \item {EUSART\_SetFramingErrorHandler}
+    \subitem {eusart.c}, \hyperpage{30}
+    \subitem {eusart.h}, \hyperpage{16}
+  \item {EUSART\_SetOverrunErrorHandler}
+    \subitem {eusart.c}, \hyperpage{31}
+    \subitem {eusart.h}, \hyperpage{16}
+  \item {EUSART\_SetRxInterruptHandler}
+    \subitem {eusart.c}, \hyperpage{31}
+    \subitem {eusart.h}, \hyperpage{16}
+  \item {EUSART\_SetTxInterruptHandler}
+    \subitem {eusart.c}, \hyperpage{31}
+    \subitem {eusart.h}, \hyperpage{17}
+  \item {eusart\_status\_t}, \hyperpage{9}
+    \subitem {ferr}, \hyperpage{9}
+    \subitem {oerr}, \hyperpage{10}
+    \subitem {perr}, \hyperpage{10}
+    \subitem {reserved}, \hyperpage{10}
+    \subitem {status}, \hyperpage{10}
+  \item {EUSART\_Transmit\_ISR}
+    \subitem {eusart.c}, \hyperpage{32}
+    \subitem {eusart.h}, \hyperpage{17}
+  \item {EUSART\_TX\_BUFFER\_SIZE}
+    \subitem {eusart.c}, \hyperpage{26}
+  \item {EUSART\_TxDefaultInterruptHandler}
+    \subitem {eusart.c}, \hyperpage{34}
+    \subitem {eusart.h}, \hyperpage{18}
+  \item {EUSART\_Write}
+    \subitem {eusart.c}, \hyperpage{32}
+    \subitem {eusart.h}, \hyperpage{17}
+  \item {EUSART\_WriteString}
+    \subitem {eusart.c}, \hyperpage{32}
+    \subitem {eusart.h}, \hyperpage{18}
+  \item {eusartRxBuffer}
+    \subitem {eusart.c}, \hyperpage{34}
+  \item {eusartRxCount}
+    \subitem {eusart.c}, \hyperpage{34}
+    \subitem {eusart.h}, \hyperpage{19}
+  \item {eusartRxHead}
+    \subitem {eusart.c}, \hyperpage{34}
+  \item {eusartRxLastError}
+    \subitem {eusart.c}, \hyperpage{34}
+  \item {eusartRxStatusBuffer}
+    \subitem {eusart.c}, \hyperpage{34}
+  \item {eusartRxTail}
+    \subitem {eusart.c}, \hyperpage{35}
+  \item {eusartTxBuffer}
+    \subitem {eusart.c}, \hyperpage{35}
+  \item {eusartTxBufferRemaining}
+    \subitem {eusart.c}, \hyperpage{35}
+    \subitem {eusart.h}, \hyperpage{19}
+  \item {eusartTxHead}
+    \subitem {eusart.c}, \hyperpage{35}
+  \item {eusartTxTail}
+    \subitem {eusart.c}, \hyperpage{35}
+
+  \indexspace
+
+  \item {FCY}
+    \subitem {hardware.h}, \hyperpage{20}
+  \item {ferr}
+    \subitem {eusart\_status\_t}, \hyperpage{9}
+
+  \indexspace
+
+  \item {hardware.c}
+    \subitem {Hardware\_ConfigureOscillator}, \hyperpage{36}
+    \subitem {Hardware\_initIO}, \hyperpage{36}
+    \subitem {Hardware\_initUART}, \hyperpage{37}
+    \subitem {Hardware\_UARTsendByte}, \hyperpage{37}
+    \subitem {Hardware\_UARTsendString}, \hyperpage{37}
+  \item {hardware.h}
+    \subitem {\_XTAL\_FREQ}, \hyperpage{19}
+    \subitem {DIP1\_PIN}, \hyperpage{20}
+    \subitem {DIP3\_PIN}, \hyperpage{20}
+    \subitem {FCY}, \hyperpage{20}
+    \subitem {Hardware\_ConfigureOscillator}, \hyperpage{21}
+    \subitem {Hardware\_initIO}, \hyperpage{21}
+    \subitem {Hardware\_initUART}, \hyperpage{21}
+    \subitem {Hardware\_UARTsendByte}, \hyperpage{22}
+    \subitem {Hardware\_UARTsendString}, \hyperpage{22}
+    \subitem {PIR\_PIN}, \hyperpage{20}
+    \subitem {SHUTTER\_PIN}, \hyperpage{20}
+  \item {Hardware\_ConfigureOscillator}
+    \subitem {hardware.c}, \hyperpage{36}
+    \subitem {hardware.h}, \hyperpage{21}
+  \item {Hardware\_initIO}
+    \subitem {hardware.c}, \hyperpage{36}
+    \subitem {hardware.h}, \hyperpage{21}
+  \item {Hardware\_initUART}
+    \subitem {hardware.c}, \hyperpage{37}
+    \subitem {hardware.h}, \hyperpage{21}
+  \item {Hardware\_UARTsendByte}
+    \subitem {hardware.c}, \hyperpage{37}
+    \subitem {hardware.h}, \hyperpage{22}
+  \item {Hardware\_UARTsendString}
+    \subitem {hardware.c}, \hyperpage{37}
+    \subitem {hardware.h}, \hyperpage{22}
+  \item {headers/eusart.h}, \hyperpage{11}
+  \item {headers/hardware.h}, \hyperpage{19}
+  \item {headers/pygmy.h}, \hyperpage{23}
+  \item {headers/system.h}, \hyperpage{24}
+
+  \indexspace
+
+  \item {interrupts.c}
+    \subitem {\_\_interrupt}, \hyperpage{38}
+    \subitem {array}, \hyperpage{39}
+    \subitem {UART\_sendByte}, \hyperpage{38}
+    \subitem {UART\_sendString}, \hyperpage{38}
+
+  \indexspace
+
+  \item {main}
+    \subitem {main.c}, \hyperpage{39}
+  \item {main.c}
+    \subitem {main}, \hyperpage{39}
+    \subitem {menuRun}, \hyperpage{40}
+    \subitem {USB\_POWERED}, \hyperpage{39}
+  \item {menuRun}
+    \subitem {main.c}, \hyperpage{40}
+
+  \indexspace
+
+  \item {oerr}
+    \subitem {eusart\_status\_t}, \hyperpage{10}
+
+  \indexspace
+
+  \item {perr}
+    \subitem {eusart\_status\_t}, \hyperpage{10}
+  \item {PIR\_PIN}
+    \subitem {hardware.h}, \hyperpage{20}
+  \item {pygmy.h}
+    \subitem {Pygmy\_camParamsToString}, \hyperpage{23}
+    \subitem {Pygmy\_delay\_ms}, \hyperpage{23}
+    \subitem {Pygmy\_handleMsg}, \hyperpage{23}
+    \subitem {Pygmy\_init}, \hyperpage{23}
+    \subitem {Pygmy\_readDipSwitches}, \hyperpage{23}
+    \subitem {Pygmy\_TriggeredPIR}, \hyperpage{24}
+    \subitem {Pygmy\_validCmd}, \hyperpage{24}
+  \item {Pygmy\_camParamsToString}
+    \subitem {pygmy.h}, \hyperpage{23}
+  \item {Pygmy\_delay\_ms}
+    \subitem {pygmy.h}, \hyperpage{23}
+  \item {Pygmy\_handleMsg}
+    \subitem {pygmy.h}, \hyperpage{23}
+  \item {Pygmy\_init}
+    \subitem {pygmy.h}, \hyperpage{23}
+  \item {Pygmy\_readDipSwitches}
+    \subitem {pygmy.h}, \hyperpage{23}
+  \item {Pygmy\_TriggeredPIR}
+    \subitem {pygmy.h}, \hyperpage{24}
+  \item {Pygmy\_validCmd}
+    \subitem {pygmy.h}, \hyperpage{24}
+
+  \indexspace
+
+  \item {README.md}, \hyperpage{24}
+  \item {reserved}
+    \subitem {eusart\_status\_t}, \hyperpage{10}
+
+  \indexspace
+
+  \item {SHUTTER\_PIN}
+    \subitem {hardware.h}, \hyperpage{20}
+  \item {src/configbits.h}, \hyperpage{24}
+  \item {src/eusart.c}, \hyperpage{24}
+  \item {src/fifo.c}, \hyperpage{36}
+  \item {src/fifo.h}, \hyperpage{36}
+  \item {src/hardware.c}, \hyperpage{36}
+  \item {src/interrupts.c}, \hyperpage{38}
+  \item {src/main.c}, \hyperpage{39}
+  \item {src/pygmy.c}, \hyperpage{40}
+  \item {status}
+    \subitem {eusart\_status\_t}, \hyperpage{10}
+  \item {system.h}
+    \subitem {ConfigureOscillator}, \hyperpage{24}
+
+  \indexspace
+
+  \item {UART\_sendByte}
+    \subitem {interrupts.c}, \hyperpage{38}
+  \item {UART\_sendString}
+    \subitem {interrupts.c}, \hyperpage{38}
+  \item {USB\_POWERED}
+    \subitem {main.c}, \hyperpage{39}
+
+\end{theindex}

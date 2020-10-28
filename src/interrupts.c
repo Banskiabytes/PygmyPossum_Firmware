@@ -1,3 +1,11 @@
+/** 
+ *  @file interrupts.c
+ *  @brief interrupt handler for all interrupt triggers
+ *
+ *  @author Thomas Evison
+ *  @date 28/10/2020
+ */
+
 /******************************************************************************/
 /*Files to Include                                                            */
 /******************************************************************************/
@@ -13,10 +21,12 @@ void UART_sendByte(uint8_t);
 
 volatile extern uint8_t array[16];
 
-/******************************************************************************/
-/* Interrupt Routines                                                         */
-
-/******************************************************************************/
+/**
+ *  Interrupt handler - first checks which flags have been set, then will call
+ * corresponding interrupt subroutine
+ *  @author Thomas Evison
+ *  @date 28/10/2020
+ */
 void __interrupt() isr(void) {
 
     /* Determine which flag generated the interrupt */
@@ -27,23 +37,18 @@ void __interrupt() isr(void) {
         GIE = true; // enable global interrupts
     }
     // interrupt handler
-    if(INTCONbits.PEIE == 1)
-    {
-        if(PIE1bits.TXIE == 1 && PIR1bits.TXIF == 1)
-        {
+    if (INTCONbits.PEIE == 1) {
+        if (PIE1bits.TXIE == 1 && PIR1bits.TXIF == 1) {
             EUSART_TxDefaultInterruptHandler();
-        } 
-        else if(PIE1bits.RCIE == 1 && PIR1bits.RCIF == 1)
-        {
+        }
+        else if (PIE1bits.RCIE == 1 && PIR1bits.RCIF == 1) {
             EUSART_RxDefaultInterruptHandler();
-        } 
-        else
-        {
+        }
+        else {
             //Unhandled Interrupt
         }
-    }      
-    else
-    {
+    }
+    else {
         //Unhandled Interrupt
     }
 

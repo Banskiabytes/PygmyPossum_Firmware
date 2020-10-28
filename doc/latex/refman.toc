@@ -1,0 +1,149 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}R\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}E\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}D\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ME}{1}{chapter.1}%
+\contentsline {subsection}{\numberline {1.0.1}Table of Contents}{1}{subsection.1.0.1}%
+\contentsline {subsection}{\numberline {1.0.2}About The Project}{1}{subsection.1.0.2}%
+\contentsline {subsubsection}{\numberline {1.0.2.1}How it works..}{2}{subsubsection.1.0.2.1}%
+\contentsline {subsection}{\numberline {1.0.3}Built With}{2}{subsection.1.0.3}%
+\contentsline {paragraph}{\numberline {1.0.3.0.1}Hardware\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:}{2}{paragraph.1.0.3.0.1}%
+\contentsline {paragraph}{\numberline {1.0.3.0.2}Software\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:}{2}{paragraph.1.0.3.0.2}%
+\contentsline {subsection}{\numberline {1.0.4}Usage}{2}{subsection.1.0.4}%
+\contentsline {subsection}{\numberline {1.0.5}License}{3}{subsection.1.0.5}%
+\contentsline {subsection}{\numberline {1.0.6}Contact}{3}{subsection.1.0.6}%
+\contentsline {chapter}{\numberline {2}Data Structure Index}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Data Structures}{5}{section.2.1}%
+\contentsline {chapter}{\numberline {3}File Index}{7}{chapter.3}%
+\contentsline {section}{\numberline {3.1}File List}{7}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Data Structure Documentation}{9}{chapter.4}%
+\contentsline {section}{\numberline {4.1}eusart\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}status\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}t Union Reference}{9}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Detailed Description}{9}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Field Documentation}{9}{subsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.1}"@1}{9}{subsubsection.4.1.2.1}%
+\contentsline {subsubsection}{\numberline {4.1.2.2}ferr}{10}{subsubsection.4.1.2.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.3}oerr}{10}{subsubsection.4.1.2.3}%
+\contentsline {subsubsection}{\numberline {4.1.2.4}perr}{10}{subsubsection.4.1.2.4}%
+\contentsline {subsubsection}{\numberline {4.1.2.5}reserved}{10}{subsubsection.4.1.2.5}%
+\contentsline {subsubsection}{\numberline {4.1.2.6}status}{10}{subsubsection.4.1.2.6}%
+\contentsline {chapter}{\numberline {5}File Documentation}{11}{chapter.5}%
+\contentsline {section}{\numberline {5.1}headers/eusart.h File Reference}{11}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Macro Definition Documentation}{12}{subsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.1.1}EUSART\_DataReady}{12}{subsubsection.5.1.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Function Documentation}{12}{subsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.2.1}EUSART\_get\_last\_status()}{12}{subsubsection.5.1.2.1}%
+\contentsline {subsubsection}{\numberline {5.1.2.2}EUSART\_Initialize()}{13}{subsubsection.5.1.2.2}%
+\contentsline {subsubsection}{\numberline {5.1.2.3}EUSART\_is\_rx\_ready()}{13}{subsubsection.5.1.2.3}%
+\contentsline {subsubsection}{\numberline {5.1.2.4}EUSART\_is\_tx\_done()}{14}{subsubsection.5.1.2.4}%
+\contentsline {subsubsection}{\numberline {5.1.2.5}EUSART\_is\_tx\_ready()}{14}{subsubsection.5.1.2.5}%
+\contentsline {subsubsection}{\numberline {5.1.2.6}EUSART\_Read()}{15}{subsubsection.5.1.2.6}%
+\contentsline {subsubsection}{\numberline {5.1.2.7}EUSART\_Receive\_ISR()}{15}{subsubsection.5.1.2.7}%
+\contentsline {subsubsection}{\numberline {5.1.2.8}EUSART\_RxDataHandler()}{15}{subsubsection.5.1.2.8}%
+\contentsline {subsubsection}{\numberline {5.1.2.9}EUSART\_SetErrorHandler()}{16}{subsubsection.5.1.2.9}%
+\contentsline {subsubsection}{\numberline {5.1.2.10}EUSART\_SetFramingErrorHandler()}{16}{subsubsection.5.1.2.10}%
+\contentsline {subsubsection}{\numberline {5.1.2.11}EUSART\_SetOverrunErrorHandler()}{16}{subsubsection.5.1.2.11}%
+\contentsline {subsubsection}{\numberline {5.1.2.12}EUSART\_SetRxInterruptHandler()}{17}{subsubsection.5.1.2.12}%
+\contentsline {subsubsection}{\numberline {5.1.2.13}EUSART\_SetTxInterruptHandler()}{17}{subsubsection.5.1.2.13}%
+\contentsline {subsubsection}{\numberline {5.1.2.14}EUSART\_Transmit\_ISR()}{17}{subsubsection.5.1.2.14}%
+\contentsline {subsubsection}{\numberline {5.1.2.15}EUSART\_Write()}{18}{subsubsection.5.1.2.15}%
+\contentsline {subsubsection}{\numberline {5.1.2.16}EUSART\_WriteString()}{18}{subsubsection.5.1.2.16}%
+\contentsline {subsection}{\numberline {5.1.3}Variable Documentation}{18}{subsection.5.1.3}%
+\contentsline {subsubsection}{\numberline {5.1.3.1}EUSART\_RxDefaultInterruptHandler}{18}{subsubsection.5.1.3.1}%
+\contentsline {subsubsection}{\numberline {5.1.3.2}EUSART\_TxDefaultInterruptHandler}{19}{subsubsection.5.1.3.2}%
+\contentsline {subsubsection}{\numberline {5.1.3.3}eusartRxCount}{19}{subsubsection.5.1.3.3}%
+\contentsline {subsubsection}{\numberline {5.1.3.4}eusartTxBufferRemaining}{19}{subsubsection.5.1.3.4}%
+\contentsline {section}{\numberline {5.2}headers/hardware.h File Reference}{19}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Macro Definition Documentation}{19}{subsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.1.1}\_XTAL\_FREQ}{20}{subsubsection.5.2.1.1}%
+\contentsline {subsubsection}{\numberline {5.2.1.2}DIP1\_PIN}{20}{subsubsection.5.2.1.2}%
+\contentsline {subsubsection}{\numberline {5.2.1.3}DIP3\_PIN}{20}{subsubsection.5.2.1.3}%
+\contentsline {subsubsection}{\numberline {5.2.1.4}FCY}{20}{subsubsection.5.2.1.4}%
+\contentsline {subsubsection}{\numberline {5.2.1.5}PIR\_PIN}{20}{subsubsection.5.2.1.5}%
+\contentsline {subsubsection}{\numberline {5.2.1.6}SHUTTER\_PIN}{20}{subsubsection.5.2.1.6}%
+\contentsline {subsection}{\numberline {5.2.2}Function Documentation}{21}{subsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.2.1}Hardware\_ConfigureOscillator()}{21}{subsubsection.5.2.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2.2}Hardware\_initIO()}{21}{subsubsection.5.2.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.2.3}Hardware\_initUART()}{22}{subsubsection.5.2.2.3}%
+\contentsline {subsubsection}{\numberline {5.2.2.4}Hardware\_UARTsendByte()}{22}{subsubsection.5.2.2.4}%
+\contentsline {subsubsection}{\numberline {5.2.2.5}Hardware\_UARTsendString()}{22}{subsubsection.5.2.2.5}%
+\contentsline {section}{\numberline {5.3}headers/pygmy.h File Reference}{23}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Function Documentation}{23}{subsection.5.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.1.1}Pygmy\_camParamsToString()}{23}{subsubsection.5.3.1.1}%
+\contentsline {subsubsection}{\numberline {5.3.1.2}Pygmy\_delay\_ms()}{23}{subsubsection.5.3.1.2}%
+\contentsline {subsubsection}{\numberline {5.3.1.3}Pygmy\_handleMsg()}{23}{subsubsection.5.3.1.3}%
+\contentsline {subsubsection}{\numberline {5.3.1.4}Pygmy\_init()}{23}{subsubsection.5.3.1.4}%
+\contentsline {subsubsection}{\numberline {5.3.1.5}Pygmy\_readDipSwitches()}{24}{subsubsection.5.3.1.5}%
+\contentsline {subsubsection}{\numberline {5.3.1.6}Pygmy\_TriggeredPIR()}{24}{subsubsection.5.3.1.6}%
+\contentsline {subsubsection}{\numberline {5.3.1.7}Pygmy\_validCmd()}{24}{subsubsection.5.3.1.7}%
+\contentsline {section}{\numberline {5.4}headers/system.h File Reference}{24}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Function Documentation}{24}{subsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.1.1}ConfigureOscillator()}{24}{subsubsection.5.4.1.1}%
+\contentsline {section}{\numberline {5.5}R\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}E\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}D\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}M\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}E.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md File Reference}{24}{section.5.5}%
+\contentsline {section}{\numberline {5.6}src/configbits.h File Reference}{24}{section.5.6}%
+\contentsline {section}{\numberline {5.7}src/eusart.c File Reference}{24}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}Detailed Description}{25}{subsection.5.7.1}%
+\contentsline {subsection}{\numberline {5.7.2}Macro Definition Documentation}{26}{subsection.5.7.2}%
+\contentsline {subsubsection}{\numberline {5.7.2.1}EUSART\_RX\_BUFFER\_SIZE}{26}{subsubsection.5.7.2.1}%
+\contentsline {subsubsection}{\numberline {5.7.2.2}EUSART\_TX\_BUFFER\_SIZE}{26}{subsubsection.5.7.2.2}%
+\contentsline {subsection}{\numberline {5.7.3}Function Documentation}{26}{subsection.5.7.3}%
+\contentsline {subsubsection}{\numberline {5.7.3.1}EUSART\_DefaultErrorHandler()}{26}{subsubsection.5.7.3.1}%
+\contentsline {subsubsection}{\numberline {5.7.3.2}EUSART\_DefaultFramingErrorHandler()}{26}{subsubsection.5.7.3.2}%
+\contentsline {subsubsection}{\numberline {5.7.3.3}EUSART\_DefaultOverrunErrorHandler()}{26}{subsubsection.5.7.3.3}%
+\contentsline {subsubsection}{\numberline {5.7.3.4}EUSART\_get\_last\_status()}{27}{subsubsection.5.7.3.4}%
+\contentsline {subsubsection}{\numberline {5.7.3.5}EUSART\_Initialize()}{27}{subsubsection.5.7.3.5}%
+\contentsline {subsubsection}{\numberline {5.7.3.6}EUSART\_is\_rx\_ready()}{28}{subsubsection.5.7.3.6}%
+\contentsline {subsubsection}{\numberline {5.7.3.7}EUSART\_is\_tx\_done()}{28}{subsubsection.5.7.3.7}%
+\contentsline {subsubsection}{\numberline {5.7.3.8}EUSART\_is\_tx\_ready()}{29}{subsubsection.5.7.3.8}%
+\contentsline {subsubsection}{\numberline {5.7.3.9}EUSART\_Read()}{29}{subsubsection.5.7.3.9}%
+\contentsline {subsubsection}{\numberline {5.7.3.10}EUSART\_Receive\_ISR()}{30}{subsubsection.5.7.3.10}%
+\contentsline {subsubsection}{\numberline {5.7.3.11}EUSART\_RxDataHandler()}{30}{subsubsection.5.7.3.11}%
+\contentsline {subsubsection}{\numberline {5.7.3.12}EUSART\_SetErrorHandler()}{30}{subsubsection.5.7.3.12}%
+\contentsline {subsubsection}{\numberline {5.7.3.13}EUSART\_SetFramingErrorHandler()}{31}{subsubsection.5.7.3.13}%
+\contentsline {subsubsection}{\numberline {5.7.3.14}EUSART\_SetOverrunErrorHandler()}{31}{subsubsection.5.7.3.14}%
+\contentsline {subsubsection}{\numberline {5.7.3.15}EUSART\_SetRxInterruptHandler()}{31}{subsubsection.5.7.3.15}%
+\contentsline {subsubsection}{\numberline {5.7.3.16}EUSART\_SetTxInterruptHandler()}{32}{subsubsection.5.7.3.16}%
+\contentsline {subsubsection}{\numberline {5.7.3.17}EUSART\_Transmit\_ISR()}{32}{subsubsection.5.7.3.17}%
+\contentsline {subsubsection}{\numberline {5.7.3.18}EUSART\_Write()}{32}{subsubsection.5.7.3.18}%
+\contentsline {subsubsection}{\numberline {5.7.3.19}EUSART\_WriteString()}{33}{subsubsection.5.7.3.19}%
+\contentsline {subsection}{\numberline {5.7.4}Variable Documentation}{33}{subsection.5.7.4}%
+\contentsline {subsubsection}{\numberline {5.7.4.1}EUSART\_ErrorHandler}{33}{subsubsection.5.7.4.1}%
+\contentsline {subsubsection}{\numberline {5.7.4.2}EUSART\_FramingErrorHandler}{33}{subsubsection.5.7.4.2}%
+\contentsline {subsubsection}{\numberline {5.7.4.3}EUSART\_OverrunErrorHandler}{33}{subsubsection.5.7.4.3}%
+\contentsline {subsubsection}{\numberline {5.7.4.4}EUSART\_RxDefaultInterruptHandler}{34}{subsubsection.5.7.4.4}%
+\contentsline {subsubsection}{\numberline {5.7.4.5}EUSART\_TxDefaultInterruptHandler}{34}{subsubsection.5.7.4.5}%
+\contentsline {subsubsection}{\numberline {5.7.4.6}eusartRxBuffer}{34}{subsubsection.5.7.4.6}%
+\contentsline {subsubsection}{\numberline {5.7.4.7}eusartRxCount}{34}{subsubsection.5.7.4.7}%
+\contentsline {subsubsection}{\numberline {5.7.4.8}eusartRxHead}{34}{subsubsection.5.7.4.8}%
+\contentsline {subsubsection}{\numberline {5.7.4.9}eusartRxLastError}{34}{subsubsection.5.7.4.9}%
+\contentsline {subsubsection}{\numberline {5.7.4.10}eusartRxStatusBuffer}{35}{subsubsection.5.7.4.10}%
+\contentsline {subsubsection}{\numberline {5.7.4.11}eusartRxTail}{35}{subsubsection.5.7.4.11}%
+\contentsline {subsubsection}{\numberline {5.7.4.12}eusartTxBuffer}{35}{subsubsection.5.7.4.12}%
+\contentsline {subsubsection}{\numberline {5.7.4.13}eusartTxBufferRemaining}{35}{subsubsection.5.7.4.13}%
+\contentsline {subsubsection}{\numberline {5.7.4.14}eusartTxHead}{35}{subsubsection.5.7.4.14}%
+\contentsline {subsubsection}{\numberline {5.7.4.15}eusartTxTail}{35}{subsubsection.5.7.4.15}%
+\contentsline {section}{\numberline {5.8}src/fifo.c File Reference}{36}{section.5.8}%
+\contentsline {section}{\numberline {5.9}src/fifo.h File Reference}{36}{section.5.9}%
+\contentsline {section}{\numberline {5.10}src/hardware.c File Reference}{36}{section.5.10}%
+\contentsline {subsection}{\numberline {5.10.1}Detailed Description}{36}{subsection.5.10.1}%
+\contentsline {subsubsection}{\numberline {5.10.1.1}(in) G\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}P3 $\vert $4 5$\vert $ G\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}P2 (in) D\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}I\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}P2}{36}{subsubsection.5.10.1.1}%
+\contentsline {subsection}{\numberline {5.10.2}Function Documentation}{36}{subsection.5.10.2}%
+\contentsline {subsubsection}{\numberline {5.10.2.1}Hardware\_ConfigureOscillator()}{36}{subsubsection.5.10.2.1}%
+\contentsline {subsubsection}{\numberline {5.10.2.2}Hardware\_initIO()}{37}{subsubsection.5.10.2.2}%
+\contentsline {subsubsection}{\numberline {5.10.2.3}Hardware\_initUART()}{37}{subsubsection.5.10.2.3}%
+\contentsline {subsubsection}{\numberline {5.10.2.4}Hardware\_UARTsendByte()}{37}{subsubsection.5.10.2.4}%
+\contentsline {subsubsection}{\numberline {5.10.2.5}Hardware\_UARTsendString()}{37}{subsubsection.5.10.2.5}%
+\contentsline {section}{\numberline {5.11}src/interrupts.c File Reference}{38}{section.5.11}%
+\contentsline {subsection}{\numberline {5.11.1}Detailed Description}{38}{subsection.5.11.1}%
+\contentsline {subsection}{\numberline {5.11.2}Function Documentation}{38}{subsection.5.11.2}%
+\contentsline {subsubsection}{\numberline {5.11.2.1}\_\_interrupt()}{38}{subsubsection.5.11.2.1}%
+\contentsline {subsubsection}{\numberline {5.11.2.2}UART\_sendByte()}{38}{subsubsection.5.11.2.2}%
+\contentsline {subsubsection}{\numberline {5.11.2.3}UART\_sendString()}{38}{subsubsection.5.11.2.3}%
+\contentsline {subsection}{\numberline {5.11.3}Variable Documentation}{39}{subsection.5.11.3}%
+\contentsline {subsubsection}{\numberline {5.11.3.1}array}{39}{subsubsection.5.11.3.1}%
+\contentsline {section}{\numberline {5.12}src/main.c File Reference}{39}{section.5.12}%
+\contentsline {subsection}{\numberline {5.12.1}Detailed Description}{39}{subsection.5.12.1}%
+\contentsline {subsection}{\numberline {5.12.2}Macro Definition Documentation}{39}{subsection.5.12.2}%
+\contentsline {subsubsection}{\numberline {5.12.2.1}USB\_POWERED}{39}{subsubsection.5.12.2.1}%
+\contentsline {subsection}{\numberline {5.12.3}Function Documentation}{39}{subsection.5.12.3}%
+\contentsline {subsubsection}{\numberline {5.12.3.1}main()}{40}{subsubsection.5.12.3.1}%
+\contentsline {subsubsection}{\numberline {5.12.3.2}menuRun()}{40}{subsubsection.5.12.3.2}%
+\contentsline {section}{\numberline {5.13}src/pygmy.c File Reference}{40}{section.5.13}%
+\contentsline {subsection}{\numberline {5.13.1}Detailed Description}{40}{subsection.5.13.1}%
+\contentsline {chapter}{Index}{41}{section*.19}%
