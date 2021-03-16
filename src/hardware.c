@@ -45,14 +45,34 @@ void Hardware_ConfigureOscillator(){
 void Hardware_initIO(){
     
     /* setup I/O registers */
-    TRISA = 0B00101011;            // set PORTA directions
+    TRISA = 0B00111011;            // set PORTA directions
+    TRISB = 0B01101111;            // set PORTA directions
+    TRISC = 0B01111111;            // set PORTA directions
     
     WPUA = TRISA;                  // weak pullups on all inputs
-    ANSELA = 0x00;                 // Pin is assigned Digital I/O
+    WPUB = TRISB;                  // weak pullups on all inputs
+    WPUC = TRISC;                  // weak pullups on all inputs
+    
     PORTA = 0x00;                  // set all outputs false
+    
+    ANSELA = 0x00;                 // Pins is assigned Digital I/O
+    ANSELB = 0x00;
+    ANSELC = 0x01;                 // analog in for ANIN_BAT_CHECK
+    
+    ADCON0bits.CHS = 0B010000;     // set analog input RC0
+    ADCON0bits.ADON = true;        // ADC is disabled and consumes no operating current
+    
+    ADCON1bits.ADFM = true;        // Right justified
+    ADCON1bits.ADCS = 0B000;       // ADC Conversion Clock Select bits
+    ADCON1bits.ADNREF = false;     // VREF- is connected to VSS
+    ADCON1bits.ADPREF = 0;         // VREF+ is connected to VDD
+    
+
     
     PPSLOCKED = false;
     RA0PPS  = 0x00;
+    RXPPS = 0x0D;   //RB5->EUSART:RX;   
+    TXPPS = 0x0C;   //RB4->EUSART:TX;    
     PPSLOCKED = true;
     
     /* set interrupts */
@@ -78,7 +98,7 @@ void Hardware_initUART(){
     
     /* choose Tx pin with PPS */
     PPSLOCKbits.PPSLOCKED = false;
-    RA2PPS = 0b10100; // set RA2 as UART Tx
+    RB4PPS = 0x14;   // set RB4 as UART Tx
     PPSLOCKbits.PPSLOCKED = true;
 
     /* setup UART transmission */

@@ -48,7 +48,7 @@ bool EUSART_is_tx_done(void);
 eusart_status_t EUSART_get_last_status(void);
 uint8_t EUSART_Read(void);
 void EUSART_Write(uint8_t txData);
-void EUSART_WriteString(uint8_t[]);
+void EUSART_WriteString(uint8_t[] );
 void EUSART_Transmit_ISR(void);
 void EUSART_Receive_ISR(void);
 void EUSART_RxDataHandler(void);

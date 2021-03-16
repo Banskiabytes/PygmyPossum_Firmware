@@ -28,6 +28,8 @@ struct {
     uint8_t minEventPeriod; ///< s - minimum time before another shutter is trig
 } camParams;
 
+
+
 /**
  *  Reads hardware dip switches and resolves to an unsigned int.
  *  @return The the dip switches setting as an unsigned integer
@@ -36,10 +38,36 @@ uint8_t Pygmy_readDipSwitches() {
 
     // values inverted for active low switch w/ pull-up resistor
     uint8_t dipSetting = 0;
-    //dipSetting |= !DIP1_PIN << 0;
-    //    dipSetting |= !DIP2_PIN << 1;
-    dipSetting |= !DIP3_PIN << 0;
+    dipSetting |= !DIP1 << 0;
+    dipSetting |= !DIP2 << 1;
+    dipSetting |= !DIP3 << 2;
+    dipSetting |= !DIP4 << 3;
     return dipSetting;
+}
+
+/**
+ *  Reads hardware dip switches and resolves to an unsigned int.
+ *  @return The the dip switches setting as an unsigned integer
+ */
+uint16_t Pygmy_readBattVoltage() {
+    
+    DOUT_BAT_CHECK_EN = true;   // energize battery checking circuit
+    
+    uint16_t result; 
+    
+    ADCON0bits.ADON = true;     // ADC is enabled
+    ADCON0bits.GO = true;
+    
+    while (ADCON0bits.ADGO);
+    
+
+    result = (ADRESH << 8) | ADRESL;
+    
+    ADCON0bits.ADON = false;     // ADC is disabled and consumes no operating current
+    
+    DOUT_BAT_CHECK_EN = false;   // de-energize battery checking circuit
+    
+    return result;
 }
 
 /**
@@ -85,31 +113,41 @@ uint8_t * Pygmy_handleMsg(uint8_t cmd[]) {
     uint8_t response[16] = {0};
     response[0] = 'R'; ///< standard response flag
     response[1] = cmd[1]; ///< return the cmd code
+    
+    uint16_t battVoltage;
 
     /* get frame command */
     switch (cmd[1]) {
         case 'A': // get usr prog
             response[2] = cmd[2];
-            for (int i = 0; i < 8; i++) {
+            for (uint8_t i = 0; i < 8; i++) {
                 response[3 + i] = (eeprom_read(USRPROG_START_MEM + cmd[2]*8 + i));
             }
             break;
         case 'B': // set usr prog
             response[2] = cmd[2];
-            for (int i = 0; i < 8; i++) {
-                eeprom_write(USRPROG_START_MEM + cmd[2]*8 + i, cmd[3 + i]);
+            uint16_t index = 8*response[2];
+            for (uint8_t i = 0; i < 8; i++) {
+                eeprom_write(USRPROG_START_MEM + index + i, cmd[2 + i]);
+                response[2 + i] = cmd[2 + i];
             }
             break;
         case 'D': // get dip switches
             response[2] = Pygmy_readDipSwitches();
             break;
+        case 'E': // get the battery voltage
+            
+            battVoltage = Pygmy_readBattVoltage();
+            response[2]= battVoltage & 0xff;
+            response[3]= (battVoltage >> 8);
+            break;
         case 'V': // set default usrProg values
-            for (int i = 0; i < 16; i++) {
+            for (uint8_t i = 0; i < 16; i++) {
                 eeprom_write(USRPROG_START_MEM + (i * 8) + 0, 0x00); // config byte
                 eeprom_write(USRPROG_START_MEM + (i * 8) + 1, 0x03); // numOfSnaps
-                eeprom_write(USRPROG_START_MEM + (i * 8) + 2, 0xE8); // snapPeriod LSB
-                eeprom_write(USRPROG_START_MEM + (i * 8) + 3, 0x03); // snapPeriod MSB
-                eeprom_write(USRPROG_START_MEM + (i * 8) + 4, 10); // minEventPeriod
+                eeprom_write(USRPROG_START_MEM + (i * 8) + 2, 0xF4); // snapPeriod LSB
+                eeprom_write(USRPROG_START_MEM + (i * 8) + 3, 0x01); // snapPeriod MSB
+                eeprom_write(USRPROG_START_MEM + (i * 8) + 4, 10);   // minEventPeriod
                 eeprom_write(USRPROG_START_MEM + (i * 8) + 5, 0xFF); // undefined
                 eeprom_write(USRPROG_START_MEM + (i * 8) + 6, 0xFF); // undefined
                 eeprom_write(USRPROG_START_MEM + (i * 8) + 7, 0xFF); // undefined
@@ -128,12 +166,12 @@ uint8_t * Pygmy_handleMsg(uint8_t cmd[]) {
  */
 void Pygmy_TriggeredPIR() {
 
-    if (!PIR_PIN) {
+    if (!DIN_PIR) {
 
         /* wake camera */
-        SHUTTER_PIN = true;
+        DOUT_CAM_S = true;
         Pygmy_delay_ms(50);
-        SHUTTER_PIN = false;
+        DOUT_CAM_S = false;
         Pygmy_delay_ms(100);
 
         /* read and apply camera settings */
@@ -141,9 +179,9 @@ void Pygmy_TriggeredPIR() {
 
         /* take burst of images */
         for (int i = 0; i < camParams.numOfSnaps; i++) {
-            SHUTTER_PIN = true; // WAP WAP WAP!
+            DOUT_CAM_S = true; // WAP WAP WAP!
             Pygmy_delay_ms(200);
-            SHUTTER_PIN = false;
+            DOUT_CAM_S = false;
             Pygmy_delay_ms(camParams.snapPeriod);
         }
 

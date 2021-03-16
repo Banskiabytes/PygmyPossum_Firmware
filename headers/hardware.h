@@ -1,13 +1,16 @@
 
 /* inputs */
-#define DIP3_PIN PORTAbits.RA0
-#define DIP1_PIN PORTAbits.RA1
-//#define DIP2_PIN PORTAbits.RA2
-#define PIR_PIN PORTAbits.RA5
+#define DIP4 PORTCbits.RC6
+#define DIP3 PORTCbits.RC3
+#define DIP2 PORTCbits.RC4
+#define DIP1 PORTCbits.RC5
+#define DIN_PIR PORTAbits.RA5
+#define DIN_USB_ON !PORTCbits.RC1 // inverted
 
 /* outputs */
-#define SHUTTER_PIN LATAbits.LATA2
-
+#define DOUT_CAM_S LATCbits.LATC7
+#define DOUT_CAM_F LATBbits.LATB7
+#define DOUT_BAT_CHECK_EN LATAbits.LATA2
 
 /* Microcontroller MIPs (FCY) */
 #define _XTAL_FREQ 32000000UL

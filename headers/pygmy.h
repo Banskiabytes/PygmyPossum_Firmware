@@ -13,6 +13,7 @@ void Pygmy_TriggeredPIR(void);
 void Pygmy_camParamsToString(void);
 bool Pygmy_validCmd(char);
 uint8_t * Pygmy_handleMsg(uint8_t[]);
+uint16_t Pygmy_readBattVoltage();
 
 
 

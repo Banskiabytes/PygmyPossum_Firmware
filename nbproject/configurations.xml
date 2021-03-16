@@ -34,7 +34,7 @@
     <conf name="XC8_PIC16F18313" type="2">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
-        <targetDevice>PIC16F18313</targetDevice>
+        <targetDevice>PIC16F18344</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>pk4hybrid</platformTool>
@@ -654,9 +654,7 @@
                   value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-7ff"/>
-        <property key="poweroptions.powerenable" value="true"/>
-        <property key="programmerToGoFilePath"
-                  value="C:/Users/me/Google Drive/1. Projects/15_CAMERA_TRAP/02_FIRMWARE/PYGMY_POSSUM.X/debug/XC8_PIC16F18313/PYGMY_POSSUM_ptg"/>
+        <property key="poweroptions.powerenable" value="false"/>
         <property key="programmerToGoImageName" value="PYGMY_POSSUM_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
