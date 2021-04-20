@@ -46,8 +46,8 @@ void Hardware_initIO(){
     
     /* setup I/O registers */
     TRISA = 0B00111011;            // set PORTA directions
-    TRISB = 0B01101111;            // set PORTA directions
-    TRISC = 0B01111111;            // set PORTA directions
+    TRISB = 0B01101111;            // set PORTB directions
+    TRISC = 0B01111111;            // set PORTC directions
     
     WPUA = TRISA;                  // weak pullups on all inputs
     WPUB = TRISB;                  // weak pullups on all inputs
@@ -66,9 +66,7 @@ void Hardware_initIO(){
     ADCON1bits.ADCS = 0B000;       // ADC Conversion Clock Select bits
     ADCON1bits.ADNREF = false;     // VREF- is connected to VSS
     ADCON1bits.ADPREF = 0;         // VREF+ is connected to VDD
-    
-
-    
+        
     PPSLOCKED = false;
     RA0PPS  = 0x00;
     RXPPS = 0x0D;   //RB5->EUSART:RX;   
@@ -76,7 +74,7 @@ void Hardware_initIO(){
     PPSLOCKED = true;
     
     /* set interrupts */
-    IOCAN = 0B00100000;            // look for falling edge on RA5
+    IOCAN = 0B00110000;            // look for falling edge on RA4, RA5
     IOCAP = 0x00;                  // ignore all rising edge
     INTCONbits.GIE = true;         // enable global interrupts
     INTCONbits.PEIE = true;        // enable peripheral interrupts

@@ -10,13 +10,11 @@
 /**
   Section: Macro Declarations
  */
-
 #define EUSART_DataReady  (EUSART_is_rx_ready())
 
 /**
   Section: Data Type Definitions
  */
-
 typedef union {
 
     struct {

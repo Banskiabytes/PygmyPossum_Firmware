@@ -6,6 +6,7 @@
 #define DIP1 PORTCbits.RC5
 #define DIN_PIR PORTAbits.RA5
 #define DIN_USB_ON !PORTCbits.RC1 // inverted
+#define TP1 PORTAbits.RA4         // test pin
 
 /* outputs */
 #define DOUT_CAM_S LATCbits.LATC7

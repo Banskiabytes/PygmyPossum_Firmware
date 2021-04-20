@@ -39,8 +39,8 @@ void main(void) {
     EUSART_Initialize();
 
     /* flash LED to prove function */
-    int rxDataArrayIndex;
-    for (rxDataArrayIndex = 0; rxDataArrayIndex < 5; rxDataArrayIndex++) {
+    int i;
+    for (i = 0; i < 5; i++) {
         DOUT_CAM_S = !DOUT_CAM_S; // invert output
         __delay_ms(500);
     }
@@ -55,7 +55,11 @@ void main(void) {
 
     uint8_t rxData;
     bool endOfFrame;
+    int rxDataArrayIndex;
     uint8_t rxDataArray[16] = {0};
+    
+    Pygmy_SetDefaultValues();
+    
 
     /* enter main loop and wait for interrupt from PIR sensor */
     while (true) {
@@ -66,7 +70,7 @@ void main(void) {
             if (EUSART_is_rx_ready()) {
                 rxData = EUSART_Read();
                 if (EUSART_is_tx_ready()) {
-                    //EUSART_Write(rxData); // echo received byte
+                    EUSART_Write(rxData); // echo received byte
                 }
 
                 /* UART buffer state machine */
@@ -92,7 +96,7 @@ void main(void) {
                             state = ST_INMSG;
                         }
                         break;
-                    default:
+                    default:   // clear AFTRESC if required
                         if (state == ST_AFTRESC) {
                             state = ST_INMSG;
                         }
@@ -109,25 +113,17 @@ void main(void) {
                 if (endOfFrame) {
                     uint8_t *response;
 
-                    //EUSART_Write(0x0A); // newline
-
-                    /* echo cmd */
-                    for (int i = 0; i < 16; i++) {
-                        //EUSART_Write(rxDataArray[i]);
-                    }
-                    //EUSART_Write(0x0A); // newline
-
                     /* send response */
                     response = Pygmy_handleMsg(rxDataArray);
                     for (int i = 0; i < 16; i++) {
                         EUSART_Write(*(response + i));
                     }
-                    //EUSART_Write(0x0A); // newline
 
                     /* clear the array */
                     for (int i = 0; i < 16; i++) {
                         rxDataArray[i] = 0;
                     }
+                    rxDataArrayIndex = 0;
 
                     /* clear end frame flag */
                     endOfFrame = false;
@@ -136,6 +132,7 @@ void main(void) {
 
         
         } else {
+            EUSART_WriteString("Sleep\n");
             SLEEP(); // wake only after PIR interrupt
         }
     }

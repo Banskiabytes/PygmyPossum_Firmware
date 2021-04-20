@@ -29,14 +29,25 @@ volatile extern uint8_t array[16];
  */
 void __interrupt() isr(void) {
 
+    /* interrupt handler */
     /* Determine which flag generated the interrupt */
+    
+    // falling edge on PIR sensor
     if (IOCIF && IOCAF5) {
-        GIE = false; // disable global interrupts
-        IOCAF5 = false; // Clear Interrupt Flag
-        Pygmy_TriggeredPIR(); // Fire Camera
-        GIE = true; // enable global interrupts
+        GIE = false;              // disable global interrupts
+        IOCAF5 = false;           // Clear Interrupt Flag
+        Pygmy_TriggeredPIR();     // Fire Camera
+        GIE = true;               // enable global interrupts
     }
-    // interrupt handler
+    
+    // falling edge on TP1 (test pin - set default values)
+    if(IOCIF && IOCAF4) {
+        GIE = false;              // disable global interrupts
+        IOCAF4 = false;           // Clear Interrupt Flag
+        Pygmy_SetDefaultValues(); // write default values to EEPROM
+        GIE = true;               // enable global interrupts
+    }
+    
     if (INTCONbits.PEIE == 1) {
         if (PIE1bits.TXIE == 1 && PIR1bits.TXIF == 1) {
             EUSART_TxDefaultInterruptHandler();
