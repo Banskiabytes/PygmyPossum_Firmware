@@ -58,14 +58,13 @@ void main(void) {
     int rxDataArrayIndex;
     uint8_t rxDataArray[16] = {0};
     
+    /* for now, lets set the defaults.. */
     Pygmy_SetDefaultValues();
-    
 
     /* enter main loop and wait for interrupt from PIR sensor */
     while (true) {
 
-        if (DIN_USB_ON) {
-
+        if (!DIN_USB_ON) {
 
             if (EUSART_is_rx_ready()) {
                 rxData = EUSART_Read();
@@ -133,7 +132,7 @@ void main(void) {
         
         } else {
             EUSART_WriteString("Sleep\n");
-            SLEEP(); // wake only after PIR interrupt
+            SLEEP(); // wake on PIR interrupt (or other interrupt))
         }
     }
 

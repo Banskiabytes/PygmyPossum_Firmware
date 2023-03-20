@@ -35,6 +35,7 @@ The Pygmy Possum is a battery powered PIR (Passive Infrared) sensor for triggeri
 <p>
 A camera trap is a remotely activated camera that is equipped with a motion sensor or an infrared sensor, or uses a light beam as a trigger. Camera trapping is a method for capturing wild animals on film when researchers are not present, and has been used in ecological research for decades. In addition to applications in hunting and wildlife viewing, research applications include studies of nest ecology, detection of rare species, estimation of population size and species richness, as well as research on habitat use and occupation of human-built structures.[1](https://en.wikipedia.org/wiki/Camera_trap)
 </p>
+![](./images/IMG-1918.png)
 
 ### How it works..
 <p>

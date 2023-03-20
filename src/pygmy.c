@@ -151,13 +151,13 @@ void Pygmy_TriggeredPIR() {
 void Pygmy_SetDefaultValues() {
     
     uint8_t defaultConfigBytes[16] = {0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1};
-    uint16_t defaultSnapPeriods[16] = {50, 100, 250, 500, 750, 1000, 1500, 2000, 3000, 5000, 10000, 1000, 1000, 1000, 1000, 1000};
-    uint8_t defaultVideoLen[16] = {0,0,0,0,0,0,0,0,0,0,0,5,10,20,60};
+    uint16_t defaultSnapPeriods[16] = {50, 100, 250, 500, 750, 1000, 1500, 2000, 3000, 5000, 1000, 1000, 1000, 1000, 1000, 1000};
+    uint8_t defaultVideoLen[16] = {0,0,0,0,0,0,0,0,0,0,0,0,5,10,20,60};
     
     eeprom_write(USRSETTINGS_START_MEM, 0x64);               // wakeCameraDelay - 100ms
     eeprom_write(USRSETTINGS_START_MEM + 1, 0xC8);           // shutterPulseWidth - 200ms
 
-    for (uint8_t i = 0; i < 16; i++) {
+    for (uint8_t i = 0; i < 15; i++) {
         eeprom_write(USRPROG_START_MEM + (i * 8) + 0, defaultConfigBytes[i]); // config byte
         eeprom_write(USRPROG_START_MEM + (i * 8) + 1, 0x03); // numOfSnaps
 
